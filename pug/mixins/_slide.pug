@@ -1,0 +1,7 @@
+mixin slide(slideClass, sourceImage, altText, type, date)
+    
+    div(class=slideClass)
+         img.img-proj(src=sourceImage, alt=altText)
+         div.desc-proj 
+            p=type
+            p=date

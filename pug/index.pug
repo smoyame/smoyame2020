@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+include mixins/_slide.pug
+
+
+html(lang="en")
+    head
+
+        
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document Title
+        //- linked files
+        link(rel="stylesheet", href="https://use.typekit.net/stl3ffw.css")
+        
+    body
+        .container
+            
+            include mixins/_header.pug
+
+            main.content
+                .titles
+                    h2.title-proj1 Voter's Guide
+                    h2.title-proj2 The Dry Run
+                    h2.title-proj3 2034 Olympics
+                    h2.title-proj4 Misc. Materials
+                    h2.title-proj5 Poetry Chapbook
+                    h2.title-proj6 AMASS Mag
+                .slides
+                    +slide('slide slide-proj1', 'https://via.placeholder.com/1000x900', 'Just some alt text', 'Publication', 'Sept 2019')
+                    +slide('slide slide-proj2', 'https://via.placeholder.com/1000x700', 'Just some alt text', 'Publication', 'Feb 2020')
+                    +slide('slide slide-proj3', 'https://via.placeholder.com/1000x800', 'Just some alt text', 'Branding', 'Spring 2020')
+                   
+            
