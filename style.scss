@@ -1,0 +1,110 @@
+//Main Color palette
+$main-front: #0000ff;
+$main-back: #ffff00;
+
+$main-font: 'urw-din', sans-serif;
+
+// testing/debugging
+$test1: magenta;
+$test2: lime;
+$test3: cyan;
+// overarching attributes
+* {
+    // resets
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: $main-font;
+    color: $main-front;
+    transition: all .2s ease;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    margin: 1rem 1.5rem;
+    display: grid;
+}
+
+img {
+    width: 100%;
+}
+
+//specific
+
+.navbar {}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+    margin: 2rem auto;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: space-between;
+    a {
+        width: 20vw;
+        
+        background-color: #fff;
+        text-align: center;
+        padding: 1rem;
+        border: 2px solid $main-front;
+    }
+}
+
+.content {
+   display: grid; 
+   grid-template-rows: repeat(2, 1fr);
+   grid-gap: 1rem;
+}
+
+.titles {
+    grid-row: 1 / 2;
+    grid-column: 1 /2;
+    z-index: 60;
+    position: fixed;
+}
+
+.title {
+    a{
+    font-size: 3rem;
+    margin-left: -1.6rem;
+    z-index: 60;
+    display: inline-block;
+    
+    }
+}
+
+.slides {
+    grid-row: 1 / 2;
+    grid-column: 1 /2;
+    margin-top: 2.5rem;
+}
+
+.slide {
+    margin-right: -1.5rem;
+    margin-left: 4rem;
+    
+}
+
+.desc-proj {
+    display: none;
+}
+
+//precise
+.sam {
+    font-weight: bold;
+}
+

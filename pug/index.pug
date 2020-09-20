@@ -8,9 +8,10 @@ html(lang="en")
         
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document Title
+        title Samanta Moya Medina
         //- linked files
         link(rel="stylesheet", href="https://use.typekit.net/stl3ffw.css")
+        link(rel="stylesheet", href="style.css")
         
     body
         .container
@@ -19,15 +20,25 @@ html(lang="en")
 
             main.content
                 .titles
-                    h2.title-proj1 Voter's Guide
-                    h2.title-proj2 The Dry Run
-                    h2.title-proj3 2034 Olympics
-                    h2.title-proj4 Misc. Materials
-                    h2.title-proj5 Poetry Chapbook
-                    h2.title-proj6 AMASS Mag
+                    h2.title-proj1.title 
+                        a(href="#") Voter's Guide
+                    h2.title-proj2.title 
+                        a(href="#") The Dry Run
+                    h2.title-proj3.title 
+                        a(href="#") 2034 Olympics
+                    h2.title-proj4.title 
+                        a(href="#") Misc. Materials
+                    h2.title-proj5.title 
+                        a(href="#") Chapbook
+                    h2.title-proj6.title 
+                        a(href="#") AMASS Mag
                 .slides
                     +slide('slide slide-proj1', 'https://via.placeholder.com/1000x900', 'Just some alt text', 'Publication', 'Sept 2019')
                     +slide('slide slide-proj2', 'https://via.placeholder.com/1000x700', 'Just some alt text', 'Publication', 'Feb 2020')
                     +slide('slide slide-proj3', 'https://via.placeholder.com/1000x800', 'Just some alt text', 'Branding', 'Spring 2020')
+                    +slide('slide slide-proj4', 'https://via.placeholder.com/1000x500', 'Just some alt text', 'Branding', 'Spring 2020')
+                    +slide('slide slide-proj5', 'https://via.placeholder.com/1000x900', 'Just some alt text', 'Branding', 'Spring 2020')
+                    +slide('slide slide-proj6', 'https://via.placeholder.com/1000x800', 'Just some alt text', 'Branding', 'Spring 2020')
                    
-            
+            footer
+                &copy; samanta moya medina 2020
