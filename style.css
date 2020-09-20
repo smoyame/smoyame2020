@@ -1,10 +1,16 @@
+@font-face {
+  font-family: 'Inconsolata Regular';
+  src: url(/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 20px;
-  font-family: "urw-din", sans-serif;
+  font-family: "Inconsolata Regular", sans-serif;
+  font-weight: 300;
   color: #0000ff;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
@@ -108,6 +114,6 @@ img {
 }
 
 .sam {
-  font-weight: bold;
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */

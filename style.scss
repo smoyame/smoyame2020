@@ -2,7 +2,11 @@
 $main-front: #0000ff;
 $main-back: #ffff00;
 
-$main-font: 'urw-din', sans-serif;
+@font-face {
+    font-family: 'Inconsolata Regular';
+    src: url(/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+$font: 'Inconsolata Regular', sans-serif;
 
 // testing/debugging
 $test1: magenta;
@@ -15,7 +19,8 @@ $test3: cyan;
     padding: 0;
     box-sizing: border-box;
     font-size: 20px;
-    font-family: $main-font;
+    font-family: $font;
+    font-weight: 300;
     color: $main-front;
     transition: all .2s ease;
     text-decoration: none;
@@ -105,6 +110,6 @@ img {
 
 //precise
 .sam {
-    font-weight: bold;
+    font-weight: 700;
 }
 
