@@ -21,26 +21,14 @@ html(lang="en")
             include mixins/_header.pug
 
             main.content
-                .titles
-                    h2.title-proj1.title 
-                        a(href="#") Voter's Guide
-                    h2.title-proj2.title 
-                        a(href="#") The Dry Run
-                    h2.title-proj3.title 
-                        a(href="#") 2034 Olympics
-                    h2.title-proj4.title 
-                        a(href="#") Misc. Materials
-                    h2.title-proj5.title 
-                        a(href="#") Chapbook
-                    h2.title-proj6.title 
-                        a(href="#") AMASS Mag
                 .slides
-                    +slide('slide slide-proj1', 'https://via.placeholder.com/1000x900', 'Just some alt text', 'Publication', 'Sept 2019')
-                    +slide('slide slide-proj2', 'https://via.placeholder.com/1000x700', 'Just some alt text', 'Publication', 'Feb 2020')
-                    +slide('slide slide-proj3', 'https://via.placeholder.com/1000x800', 'Just some alt text', 'Branding', 'Spring 2020')
-                    +slide('slide slide-proj4', 'https://via.placeholder.com/1000x500', 'Just some alt text', 'Branding', 'Spring 2020')
-                    +slide('slide slide-proj5', 'https://via.placeholder.com/1000x900', 'Just some alt text', 'Branding', 'Spring 2020')
-                    +slide('slide slide-proj6', 'https://via.placeholder.com/1000x800', 'Just some alt text', 'Branding', 'Spring 2020')
-                   
-            footer
-                &copy; samanta moya medina 2020
+                    +slide('slide slide-proj1','title title-proj1','#', 'First Proect', 'https://via.placeholder.com/1000x700', 'Just some alt text', 'Publication', 'Sept 2019')
+                    +slide('slide slide-proj2','title title-proj2','#', 'The Dry Run 2', 'https://via.placeholder.com/1000x900', 'Just some alt text', 'Publication', 'Sept 2019')
+                    +slide('slide slide-proj3','title title-proj3','#', '2034 Olympics', 'https://via.placeholder.com/1000x500', 'Just some alt text', 'Publication', 'Sept 2019')
+                    +slide('slide slide-proj4','title title-proj4','#', 'Misc. Materials', 'https://via.placeholder.com/1000x800', 'Just some alt text', 'Publication', 'Sept 2019')
+                    +slide('slide slide-proj5','title title-proj5','#', 'Chapbook', 'https://via.placeholder.com/1000x900', 'Just some alt text', 'Publication', 'Sept 2019')
+                    +slide('slide slide-proj6','title title-proj6','#', 'AMASS Mag', 'https://via.placeholder.com/1000x900', 'Just some alt text', 'Publication', 'Sept 2019')
+
+            footer.footer
+                span.sitecredit
+                    | &copy; samanta moya medina 2020               

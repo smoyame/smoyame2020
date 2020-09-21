@@ -2,6 +2,7 @@
 $main-front: #0000ff;
 $main-back: #ffff00;
 
+
 @font-face {
     font-family: 'Inconsolata Regular';
     src: url(/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
@@ -41,7 +42,12 @@ img {
 
 //specific
 
-.navbar {}
+.header {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 3.5rem);
+}
 
 .name {
     display: flex;
@@ -62,54 +68,198 @@ img {
     a {
         width: 20vw;
         
-        background-color: #fff;
+        // background-color: #fff;
         text-align: center;
         padding: 1rem;
-        border: 2px solid $main-front;
+        border-bottom: 5px solid $main-front;
+        border-top: 1px solid rgba($color: #ffffff, $alpha: 0.0);
+        border-right: 1px solid rgba($color: #ffffff, $alpha: 0.0);
+        border-left: 1px solid rgba($color: #ffffff, $alpha: 0.0);
+        
     }
-}
 
-.content {
-   display: grid; 
-   grid-template-rows: repeat(2, 1fr);
-   grid-gap: 1rem;
-}
 
-.titles {
-    grid-row: 1 / 2;
-    grid-column: 1 /2;
-    z-index: 60;
-    position: fixed;
 }
+.nav-item a:hover {
+        border-top: 1px solid $main-front;
+        
+        }
 
 .title {
     a{
     font-size: 3rem;
-    margin-left: -1.6rem;
+    font-weight: 700;
+    margin-left: -4.2rem;
     z-index: 60;
     display: inline-block;
-    
+    position: fixed;
     }
+
 }
 
-.slides {
-    grid-row: 1 / 2;
-    grid-column: 1 /2;
-    margin-top: 2.5rem;
+.title-proj1 {
+    position: absolute;
+    top: 10rem;
+}
+.title-proj2 {
+    position: absolute;
+    top: 13rem;
+}
+.title-proj3 {
+    position: absolute;
+    top: 16rem;
+}
+
+.title-proj4 {
+    position: absolute;
+    top: 19rem;
+}
+
+.title-proj5 {
+    position: absolute;
+    top: 22rem;
+}
+
+.title-proj6 {
+    position: absolute;
+    top: 25rem;
+}
+
+$img-footer-offset: 11rem;
+.slides img{
+    position: relative;
+    top: $img-footer-offset;
+    z-index: -1;
+    
+
 }
 
 .slide {
     margin-right: -1.5rem;
     margin-left: 4rem;
-    
 }
+
 
 .desc-proj {
     display: none;
 }
 
-//precise
-.sam {
-    font-weight: 700;
+.footer {
+    position: relative;
+    top: 8rem;
 }
 
+//precise
+.sam {
+    font-weight: 900;
+    span {
+        display: block;
+    }
+}
+
+// Desktop
+@media (min-width: 1000px) {
+    body{
+        background-color: $test1;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 7rem;
+    }
+
+    .name {
+        display: block;
+        
+    }
+    .nav-items {
+        display: block;
+        width: 100%;
+        margin: rem 0;
+    }
+
+    .nav-item {
+        display: block;
+        margin: 1rem 0;
+        a {
+            width: 100%;
+            text-align: left;
+            padding: 0rem .5rem;
+
+            border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.0);
+            border-top: 1px solid rgba($color: #ffffff, $alpha: 0.0);
+            border-right: 1px solid rgba($color: #ffffff, $alpha: 0.0);
+            border-left: 5px solid $main-front;
+        }
+    }
+
+    .nav-item a:hover {
+        border-right: 1px solid $main-front;
+        border-top: 1px solid rgba($color: #ffffff, $alpha: 0.0);
+    }
+
+    .title {
+        a{
+        font-size: 5rem;
+        font-weight: 700;
+        margin-left: -4.2rem;
+        z-index: 60;
+        display: inline-block;
+        position: fixed;
+        }
+    
+    }
+
+    .title-proj1 {
+        position: absolute;
+        top: 5rem;
+    }
+    .title-proj2 {
+        position: absolute;
+        top: 10rem;
+    }
+    .title-proj3 {
+        position: absolute;
+        top: 15rem;
+    }
+    
+    .title-proj4 {
+        position: absolute;
+        top: 20rem;
+    }
+    
+    .title-proj5 {
+        position: absolute;
+        top: 25rem;
+    }
+    
+    .title-proj6 {
+        position: absolute;
+        top: 30rem;
+    }
+    $img-footer-offset-desktop: 0;
+    .slides img {
+        position: relative;
+        top: 0;
+    }
+
+    .slide{
+        margin-left: 16rem;
+    }
+
+    .desc-proj {
+        display: block;
+    }
+
+    .footer {
+        top: -2rem;
+    }
+
+}
