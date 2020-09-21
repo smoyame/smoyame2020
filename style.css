@@ -11,7 +11,7 @@
   font-size: 20px;
   font-family: "Inconsolata Regular", sans-serif;
   font-weight: 300;
-  color: #0000ff;
+  color: #000000;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
   text-decoration: none;
@@ -76,18 +76,18 @@ img {
   width: 20vw;
   text-align: center;
   padding: 1rem;
-  border-bottom: 5px solid #0000ff;
+  border-bottom: 5px solid #000000;
   border-top: 1px solid rgba(255, 255, 255, 0);
   border-right: 1px solid rgba(255, 255, 255, 0);
   border-left: 1px solid rgba(255, 255, 255, 0);
 }
 
 .nav-item a:hover {
-  border-top: 1px solid #0000ff;
+  border-top: 1px solid #000000;
 }
 
 .title a {
-  font-size: 3rem;
+  font-size: calc(8vw);
   font-weight: 700;
   margin-left: -4.2rem;
   z-index: 60;
@@ -102,27 +102,27 @@ img {
 
 .title-proj2 {
   position: absolute;
-  top: 13rem;
+  top: calc(12rem + 4vw);
 }
 
 .title-proj3 {
   position: absolute;
-  top: 16rem;
+  top: calc(14rem + 8vw);
 }
 
 .title-proj4 {
   position: absolute;
-  top: 19rem;
+  top: calc(16rem + 12vw);
 }
 
 .title-proj5 {
   position: absolute;
-  top: 22rem;
+  top: calc(18rem + 16vw);
 }
 
 .title-proj6 {
   position: absolute;
-  top: 25rem;
+  top: calc(20rem + 20vw);
 }
 
 .slides img {
@@ -153,9 +153,9 @@ img {
   display: block;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   body {
-    background-color: magenta;
+    background-color: #ffffff;
   }
   .container {
     margin: 2rem;
@@ -174,24 +174,36 @@ img {
     width: auto;
     position: -webkit-sticky;
     position: sticky;
-    -ms-flex-preferred-size: 4rem;
-        flex-basis: 4rem;
-  }
-  .NAME, .NAVBAR {
-    height: auto;
-    position: -webkit-sticky;
-    position: sticky;
+    margin-right: 10%;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    top: 2rem;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
   .content {
-    width: auto;
+    width: 70%;
+    min-width: 0;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    margin-left: 10rem;
+    -ms-flex-negative: 3;
+        flex-shrink: 3;
+    margin-left: 0rem;
     overflow: scroll;
   }
-  .name {
+  .name,
+  .moyame,
+  .job,
+  .jobcont {
     display: block;
+  }
+  .moyame {
+    margin-bottom: .5rem;
+    font-weight: 900;
   }
   .nav-items {
     display: block;
@@ -209,11 +221,14 @@ img {
     border-bottom: 1px solid rgba(255, 255, 255, 0);
     border-top: 1px solid rgba(255, 255, 255, 0);
     border-right: 1px solid rgba(255, 255, 255, 0);
-    border-left: 5px solid #0000ff;
+    border-left: 5px solid #000000;
   }
   .nav-item a:hover {
-    border-right: 1px solid #0000ff;
+    border-right: 1px solid #000000;
     border-top: 1px solid rgba(255, 255, 255, 0);
+  }
+  .title {
+    left: 0;
   }
   .title a {
     font-size: 5rem;
@@ -251,6 +266,8 @@ img {
     position: relative;
     top: 0;
     width: 100%;
+    height: auto;
+    min-width: 0;
   }
   .slide {
     margin-left: 0;
@@ -258,10 +275,12 @@ img {
   .desc-proj {
     display: block;
     background-color: #fff;
+    padding: 1rem;
   }
   .footer {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    margin-bottom: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

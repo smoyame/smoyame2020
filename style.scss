@@ -1,18 +1,21 @@
 //Main Color palette
-$main-front: #0000ff;
-$main-back: #ffff00;
+$main-front: #000000;
+$main-back: #ffffff;
 
 
 @font-face {
     font-family: 'Inconsolata Regular';
     src: url(/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
 }
-$font: 'Inconsolata Regular', sans-serif;
+
+$font: 'Inconsolata Regular',
+sans-serif;
 
 // testing/debugging
 $test1: magenta;
 $test2: lime;
 $test3: cyan;
+
 // overarching attributes
 * {
     // resets
@@ -58,16 +61,17 @@ img {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    
+
     margin: 2rem auto;
 }
 
 .nav-item {
     display: flex;
     justify-content: space-between;
+
     a {
         width: 20vw;
-        
+
         // background-color: #fff;
         text-align: center;
         padding: 1rem;
@@ -75,24 +79,25 @@ img {
         border-top: 1px solid rgba($color: #ffffff, $alpha: 0.0);
         border-right: 1px solid rgba($color: #ffffff, $alpha: 0.0);
         border-left: 1px solid rgba($color: #ffffff, $alpha: 0.0);
-        
+
     }
 
 
 }
+
 .nav-item a:hover {
-        border-top: 1px solid $main-front;
-        
-        }
+    border-top: 1px solid $main-front;
+
+}
 
 .title {
-    a{
-    font-size: 3rem;
-    font-weight: 700;
-    margin-left: -4.2rem;
-    z-index: 60;
-    display: inline-block;
-    position: fixed;
+    a {
+        font-size: calc(8vw);
+        font-weight: 700;
+        margin-left: -4.2rem;
+        z-index: 60;
+        display: inline-block;
+        position: fixed;
     }
 
 }
@@ -101,36 +106,45 @@ img {
     position: absolute;
     top: 10rem;
 }
+
 .title-proj2 {
     position: absolute;
-    top: 13rem;
+    // top: 13rem;
+    top: calc(12rem + 4vw);
 }
+
 .title-proj3 {
     position: absolute;
-    top: 16rem;
+    // top: 16rem;
+    top: calc(14rem + 8vw);
+
 }
 
 .title-proj4 {
     position: absolute;
-    top: 19rem;
+    // top: 19rem;
+    top: calc(16rem + 12vw);
 }
 
 .title-proj5 {
     position: absolute;
-    top: 22rem;
+    // top: 22rem;
+    top: calc(18rem + 16vw);
 }
 
 .title-proj6 {
     position: absolute;
-    top: 25rem;
+    // top: 25rem;
+    top: calc(20rem + 20vw);
 }
 
 $img-footer-offset: 11rem;
-.slides img{
+
+.slides img {
     position: relative;
     top: $img-footer-offset;
     z-index: -1;
-    
+
 
 }
 
@@ -152,52 +166,65 @@ $img-footer-offset: 11rem;
 //precise
 .sam {
     font-weight: 900;
+
     span {
         display: block;
     }
 }
 
 // Desktop
-@media (min-width: 1000px) {
-    body{
-        background-color: $test1;
+@media (min-width: 900px) {
+    body {
+        background-color: $main-back;
     }
 
     .container {
         margin: 2rem;
-        ;
         display: flex;
         flex-wrap: wrap;
     }
 
     ::-webkit-scrollbar {
         width: 0px;
-        background: transparent; /* make scrollbar transparent */
+        background: transparent;
+        /* make scrollbar transparent */
     }
+
     .header {
         width: auto;
         // position: fixed;
         position: sticky;
-        // min-width: 4rem;
-        flex-basis: 4rem;
+        margin-right: 10%;
+        flex-basis: 20%;
+        flex-grow: 0;
+        top: 2rem;
+        align-self: flex-start;
     }
 
-    .NAME, .NAVBAR {
-        height: auto;
-        position: sticky;
-    }
+
 
     .content {
-        width: auto;
+        width: 70%;
+        min-width: 0;
         flex-grow: 1;
-        margin-left: 10rem;
+        flex-shrink: 3;
+        margin-left: 0rem;
         overflow: scroll;
+        // padding-left: 15rem;
     }
 
-    .name {
+    .name,
+    .moyame,
+    .job,
+    .jobcont {
         display: block;
-        
     }
+
+    .moyame {
+        margin-bottom: .5rem;
+        font-weight: 900;
+    }
+
     .nav-items {
         display: block;
         width: 100%;
@@ -207,6 +234,7 @@ $img-footer-offset: 11rem;
     .nav-item {
         display: block;
         margin: 1rem 0;
+
         a {
             width: 100%;
             text-align: left;
@@ -225,67 +253,74 @@ $img-footer-offset: 11rem;
     }
 
     .title {
-        
+        left: 0;
 
-        a{
-        font-size: 5rem;
-        font-weight: 700;
-        margin-left: 0;
-        z-index: 60;
-        display: block;
-        position: static;
+        a {
+            font-size: 5rem;
+            font-weight: 700;
+            margin-left: 0;
+            z-index: 60;
+            display: block;
+            position: static;
         }
-    
+
     }
 
-     .title-proj1 {
+    .title-proj1 {
         position: fixed;
         top: 5rem;
-        
+
     }
+
     .title-proj2 {
         position: fixed;
         top: 10rem;
     }
+
     .title-proj3 {
         position: fixed;
         top: 15rem;
     }
-    
+
     .title-proj4 {
         position: fixed;
         top: 20rem;
     }
-    
+
     .title-proj5 {
         position: fixed;
         top: 25rem;
     }
-    
+
     .title-proj6 {
         position: fixed;
         top: 30rem;
     }
+
     $img-footer-offset-desktop: 0;
+
     .slides img {
         position: relative;
         top: 0;
         width: 100%;
-        
+        height: auto;
+        min-width: 0;
+
     }
 
-    .slide{
+    .slide {
         margin-left: 0;
     }
 
     .desc-proj {
         display: block;
         background-color: #fff;
+        padding: 1rem;
     }
 
     .footer {
         flex-basis: 100%;
-       
+        margin-bottom: 2rem;
     }
 
 }
