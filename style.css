@@ -132,8 +132,8 @@ img {
 }
 
 .slide {
-  margin-right: -1.5rem;
-  margin-left: 4rem;
+  margin-right: auto;
+  margin-left: 5rem;
 }
 
 .desc-proj {
@@ -157,25 +157,38 @@ img {
   body {
     background-color: magenta;
   }
-  .content {
+  .container {
+    margin: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    /* make scrollbar transparent */
   }
   .header {
-    position: fixed;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 7rem;
+    width: auto;
+    position: -webkit-sticky;
+    position: sticky;
+    -ms-flex-preferred-size: 4rem;
+        flex-basis: 4rem;
+  }
+  .NAME, .NAVBAR {
+    height: auto;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .content {
+    width: auto;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin-left: 10rem;
+    overflow: scroll;
   }
   .name {
     display: block;
@@ -205,47 +218,50 @@ img {
   .title a {
     font-size: 5rem;
     font-weight: 700;
-    margin-left: -4.2rem;
+    margin-left: 0;
     z-index: 60;
-    display: inline-block;
-    position: fixed;
+    display: block;
+    position: static;
   }
   .title-proj1 {
-    position: absolute;
+    position: fixed;
     top: 5rem;
   }
   .title-proj2 {
-    position: absolute;
+    position: fixed;
     top: 10rem;
   }
   .title-proj3 {
-    position: absolute;
+    position: fixed;
     top: 15rem;
   }
   .title-proj4 {
-    position: absolute;
+    position: fixed;
     top: 20rem;
   }
   .title-proj5 {
-    position: absolute;
+    position: fixed;
     top: 25rem;
   }
   .title-proj6 {
-    position: absolute;
+    position: fixed;
     top: 30rem;
   }
   .slides img {
     position: relative;
     top: 0;
+    width: 100%;
   }
   .slide {
-    margin-left: 16rem;
+    margin-left: 0;
   }
   .desc-proj {
     display: block;
+    background-color: #fff;
   }
   .footer {
-    top: -2rem;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

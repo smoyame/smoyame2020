@@ -135,8 +135,8 @@ $img-footer-offset: 11rem;
 }
 
 .slide {
-    margin-right: -1.5rem;
-    margin-left: 4rem;
+    margin-right: auto;
+    margin-left: 5rem;
 }
 
 
@@ -163,16 +163,35 @@ $img-footer-offset: 11rem;
         background-color: $test1;
     }
 
-    .content {
+    .container {
+        margin: 2rem;
+        ;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* make scrollbar transparent */
+    }
     .header {
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        width: 7rem;
+        width: auto;
+        // position: fixed;
+        position: sticky;
+        // min-width: 4rem;
+        flex-basis: 4rem;
+    }
+
+    .NAME, .NAVBAR {
+        height: auto;
+        position: sticky;
+    }
+
+    .content {
+        width: auto;
+        flex-grow: 1;
+        margin-left: 10rem;
+        overflow: scroll;
     }
 
     .name {
@@ -206,60 +225,67 @@ $img-footer-offset: 11rem;
     }
 
     .title {
+        
+
         a{
         font-size: 5rem;
         font-weight: 700;
-        margin-left: -4.2rem;
+        margin-left: 0;
         z-index: 60;
-        display: inline-block;
-        position: fixed;
+        display: block;
+        position: static;
         }
     
     }
 
-    .title-proj1 {
-        position: absolute;
+     .title-proj1 {
+        position: fixed;
         top: 5rem;
+        
     }
     .title-proj2 {
-        position: absolute;
+        position: fixed;
         top: 10rem;
     }
     .title-proj3 {
-        position: absolute;
+        position: fixed;
         top: 15rem;
     }
     
     .title-proj4 {
-        position: absolute;
+        position: fixed;
         top: 20rem;
     }
     
     .title-proj5 {
-        position: absolute;
+        position: fixed;
         top: 25rem;
     }
     
     .title-proj6 {
-        position: absolute;
+        position: fixed;
         top: 30rem;
     }
     $img-footer-offset-desktop: 0;
     .slides img {
         position: relative;
         top: 0;
+        width: 100%;
+        
     }
 
     .slide{
-        margin-left: 16rem;
+        margin-left: 0;
     }
 
     .desc-proj {
         display: block;
+        background-color: #fff;
     }
 
     .footer {
-        top: -2rem;
+        flex-basis: 100%;
+       
     }
 
 }
