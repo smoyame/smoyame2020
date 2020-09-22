@@ -153,7 +153,7 @@ img {
   display: block;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1100px) {
   body {
     background-color: #ffffff;
   }
@@ -165,7 +165,7 @@ img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  ::-webkit-scrollbar {
+  .container ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
     /* make scrollbar transparent */
@@ -174,9 +174,9 @@ img {
     width: auto;
     position: -webkit-sticky;
     position: sticky;
-    margin-right: 10%;
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
+    margin-right: 5%;
+    -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -228,7 +228,7 @@ img {
     border-top: 1px solid rgba(255, 255, 255, 0);
   }
   .title {
-    left: 0;
+    left: 11rem;
   }
   .title a {
     font-size: 5rem;
@@ -240,27 +240,37 @@ img {
   }
   .title-proj1 {
     position: fixed;
-    top: 5rem;
+    top: 7.4rem;
   }
   .title-proj2 {
     position: fixed;
-    top: 10rem;
+    top: 12.4rem;
+    -webkit-clip-path: inset(0% 0% 40% 0%);
+            clip-path: inset(0% 0% 40% 0%);
   }
   .title-proj3 {
     position: fixed;
-    top: 15rem;
+    top: 17.4rem;
+    -webkit-clip-path: inset(0% 0% 40% 0%);
+            clip-path: inset(0% 0% 40% 0%);
   }
   .title-proj4 {
     position: fixed;
-    top: 20rem;
+    top: 22.4rem;
+    -webkit-clip-path: inset(0% 0% 40% 0%);
+            clip-path: inset(0% 0% 40% 0%);
   }
   .title-proj5 {
     position: fixed;
-    top: 25rem;
+    top: 27.4rem;
+    -webkit-clip-path: inset(0% 0% 40% 0%);
+            clip-path: inset(0% 0% 40% 0%);
   }
   .title-proj6 {
     position: fixed;
-    top: 30rem;
+    top: 32.4rem;
+    -webkit-clip-path: inset(0% 0% 40% 0%);
+            clip-path: inset(0% 0% 40% 0%);
   }
   .slides img {
     position: relative;
@@ -271,11 +281,24 @@ img {
   }
   .slide {
     margin-left: 0;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .desc-proj {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     background-color: #fff;
     padding: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    width: 25%;
+    right: 1rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .footer {
     -ms-flex-preferred-size: 100%;
