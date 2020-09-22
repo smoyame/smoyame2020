@@ -105,6 +105,7 @@ img {
 .title-proj1 {
     position: absolute;
     top: 10rem;
+
 }
 
 .title-proj2 {
@@ -182,6 +183,7 @@ $img-footer-offset: 11rem;
         margin: 2rem;
         display: flex;
         flex-wrap: wrap;
+
         ::-webkit-scrollbar {
             width: 0px;
             background: transparent;
@@ -189,7 +191,7 @@ $img-footer-offset: 11rem;
         }
     }
 
-   
+
 
     .header {
         width: auto;
@@ -212,7 +214,7 @@ $img-footer-offset: 11rem;
         margin-left: 0rem;
         overflow: scroll;
 
-        
+
         // padding-left: 15rem;
     }
 
@@ -256,8 +258,9 @@ $img-footer-offset: 11rem;
     }
 
     .title {
-        
+
         left: 11rem;
+
         a {
             font-size: 5rem;
             font-weight: 700;
@@ -272,13 +275,14 @@ $img-footer-offset: 11rem;
     .title-proj1 {
         position: fixed;
         top: 7.4rem;
-
+        clip-path: inset(0% 75% 0% 0%);
+        animation-name: title1;
     }
 
     .title-proj2 {
         position: fixed;
         top: 12.4rem;
-        clip-path: inset(0% 0% 40% 0%);
+        clip-path: inset(0% 75% 0% 0%);
     }
 
     .title-proj3 {

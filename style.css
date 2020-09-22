@@ -241,12 +241,16 @@ img {
   .title-proj1 {
     position: fixed;
     top: 7.4rem;
+    -webkit-clip-path: inset(0% 75% 0% 0%);
+            clip-path: inset(0% 75% 0% 0%);
+    -webkit-animation-name: title1;
+            animation-name: title1;
   }
   .title-proj2 {
     position: fixed;
     top: 12.4rem;
-    -webkit-clip-path: inset(0% 0% 40% 0%);
-            clip-path: inset(0% 0% 40% 0%);
+    -webkit-clip-path: inset(0% 75% 0% 0%);
+            clip-path: inset(0% 75% 0% 0%);
   }
   .title-proj3 {
     position: fixed;
