@@ -230,6 +230,11 @@ $img-footer-offset: 11rem;
         font-weight: 900;
     }
 
+
+    .navbar {
+        margin-top: 5rem;
+    }
+
     .nav-items {
         display: block;
         width: 100%;
@@ -275,38 +280,44 @@ $img-footer-offset: 11rem;
     .title-proj1 {
         position: fixed;
         top: 7.4rem;
-        clip-path: inset(0% 75% 0% 0%);
-        animation-name: title1;
+        background-color:rgba(0,0,0, 1)
+        // mix-blend-mode: luminosity;
+        // clip-path: inset(0% 0% 40% 0%);
     }
 
     .title-proj2 {
         position: fixed;
         top: 12.4rem;
-        clip-path: inset(0% 75% 0% 0%);
+        background-color:rgba(0,0,0, 1)
+        // clip-path: inset(0% 0% 40% 0%);
     }
 
     .title-proj3 {
         position: fixed;
         top: 17.4rem;
-        clip-path: inset(0% 0% 40% 0%);
+        background-color:rgba(0,0,0, 1)
+        // clip-path: inset(0% 0% 40% 0%);
     }
 
     .title-proj4 {
         position: fixed;
         top: 22.4rem;
-        clip-path: inset(0% 0% 40% 0%);
+        background-color:rgba(0,0,0, 1)
+        // clip-path: inset(0% 0% 40% 0%);
     }
 
     .title-proj5 {
         position: fixed;
         top: 27.4rem;
-        clip-path: inset(0% 0% 40% 0%);
+        background-color:rgba(0,0,0, 1);
+        // clip-path: inset(0% 0% 40% 0%);
     }
 
     .title-proj6 {
         position: fixed;
         top: 32.4rem;
-        clip-path: inset(0% 0% 40% 0%);
+        background-color:rgba(0,0,0, 1)
+        // clip-path: inset(0% 0% 40% 0%);
     }
 
     $img-footer-offset-desktop: 0;
@@ -331,9 +342,10 @@ $img-footer-offset: 11rem;
         background-color: #fff;
         padding: 1rem;
         position: absolute;
-        bottom: 1rem;
+        top: 1rem;
         width: 25%;
         right: 1rem;
+        z-index: -1;
         justify-content: space-between;
     }
 

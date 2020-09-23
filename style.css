@@ -205,6 +205,9 @@ img {
     margin-bottom: .5rem;
     font-weight: 900;
   }
+  .navbar {
+    margin-top: 5rem;
+  }
   .nav-items {
     display: block;
     width: 100%;
@@ -241,40 +244,32 @@ img {
   .title-proj1 {
     position: fixed;
     top: 7.4rem;
-    -webkit-clip-path: inset(0% 75% 0% 0%);
-            clip-path: inset(0% 75% 0% 0%);
-    -webkit-animation-name: title1;
-            animation-name: title1;
+    background-color: black;
   }
   .title-proj2 {
     position: fixed;
     top: 12.4rem;
-    -webkit-clip-path: inset(0% 75% 0% 0%);
-            clip-path: inset(0% 75% 0% 0%);
+    background-color: black;
   }
   .title-proj3 {
     position: fixed;
     top: 17.4rem;
-    -webkit-clip-path: inset(0% 0% 40% 0%);
-            clip-path: inset(0% 0% 40% 0%);
+    background-color: black;
   }
   .title-proj4 {
     position: fixed;
     top: 22.4rem;
-    -webkit-clip-path: inset(0% 0% 40% 0%);
-            clip-path: inset(0% 0% 40% 0%);
+    background-color: black;
   }
   .title-proj5 {
     position: fixed;
     top: 27.4rem;
-    -webkit-clip-path: inset(0% 0% 40% 0%);
-            clip-path: inset(0% 0% 40% 0%);
+    background-color: black;
   }
   .title-proj6 {
     position: fixed;
     top: 32.4rem;
-    -webkit-clip-path: inset(0% 0% 40% 0%);
-            clip-path: inset(0% 0% 40% 0%);
+    background-color: black;
   }
   .slides img {
     position: relative;
@@ -297,9 +292,10 @@ img {
     background-color: #fff;
     padding: 1rem;
     position: absolute;
-    bottom: 1rem;
+    top: 1rem;
     width: 25%;
     right: 1rem;
+    z-index: -1;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
