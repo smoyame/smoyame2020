@@ -159,9 +159,16 @@ $img-footer-offset: 11rem;
     display: none;
 }
 
+.email, .sitecredit {
+    display: block;
+}
+
 .footer {
     position: relative;
     top: 8rem;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 //precise
@@ -180,7 +187,7 @@ $img-footer-offset: 11rem;
     }
 
     .container {
-        margin: 2rem;
+        margin: 2rem 2rem 0 2rem;
         display: flex;
         flex-wrap: wrap;
 
@@ -232,7 +239,7 @@ $img-footer-offset: 11rem;
 
 
     .navbar {
-        margin-top: 5rem;
+        margin-top: 25.5rem;
     }
 
     .nav-items {
@@ -257,6 +264,9 @@ $img-footer-offset: 11rem;
         }
     }
 
+    
+
+
     .nav-item a:hover {
         border-right: 1px solid $main-front;
         border-top: 1px solid rgba($color: #ffffff, $alpha: 0.0);
@@ -279,45 +289,45 @@ $img-footer-offset: 11rem;
 
     .title-proj1 {
         position: fixed;
-        top: 7.4rem;
-        background-color:rgba(0,0,0, 1)
+        top: 12.4rem;
+        background-color:rgba(0,0,0, 1);
         // mix-blend-mode: luminosity;
-        // clip-path: inset(0% 0% 40% 0%);
+        clip-path: inset(40% 0% 40% 0%);
     }
 
     .title-proj2 {
         position: fixed;
-        top: 12.4rem;
-        background-color:rgba(0,0,0, 1)
-        // clip-path: inset(0% 0% 40% 0%);
+        top: 17.4rem;
+        background-color:rgba(0,0,0, 1);
+        clip-path: inset(40% 0% 40% 0%);
     }
 
     .title-proj3 {
         position: fixed;
-        top: 17.4rem;
-        background-color:rgba(0,0,0, 1)
-        // clip-path: inset(0% 0% 40% 0%);
+        top: 22.4rem;
+        background-color:rgba(0,0,0, 1);
+        clip-path: inset(40% 0% 40% 0%);
     }
 
     .title-proj4 {
         position: fixed;
-        top: 22.4rem;
-        background-color:rgba(0,0,0, 1)
-        // clip-path: inset(0% 0% 40% 0%);
+        top: 27.4rem;
+        background-color:rgba(0,0,0, 1);
+        clip-path: inset(40% 0% 40% 0%);
     }
 
     .title-proj5 {
         position: fixed;
-        top: 27.4rem;
+        top: 32.4rem;
         background-color:rgba(0,0,0, 1);
-        // clip-path: inset(0% 0% 40% 0%);
+        clip-path: inset(40% 0% 40% 0%);
     }
 
     .title-proj6 {
         position: fixed;
-        top: 32.4rem;
-        background-color:rgba(0,0,0, 1)
-        // clip-path: inset(0% 0% 40% 0%);
+        top: 37.4rem;
+        background-color:rgba(0,0,0, 1);
+        clip-path: inset(40% 0% 40% 0%);
     }
 
     $img-footer-offset-desktop: 0;
@@ -337,6 +347,9 @@ $img-footer-offset: 11rem;
         display: flex;
     }
 
+    .slide-proj1
+
+
     .desc-proj {
         display: flex;
         background-color: #fff;
@@ -351,6 +364,7 @@ $img-footer-offset: 11rem;
 
     .footer {
         flex-basis: 100%;
+        top: 1rem;
         margin-bottom: 2rem;
     }
 

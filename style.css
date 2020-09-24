@@ -140,9 +140,19 @@ img {
   display: none;
 }
 
+.email, .sitecredit {
+  display: block;
+}
+
 .footer {
   position: relative;
   top: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .sam {
@@ -158,7 +168,7 @@ img {
     background-color: #ffffff;
   }
   .container {
-    margin: 2rem;
+    margin: 2rem 2rem 0 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -206,7 +216,7 @@ img {
     font-weight: 900;
   }
   .navbar {
-    margin-top: 5rem;
+    margin-top: 25.5rem;
   }
   .nav-items {
     display: block;
@@ -243,33 +253,45 @@ img {
   }
   .title-proj1 {
     position: fixed;
-    top: 7.4rem;
+    top: 12.4rem;
     background-color: black;
+    -webkit-clip-path: inset(40% 0% 40% 0%);
+            clip-path: inset(40% 0% 40% 0%);
   }
   .title-proj2 {
     position: fixed;
-    top: 12.4rem;
+    top: 17.4rem;
     background-color: black;
+    -webkit-clip-path: inset(40% 0% 40% 0%);
+            clip-path: inset(40% 0% 40% 0%);
   }
   .title-proj3 {
     position: fixed;
-    top: 17.4rem;
+    top: 22.4rem;
     background-color: black;
+    -webkit-clip-path: inset(40% 0% 40% 0%);
+            clip-path: inset(40% 0% 40% 0%);
   }
   .title-proj4 {
     position: fixed;
-    top: 22.4rem;
+    top: 27.4rem;
     background-color: black;
+    -webkit-clip-path: inset(40% 0% 40% 0%);
+            clip-path: inset(40% 0% 40% 0%);
   }
   .title-proj5 {
     position: fixed;
-    top: 27.4rem;
+    top: 32.4rem;
     background-color: black;
+    -webkit-clip-path: inset(40% 0% 40% 0%);
+            clip-path: inset(40% 0% 40% 0%);
   }
   .title-proj6 {
     position: fixed;
-    top: 32.4rem;
+    top: 37.4rem;
     background-color: black;
+    -webkit-clip-path: inset(40% 0% 40% 0%);
+            clip-path: inset(40% 0% 40% 0%);
   }
   .slides img {
     position: relative;
@@ -285,7 +307,8 @@ img {
     display: -ms-flexbox;
     display: flex;
   }
-  .desc-proj {
+  .slide-proj1
+.desc-proj {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -303,6 +326,7 @@ img {
   .footer {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    top: 1rem;
     margin-bottom: 2rem;
   }
 }
