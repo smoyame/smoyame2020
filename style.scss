@@ -3,8 +3,7 @@ $main-front: #000000;
 $main-back: #ffffff;
 
 
-$font: 'Inconsolata Regular',
-sans-serif;
+$font: 'Inconsolata Regular', 'Lucida Console', 'Courier New', monospace;
 
 // testing/debugging
 $test1: magenta;
@@ -235,6 +234,7 @@ img {
     }
 
     .header {
+        position: static;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -244,6 +244,7 @@ img {
 
     .initials {
         margin-bottom: 0rem;
+        font-size: 2rem;
         flex-grow: 1;
         border-bottom: none;
     }
@@ -251,7 +252,7 @@ img {
     .name {
         flex-grow: 8;
         text-align: right;
-        margin-top: 1rem;
+        // margin-top: 1rem;
     }
 
     .name, .moyame, .job, .jobcont {
@@ -261,7 +262,8 @@ img {
     .navbar {
         position: static;
         flex-basis: 55vw;
-        flex-grow: 1;;
+        flex-grow: 1;
+        margin-bottom: 2rem;
     }
 
     .nav-items {
