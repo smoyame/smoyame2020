@@ -276,11 +276,7 @@ img {
     margin-left: 1rem;
   }
   .name, .moyame, .job, .jobcont {
-    display: inline-block;
-  }
-  .sam, .moyame, .job, .jobcont {
-    font-size: 4vw;
-    line-height: 1vw;
+    display: inline;
   }
   .navbar {
     position: fixed;
@@ -322,7 +318,7 @@ img {
   .slide {
     position: static;
     display: block;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
   .desc-proj {
     position: static;
@@ -343,6 +339,13 @@ img {
   }
   .email, .sitecredit {
     color: #ffffff;
+  }
+}
+
+@media (max-width: 400px) {
+  .sam, .moyame, .job, .jobcont {
+    font-size: 4vw;
+    line-height: 3vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -269,13 +269,13 @@ img {
     }
 
     .name, .moyame, .job, .jobcont {
-        display: inline-block;
+        display: inline;
     }
 
-    .sam, .moyame, .job, .jobcont {
-        font-size: 4vw;
-        line-height: 1vw;
-    }
+    // .sam, .moyame, .job, .jobcont {
+    //     font-size: 1rem;
+    //     line-height: 1rem;
+    // }
 
     .navbar {
         position: fixed;
@@ -318,7 +318,7 @@ img {
     .slide {
         position: static;
         display: block;
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
     }
 
     .desc-proj {
@@ -345,5 +345,8 @@ img {
 }
 
 @media (max-width: 400px) {
-
+.sam, .moyame, .job, .jobcont {
+        font-size: 4vw;
+        line-height: 3vw;
+    }
 }

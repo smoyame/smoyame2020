@@ -2,13 +2,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.matchMedia({
 
-    "(min-width: 1200px)": () => {
-
+    "(max-width: 800px)": () => {
         const leftJut = (projNum) => {
             gsap.to(`.title-proj${projNum}`, {
                 ease: "power4.inOut",
                 clipPath: "inset(0% 0% 0% 0%)",
-                x: "-9rem",
+                // x: "-9rem",
                 // right: "2rem",
                 backgroundColor: "rgba( 0, 0, 0, 0)",
                 scrollTrigger: {
@@ -29,24 +28,9 @@ ScrollTrigger.matchMedia({
         leftJut(4)
         leftJut(5)
         leftJut(6)
-        
-        const bodyTimeline = gsap.timeline({
-            scrollTrigger:{
-            trigger: ".slides",
-            start: "0%",
-            end: "bottom 50%",
-            toggleActions: "play reverse play reverse",
-            // markers: true,
-            scrub: 1
-            }
-        }
-        ).to(".title", {y: "-20rem"})
-        
-        
-
     },
 
-    "(min-width: 801px, max-width: 1199px)": () => {
+    "(min-width: 801px)": () => {
 
         const leftJut = (projNum) => {
             gsap.to(`.title-proj${projNum}`, {
@@ -128,12 +112,13 @@ ScrollTrigger.matchMedia({
 
     },
 
-    "(max-width: 800px)": () => {
+    "(min-width: 1200px)": () => {
+
         const leftJut = (projNum) => {
             gsap.to(`.title-proj${projNum}`, {
                 ease: "power4.inOut",
                 clipPath: "inset(0% 0% 0% 0%)",
-                // x: "-9rem",
+                x: "-9rem",
                 // right: "2rem",
                 backgroundColor: "rgba( 0, 0, 0, 0)",
                 scrollTrigger: {
@@ -154,7 +139,23 @@ ScrollTrigger.matchMedia({
         leftJut(4)
         leftJut(5)
         leftJut(6)
+        
+        const bodyTimeline = gsap.timeline({
+            scrollTrigger:{
+            trigger: ".slides",
+            start: "0%",
+            end: "bottom 50%",
+            toggleActions: "play reverse play reverse",
+            // markers: true,
+            scrub: 1
+            }
+        }
+        ).to(".title", {y: "-20rem"})
+        
+        
+
     }
+   
 
 })
 
