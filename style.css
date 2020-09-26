@@ -260,7 +260,7 @@ img {
   }
   .initials {
     margin-bottom: 0rem;
-    font-size: 11vw;
+    font-size: 12vw;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -280,7 +280,7 @@ img {
   }
   .sam, .moyame, .job, .jobcont {
     font-size: 4vw;
-    line-height: .8vw;
+    line-height: 1vw;
   }
   .navbar {
     position: fixed;
