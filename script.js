@@ -46,7 +46,7 @@ ScrollTrigger.matchMedia({
 
     },
 
-    "(min-width: 801px)": () => {
+    "(min-width: 801px, max-width: 1199px)": () => {
 
         const leftJut = (projNum) => {
             gsap.to(`.title-proj${projNum}`, {

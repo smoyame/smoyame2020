@@ -234,13 +234,13 @@ img {
           justify-content: space-between;
 }
 
-@media screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
   .title a {
     font-size: 7vw;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .container {
     display: block;
   }
@@ -260,7 +260,7 @@ img {
   }
   .initials {
     margin-bottom: 0rem;
-    font-size: 10vw;
+    font-size: 11vw;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -272,10 +272,15 @@ img {
     -webkit-box-flex: 8;
         -ms-flex-positive: 8;
             flex-grow: 8;
-    margin-top: .3rem;
+    margin-top: .6rem;
+    margin-left: 1rem;
   }
   .name, .moyame, .job, .jobcont {
     display: inline-block;
+  }
+  .sam, .moyame, .job, .jobcont {
+    font-size: 4vw;
+    line-height: .8vw;
   }
   .navbar {
     position: fixed;
