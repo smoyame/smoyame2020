@@ -229,6 +229,13 @@ img {
 
 @media screen and (max-width: 1200px) {
 
+.title a {
+    font-size: 7vw;
+}
+}
+
+@media screen and (max-width: 800px) {
+
     .container {
         display: block;
     }
@@ -267,6 +274,7 @@ img {
         flex-grow: 1;
         // margin-bottom: 2rem;
         width: calc(100% - 4rem);
+        z-index: 999;
         background-color: $main-back;
         padding: 2rem 0;
         margin-bottom: -5rem;   
@@ -293,19 +301,22 @@ img {
         clip-path: inset(10% 0% 10% 0%);
 
         a {
-            font-size: 7vw;
+            font-size: 9vw;
         }
     }
 
     .slide {
         position: static;
         display: block;
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
     }
 
     .desc-proj {
         position: static;
         width: 100%;
+        font-size: 5vw;
+        padding: 1rem 0;
+        border-bottom: 1px solid $main-front;
     }
 
     .footer {
