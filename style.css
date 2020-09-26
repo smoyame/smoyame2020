@@ -250,6 +250,7 @@ img {
   }
   .title {
     left: 11rem;
+    width: auto;
   }
   .title a {
     font-size: 5rem;
