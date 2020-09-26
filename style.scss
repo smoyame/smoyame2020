@@ -254,9 +254,7 @@ img {
 
     .initials {
         margin-bottom: 0rem;
-        font-size: 12vw;
-        flex-grow: 1;
-        flex-basis: 3rem;
+        height: 10vw;
         border-bottom: none;
     }
 
@@ -264,7 +262,7 @@ img {
         flex-grow: 8;
         // font-size: 10vw;
         // text-align: right;
-        margin-top: .6rem;
+        margin-top: 0rem;
         margin-left: 1rem;
     }
 
@@ -272,10 +270,11 @@ img {
         display: inline;
     }
 
-    // .sam, .moyame, .job, .jobcont {
-    //     font-size: 1rem;
-    //     line-height: 1rem;
-    // }
+    .sam, .moyame, .job, .jobcont {
+        font-size: 4vw;
+        line-height: 5vw;
+        
+    }
 
     .navbar {
         position: fixed;
@@ -344,9 +343,13 @@ img {
 
 }
 
-@media (max-width: 400px) {
-.sam, .moyame, .job, .jobcont {
-        font-size: 4vw;
-        line-height: 3vw;
+@media (max-width: 430px) {
+
+
+    .initials {
+        height: 1.5rem;
+        width: auto;
+        margin-left: 0;
+        display: block;
     }
 }
