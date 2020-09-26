@@ -229,7 +229,7 @@ img {
           justify-content: space-between;
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .container {
     display: block;
   }
@@ -249,10 +249,12 @@ img {
   }
   .initials {
     margin-bottom: 0rem;
-    font-size: 2rem;
+    font-size: 3rem;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+    -ms-flex-preferred-size: 3rem;
+        flex-basis: 3rem;
     border-bottom: none;
   }
   .name {
@@ -260,18 +262,22 @@ img {
         -ms-flex-positive: 8;
             flex-grow: 8;
     text-align: right;
+    margin-top: .3rem;
   }
   .name, .moyame, .job, .jobcont {
     display: inline-block;
   }
   .navbar {
-    position: static;
+    position: fixed;
     -ms-flex-preferred-size: 55vw;
         flex-basis: 55vw;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    margin-bottom: 2rem;
+    width: calc(100% - 4rem);
+    background-color: #ffffff;
+    padding: 2rem 0;
+    margin-bottom: -5rem;
   }
   .nav-items {
     display: -webkit-box;
@@ -286,11 +292,12 @@ img {
   }
   .title {
     position: static;
-    background-color: rgba(0, 0, 0, 0);
     top: 0;
     left: 0;
     margin-top: 0rem;
-    margin-bottom: -2.15rem;
+    margin-bottom: -1.5rem;
+    -webkit-clip-path: inset(10% 0% 10% 0%);
+            clip-path: inset(10% 0% 10% 0%);
   }
   .title a {
     font-size: 7vw;
@@ -298,10 +305,14 @@ img {
   .slide {
     position: static;
     display: block;
+    margin-bottom: 2rem;
   }
   .desc-proj {
     position: static;
     width: 100%;
+  }
+  .footer {
+    margin-bottom: 8rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
