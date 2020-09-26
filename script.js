@@ -40,7 +40,7 @@ ScrollTrigger.matchMedia({
             scrub: 1
             }
         }
-        ).to(".title", {y: "-20rem"})
+        ).to(".title", {y: "-15rem"})
         
         
 
