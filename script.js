@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.matchMedia({
 
-    "(min-width: 1100px)": () => {
+    "(min-width: 1200px)": () => {
 
         const leftJut = (projNum) => {
             gsap.to(`.title-proj${projNum}`, {

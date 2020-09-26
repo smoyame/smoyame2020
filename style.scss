@@ -3,11 +3,6 @@ $main-front: #000000;
 $main-back: #ffffff;
 
 
-@font-face {
-    font-family: 'Inconsolata Regular';
-    src: url(/fonts/Inconsolata-VariableFont_wdth\wght.ttf);
-}
-
 $font: 'Inconsolata Regular',
 sans-serif;
 
@@ -69,7 +64,7 @@ li {
 
     // padding-left: 15rem;
 }
-
+// name 
 .name,
 .moyame,
 .job,
@@ -94,6 +89,8 @@ li {
     margin-bottom: .5rem;
     font-weight: 900;
 }
+
+//nav
 .navbar {
     // margin-top: 18rem;
     position: fixed;
@@ -109,7 +106,19 @@ bottom: 5rem;
 
 .nav-item {
     display: block;
-    margin: 1rem 0;
+    margin: 1rem 0 .45rem 0;
+    a {
+        // color: $test1;
+        padding-bottom: .1rem;
+        border-bottom: 5px solid $main-back;
+        
+    }
+}
+
+.nav-item a:hover {
+    font-weight: 900;
+    border-bottom: 5px solid $main-front;
+    
 }
 
 img {
@@ -217,4 +226,74 @@ img {
     margin-top: 1.5rem;
     display: flex;
     justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+
+    .container {
+        display: block;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: $main-back;
+        width: 100%;
+    }
+
+    .initials {
+        margin-bottom: 0rem;
+        flex-grow: 1;
+        border-bottom: none;
+    }
+
+    .name {
+        flex-grow: 8;
+        text-align: right;
+        margin-top: 1rem;
+    }
+
+    .name, .moyame, .job, .jobcont {
+        display: inline-block;
+    }
+
+    .navbar {
+        position: static;
+        flex-basis: 55vw;
+        flex-grow: 1;;
+    }
+
+    .nav-items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content {
+        width: 100%;
+    }
+    
+
+    .title {
+        position: static; 
+        background-color: rgba(0, 0, 0, 0);
+        top: 0;
+        left: 0;
+        margin-top: 0rem;
+        margin-bottom: -2.15rem;
+        a {
+            font-size: 7vw;
+        }
+    }
+
+    .slide {
+        position: static;
+        display: block;
+    }
+
+    .desc-proj {
+        position: static;
+        width: 100%;
+    }
+
 }
