@@ -28,6 +28,7 @@ $test3: cyan;
     color: $main-front;
     transition: all .2s ease;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 li {
@@ -91,12 +92,14 @@ img {
 }
 
 .title {
+    width: 100%;
     a {
         font-size: calc(8vw);
         font-weight: 700;
         margin-left: -4.2rem;
         z-index: 60;
-        display: inline-block;
+        width: 100%;
+        display: block;
         position: fixed;
     }
 
@@ -137,6 +140,7 @@ img {
     position: absolute;
     // top: 25rem;
     top: calc(20rem + 20vw);
+    
 }
 
 $img-footer-offset: 11rem;

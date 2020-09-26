@@ -1,187 +1,97 @@
-// let tl = gsap.timeline( {scrollTrigger:{
-//     trigger: ".slide-proj1",
-//     start: "top 0%",
-//     end: "bottom 0%",
-//     toggleActions: "restart none none reverse",
-//     markers: true,
-//     // scrub: .5,
-// }
-// }
-// )
-// .to(".title", {y: "-5rem"}
-// )
-   
-// let tl2 = gsap.timeline( {scrollTrigger:{
-//     trigger: ".slide-proj2",
-//     start: "50%",
-//     end: "25%",
-//     toggleActions: "restart none none reverse",
-//     // markers: true,
-//     // scrub: .75,
-// }}).to(".titles", {y: "-15rem"})
+gsap.registerPlugin(scrollTrigger);
 
-// let tl3 = gsap.timeline( {scrollTrigger:{
-//     trigger: ".slide-proj3",
-//     start: "top 75%",
-//     end: "bottom 75%",
-//     toggleActions: "restart none none reverse",
-//     markers: true,
-//     // scrub: .75,
-// }
-// }
-// )
-// .to(".title", {y: "-5rem"}
-// )
-
-// let tl4 = gsap.timeline( {scrollTrigger:{
-//     trigger: ".slide-proj4",
-//     start: "50%",
-//     end: "50%",
-//     toggleActions: "restart none none reverse",
-//     // markers: true,
-//     // scrub: .75,
-// }
-// }
-// )
-// .to(".title", {y: "-5rem"}
-// )
-
-// let tl5 = gsap.timeline( {scrollTrigger:{
-//     trigger: ".slide-proj5",
-//     start: "50%",
-//     end: "50%",
-//     toggleActions: "restart none none reverse",
-//     // markers: true,
-//     // scrub: .75,
-// }
-// }
-// )
-// .to(".title", {y: "-5rem"}
-// )
-
-let bodyTimeline = gsap.timeline({
-    scrollTrigger:{
-    trigger: ".slides",
-    start: "0%",
-    end: "bottom 50%",
-    toggleActions: "play reverse play reverse",
-    // markers: true,
-    scrub: 1
-    }
-}
-).to(".title", {y: "-20rem"})
-//move title to ydifference of -20rem
-
-
-
-///////////////////// the censoring animation
-
-const titleOneReveal = gsap.to(".title-proj1", {
-    ease: "power3.inOut",
-    clipPath: "inset(0% 0% 0% 0%)",
-    x: "-9rem",
-    // right: "2rem",
-    backgroundColor: "rgba( 0, 0, 0, 0)",
-    scrollTrigger: {
-        trigger:".slide-proj1",
-        // markers: true,
-        start: "top 50%",
-        end: "bottom 50%",
-        toggleActions: "play reverse play reverse",
-    }
-}
-)
-
-const titleTwoReveal = gsap.to(".title-proj2", {
-    clipPath: "inset(0% 0% 0% 0%)",
-    ease: "power3.inOut",
-    x: "-9rem",
-    backgroundColor: "rgba( 0, 0, 0, 0)",
-    // right: "2rem",
-    scrollTrigger: {
-        trigger:".slide-proj2",
-        // markers: true,
-        start: "top 50%",
-        end: "bottom 50%",
-        toggleActions: "play reverse play reverse",
-    }
-}
-)
-
-const titleThreeRev = gsap.to(".title-proj3", {
-        clipPath: "inset(0% 0% 0% 0%)",
-        ease: "power3.inOut",
-        x: "-9rem",
-        backgroundColor: "rgba( 0, 0, 0, 0)",
-        // right: "2rem",
-        scrollTrigger: {
-            trigger:".slide-proj3",
-            // markers: true,
-            start: "top 50%",
+scrollTrigger.matchMedia({
+    "(min-width: 800px)": () => {
+        const bodyTimeline = gsap.timeline({
+            scrollTrigger:{
+            trigger: ".slides",
+            start: "0%",
             end: "bottom 50%",
             toggleActions: "play reverse play reverse",
+            // markers: true,
+            scrub: 1
+            }
         }
-}
-)
-
-
-
-const titleFourRev = gsap.to(".title-proj4", {
-    clipPath: "inset(0% 0% 0% 0%)",
-    ease: "power3.inOut",
-    x: "-9rem",
-    backgroundColor: "rgba( 0, 0, 0, 0)",
-    // right: "2rem",
-    scrollTrigger: {
-        trigger:".slide-proj4",
-        // markers: true,
-        start: "top 50%",
-        end: "bottom 50%",
-        toggleActions: "play reverse play reverse",
-    },
-}
-)
-
-const titleFiveRev = gsap.to(".title-proj5", {
-    clipPath: "inset(0% 0% 0% 0%)",
-    ease: "power3.inOut",
-    x: "-9rem",
-    backgroundColor: "rgba( 0, 0, 0, 0)",
-    // right: "2rem",
-    scrollTrigger: {
-        trigger:".slide-proj5",
-        // markers: true,
-        start: "top 50%",
-        end: "bottom 50%",
-        toggleActions: "play reverse play reverse",
-    },
-}
-)
-
-const titleSixRev = gsap.to(".title-proj6", {
-    clipPath: "inset(0% 0% 0% 0%)",
-    ease: "power3.inOut",
-    x: "-9rem",
-    backgroundColor: "rgba( 0, 0, 0, 0)",
-    
-    scrollTrigger: {
-        trigger:".slide-proj6",
-        // markers: true,
-        start: "top 50%",
-        end: "bottom 50%",
-        toggleActions: "play reverse play reverse",
-    },
-}
-)
+        ).to(".title", {y: "-20rem"})
+        //move title to ydifference of -20rem
+        
+        
+        /////////////////////////////////////////
+        
+        const leftJut = (projNum) => {
+            gsap.to(`.title-proj${projNum}`, {
+                ease: "power4.inOut",
+                clipPath: "inset(0% 0% 0% 0%)",
+                x: "-9rem",
+                // right: "2rem",
+                backgroundColor: "rgba( 0, 0, 0, 0)",
+                scrollTrigger: {
+                    trigger:`.slide-proj${projNum}`,
+                    // markers: true,
+                    start: "top 50%",
+                    end: "bottom 50%",
+                    toggleActions: "play reverse play reverse",
+                }
+            }
+            )
+        
+        }
+        
+        leftJut(1)
+        leftJut(2)
+        leftJut(3)
+        leftJut(4)
+        leftJut(5)
+        leftJut(6)
+        
+    }
+})
 
 
 
 
-titleOneRev.timeScale(2)
-titleTwoRev.timeScale(2)
-titleThreeRev.timeScale(2)
-titleFourRev.timeScale(2)
-titleFiveRev.timeScale(2)
-titleSixRev.timeScale(2)
+////////////////orig code//////////////////////////////////////////////////////////////////////
+
+// const bodyTimeline = gsap.timeline({
+//     scrollTrigger:{
+//     trigger: ".slides",
+//     start: "0%",
+//     end: "bottom 50%",
+//     toggleActions: "play reverse play reverse",
+//     // markers: true,
+//     scrub: 1
+//     }
+// }
+// ).to(".title", {y: "-20rem"})
+// //move title to ydifference of -20rem
+
+
+// /////////////////////////////////////////
+
+// const leftJut = (projNum) => {
+//     gsap.to(`.title-proj${projNum}`, {
+//         ease: "power4.inOut",
+//         clipPath: "inset(0% 0% 0% 0%)",
+//         x: "-9rem",
+//         // right: "2rem",
+//         backgroundColor: "rgba( 0, 0, 0, 0)",
+//         scrollTrigger: {
+//             trigger:`.slide-proj${projNum}`,
+//             // markers: true,
+//             start: "top 50%",
+//             end: "bottom 50%",
+//             toggleActions: "play reverse play reverse",
+//         }
+//     }
+//     )
+
+// }
+
+// leftJut(1)
+// leftJut(2)
+// leftJut(3)
+// leftJut(4)
+// leftJut(5)
+// leftJut(6)
 
 
