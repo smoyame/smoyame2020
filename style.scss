@@ -239,13 +239,18 @@ $img-footer-offset: 11rem;
 
 
     .navbar {
-        margin-top: 25.5rem;
+        // margin-top: 18rem;
+        position: fixed;
+
+    bottom: 5rem;
+        height: auto;
     }
 
     .nav-items {
         display: block;
         width: 100%;
         margin: rem 0;
+        
     }
 
     .nav-item {

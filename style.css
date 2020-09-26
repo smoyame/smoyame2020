@@ -216,7 +216,9 @@ img {
     font-weight: 900;
   }
   .navbar {
-    margin-top: 25.5rem;
+    position: fixed;
+    bottom: 5rem;
+    height: auto;
   }
   .nav-items {
     display: block;
