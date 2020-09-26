@@ -292,7 +292,8 @@ img {
     width: calc(100% - 4rem);
     z-index: 999;
     background-color: #ffffff;
-    padding: 1rem 0;
+    padding: .5rem 0 1rem;
+    border-top: 1px solid #000000;
     margin-bottom: -5rem;
   }
   .nav-items {
