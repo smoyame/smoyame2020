@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+include mixins/_joblisting.pug
+
+html(lang="en")
+    head  
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Graphic Designer | Samanta Moya Median
+        //- linked files
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600;700&family=Inconsolata:wght@300;400;600;700;800;900&display=swap")
+        link(rel="stylesheet", href="style.css")
+
+        
+    body
+        .container
+            include mixins/_header.pug
+            .resume-content
+                h2.myexperience Here's some of my experience.
+                section.education
+                    h3.sectiontitle Education
+                    +joblisting('Maryland Institute College of Art \(MICA\) \/\/ Baltimore, MD', '2019\-Present', 'Bachelor of Fine Arts in Graphic Design Candidate', 'Expected Graduation in May 2021')
+                    +joblisting('Montgomery College, Rockville (MCRV) // Rockville, MD', '2015-2018', 'Associate of Applied Science in Graphic Design', 'Graduate with Honors')
+                    +joblisting('Study Abroad Intensive // Japan', 'Partial Scholarship Recipient', 'Two weeks traveling and receiving educational tours and lectures  in Japanese art, history, and culture. Insight into a Japanese university\'s design program.')
+                section.relevant
+                    h3.sectiontitle Relevant Experience
+                    +joblisting('')
+            
+            include mixins/_footer.pug

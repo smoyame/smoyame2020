@@ -1,0 +1,10 @@
+mixin joblisting(jobTitle, date, orgName, desc)
+
+    dl
+        .job-container
+            dt.job-primaryinfo
+                h4.workinfo-positioninfo=jobTitle
+                span.job-date=date
+            dd
+                span.job-org=orgName
+                p.job-desc=desc
