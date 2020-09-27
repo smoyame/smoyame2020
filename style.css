@@ -4,7 +4,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 20px;
-  font-family: "IBM Plex Mono", "Lucida Console", "Courier New", monospace;
+  font-family: "Inconsolata", "Lucida Console", "Courier New", monospace;
   font-weight: 300;
   color: #000000;
   -webkit-transition: all .2s ease;
@@ -112,18 +112,19 @@ li {
 }
 
 .callmesam {
-  font-size: 4rem;
+  margin-top: 4.3rem;
+  font-size: 4vw;
   position: absoslute;
   margin-bottom: 2rem;
 }
 
 .about-body {
-  width: 40%;
+  width: 60vw;
   margin-left: 5%;
 }
 
 .about-body p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 img {
@@ -354,6 +355,16 @@ img {
   }
   .email, .sitecredit {
     color: #ffffff;
+  }
+  .callmesam {
+    font-size: 10vw;
+  }
+  .about-container {
+    width: 100%;
+  }
+  .about-body {
+    width: 100%;
+    margin: 0;
   }
 }
 

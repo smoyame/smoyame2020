@@ -2,7 +2,7 @@
 $main-front: #000000;
 $main-back: #ffffff;
 
-$font: 'IBM Plex Mono', 'Lucida Console', 'Courier New', monospace;
+$font: 'Inconsolata', 'Lucida Console', 'Courier New', monospace;
 
 // testing/debugging
 $test1: magenta;
@@ -130,17 +130,18 @@ bottom: 5rem;
 }
 ///////// about me page //////////
 .callmesam {
-    font-size: 4rem;
+    margin-top: 4.3rem;
+    font-size: 4vw;
     position: absoslute;
     margin-bottom: 2rem;
     // left: 5rem;
 }
 
 .about-body {
-    width: 40%;
+    width: 60vw;
     margin-left: 5%;
     p {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -371,6 +372,22 @@ img {
         color: $main-back;
     }
 
+    /////////////about///////////////
+
+    .callmesam {
+        font-size: 10vw;
+    }
+
+    .about-container {
+        width: 100%;
+    }
+
+    .about-body {
+        width: 100%;
+        margin: 0;
+    }
+
+
 
 }
 
@@ -383,4 +400,5 @@ img {
         margin-left: 0;
         display: block;
     }
+
 }
