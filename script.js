@@ -1,5 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
-ScrollTrigger.saveStyles(".title-proj1, .title, .title-proj2, .title-proj3, .title-proj4, .title-proj5, .title-proj6, .slides")
+// ScrollTrigger.saveStyles(".title-proj1, .title, .title-proj2, .title-proj3, .title-proj4, .title-proj5, .title-proj6, .slides")
 
 ScrollTrigger.matchMedia({
 
@@ -111,7 +111,7 @@ ScrollTrigger.matchMedia({
             scrub: 1
             }
         }
-        ).to(".title", {y: "-23rem"})
+        ).to(".title", {y: "-20rem"})
 
     },
 
@@ -153,7 +153,7 @@ ScrollTrigger.matchMedia({
             scrub: 1
             }
         }
-        ).to(".title", {y: "-23rem"})
+        ).to(".title", {y: "-20rem"})
         
         
 

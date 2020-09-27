@@ -1,17 +1,10 @@
-@font-face {
-  font-family: 'Inconsolata Regular';
-  src: url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap) format("truetype");
-  font-weight: 200 900;
-  font-stretch: 100%;
-}
-
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 20px;
-  font-family: "Inconsolata Regular", "Lucida Console", "Courier New", monospace;
+  font-family: "IBM Plex Mono", "Lucida Console", "Courier New", monospace;
   font-weight: 300;
   color: #000000;
   -webkit-transition: all .2s ease;
@@ -54,7 +47,7 @@ li {
       align-self: flex-start;
 }
 
-.content {
+.content, .about-container {
   width: 70%;
   min-width: 0;
   -webkit-box-flex: 1;
@@ -116,6 +109,21 @@ li {
 .nav-item a:hover {
   font-weight: 900;
   border-bottom: 5px solid #000000;
+}
+
+.callmesam {
+  font-size: 4rem;
+  position: absoslute;
+  margin-bottom: 2rem;
+}
+
+.about-body {
+  width: 40%;
+  margin-left: 5%;
+}
+
+.about-body p {
+  margin-bottom: 1rem;
 }
 
 img {

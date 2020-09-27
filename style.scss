@@ -2,13 +2,7 @@
 $main-front: #000000;
 $main-back: #ffffff;
 
-@font-face {
-    font-family: 'Inconsolata Regular';
-    src: url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap) format("truetype");
-    font-weight: 200 900;
-    font-stretch: 100%;
-}
-$font: 'Inconsolata Regular', 'Lucida Console', 'Courier New', monospace;
+$font: 'IBM Plex Mono', 'Lucida Console', 'Courier New', monospace;
 
 // testing/debugging
 $test1: magenta;
@@ -57,17 +51,26 @@ li {
 
 
 
-.content {
+.content, .about-container {
     width: 70%;
     min-width: 0;
     flex-grow: 1;
     flex-shrink: 3;
     margin-left: 0rem;
     overflow: scroll;
-
-
-    // padding-left: 15rem;
 }
+//////////////// about me /////////////////
+
+// .about-container {
+//     margin-right: 45%;
+//     width: 25%;
+// }
+
+///////////////////////////////////////////
+
+
+
+
 // name 
 .name,
 .moyame,
@@ -125,6 +128,25 @@ bottom: 5rem;
     border-bottom: 5px solid $main-front;
     
 }
+///////// about me page //////////
+.callmesam {
+    font-size: 4rem;
+    position: absoslute;
+    margin-bottom: 2rem;
+    // left: 5rem;
+}
+
+.about-body {
+    width: 40%;
+    margin-left: 5%;
+    p {
+        margin-bottom: 1rem;
+    }
+}
+
+//////////////////////////////////
+
+
 
 img {
     width: 100%;
