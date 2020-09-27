@@ -71,7 +71,7 @@ ScrollTrigger.matchMedia({
                 backgroundColor: "rgba( 0, 0, 0, 0)",
                 scrollTrigger: {
                     trigger:".slide-proj5",
-                    markers: true,
+                    // markers: true,
                     start: "top 30%",
                     end: "bottom 60%",
                     toggleActions: "play reverse play reverse",
@@ -90,7 +90,7 @@ ScrollTrigger.matchMedia({
                 backgroundColor: "rgba( 0, 0, 0, 0)",
                 scrollTrigger: {
                     trigger:".slide-proj6",
-                    markers: true,
+                    // markers: true,
                     start: "top 60%",
                     end: "25%",
                     toggleActions: "play reverse play reverse",
@@ -111,7 +111,7 @@ ScrollTrigger.matchMedia({
             scrub: 1
             }
         }
-        ).to(".title", {y: "-10rem"})
+        ).to(".title", {y: "-23rem"})
 
     },
 
@@ -153,7 +153,7 @@ ScrollTrigger.matchMedia({
             scrub: 1
             }
         }
-        ).to(".title", {y: "-20rem"})
+        ).to(".title", {y: "-23rem"})
         
         
 

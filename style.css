@@ -279,6 +279,7 @@ img {
   .sam, .moyame, .job, .jobcont {
     font-size: 4vw;
     line-height: 5vw;
+    margin-top: -.3rem;
   }
   .navbar {
     position: fixed;
@@ -310,7 +311,7 @@ img {
     top: 0;
     left: 0;
     margin-top: 0rem;
-    margin-bottom: -.5rem;
+    margin-bottom: -.75rem;
     -webkit-clip-path: inset(10% 0% 10% 0%);
             clip-path: inset(10% 0% 10% 0%);
   }
@@ -320,7 +321,11 @@ img {
   .slide {
     position: static;
     display: block;
+    margin-top: 1rem;
     margin-bottom: 4rem;
+  }
+  .slide::nth-child(1) {
+    margin-top: 2rem;
   }
   .desc-proj {
     position: static;
@@ -346,7 +351,7 @@ img {
 
 @media (max-width: 430px) {
   .initials {
-    height: 1.5rem;
+    height: 2rem;
     width: auto;
     margin-left: 0;
     display: block;
