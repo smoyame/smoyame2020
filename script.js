@@ -1,4 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.saveStyles(".title-proj1, .title, .title-proj2, .title-proj3, .title-proj4, .title-proj5, .title-proj6, .slides")
 
 ScrollTrigger.matchMedia({
 
@@ -58,17 +59,7 @@ ScrollTrigger.matchMedia({
         // leftJut(5)
         // leftJut(6)
 
-        const bodyTimeline = gsap.timeline({
-            scrollTrigger:{
-            trigger: ".slides",
-            start: "0%",
-            end: "bottom 50%",
-            toggleActions: "play reverse play reverse",
-            // markers: true,
-            scrub: 1
-            }
-        }
-        ).to(".title", {y: "-10rem"})
+        
 
 
         let leftJutFive = () => {
@@ -82,7 +73,7 @@ ScrollTrigger.matchMedia({
                     trigger:".slide-proj5",
                     markers: true,
                     start: "top 30%",
-                    end: "bottom 55%",
+                    end: "bottom 60%",
                     toggleActions: "play reverse play reverse",
                 }
             }
@@ -99,7 +90,7 @@ ScrollTrigger.matchMedia({
                 backgroundColor: "rgba( 0, 0, 0, 0)",
                 scrollTrigger: {
                     trigger:".slide-proj6",
-                    // markers: true,
+                    markers: true,
                     start: "top 60%",
                     end: "25%",
                     toggleActions: "play reverse play reverse",
@@ -109,6 +100,18 @@ ScrollTrigger.matchMedia({
         }
 
         leftJutSix()
+            ///////////////////////////////////////////////
+        const bodyTimeline = gsap.timeline({
+            scrollTrigger:{
+            trigger: ".slides",
+            start: "0%",
+            end: "bottom 50%",
+            toggleActions: "play reverse play reverse",
+            // markers: true,
+            scrub: 1
+            }
+        }
+        ).to(".title", {y: "-10rem"})
 
     },
 
@@ -124,8 +127,8 @@ ScrollTrigger.matchMedia({
                 scrollTrigger: {
                     trigger:`.slide-proj${projNum}`,
                     // markers: true,
-                    start: "top 50%",
-                    end: "bottom 50%",
+                    start: "top 30%",
+                    end: "10%",
                     toggleActions: "play reverse play reverse",
                 }
             }
@@ -137,8 +140,8 @@ ScrollTrigger.matchMedia({
         leftJut(2)
         leftJut(3)
         leftJut(4)
-        leftJut(5)
-        leftJut(6)
+        // leftJut(5)
+        // leftJut(6)
         
         const bodyTimeline = gsap.timeline({
             scrollTrigger:{
