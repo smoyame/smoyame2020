@@ -47,7 +47,7 @@ li {
       align-self: flex-start;
 }
 
-.content, .about-container {
+.content, .about-container, .resume-content {
   width: 70%;
   min-width: 0;
   -webkit-box-flex: 1;
@@ -111,20 +111,49 @@ li {
   border-bottom: 5px solid #000000;
 }
 
-.callmesam {
+.callmesam, .myexperience {
   margin-top: 4.3rem;
   font-size: 4vw;
   position: absoslute;
   margin-bottom: 2rem;
 }
 
-.about-body {
+.about-body, section {
   width: 60vw;
   margin-left: 5%;
 }
 
-.about-body p {
-  margin-bottom: 1.5rem;
+.about-body p, section p {
+  margin-bottom: 1rem;
+}
+
+.sectiontitle {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 2rem 0 .5rem;
+}
+
+.sectiontitle ul {
+  margin-top: .5rem;
+}
+
+.workinfo-positioninfo, .job-date {
+  font-weight: 700;
+}
+
+.job-org {
+  display: block;
+  font-weight: 500;
+  margin-bottom: .25rem;
+}
+
+.job-primaryinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 img {
@@ -359,10 +388,10 @@ img {
   .callmesam {
     font-size: 10vw;
   }
-  .about-container {
+  .about-container, .resume-content {
     width: 100%;
   }
-  .about-body {
+  .about-body, section {
     width: 100%;
     margin: 0;
   }
