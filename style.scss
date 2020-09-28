@@ -18,6 +18,7 @@ $test3: cyan;
     font-size: 20px;
     font-family: $font;
     font-weight: 300;
+    line-height: 1.25rem;
     color: $main-front;
     transition: all .2s ease;
     text-decoration: none;
@@ -131,7 +132,8 @@ bottom: 5rem;
 ///////// about me page //////////
 .callmesam, .myexperience {
     margin-top: 4.3rem;
-    font-size: 4vw;
+    font-size: 6vw;
+    line-height: 6vw;
     position: absoslute;
     margin-bottom: 2rem;
     // left: 5rem;
@@ -150,21 +152,23 @@ bottom: 5rem;
 .sectiontitle {
     font-size: 1.5rem;
     font-weight: 900;
-    margin: 2rem 0 .5rem;
-    ul {
-        margin-top: .5rem;
-    }
+    margin: 2rem 0 .75rem;
+    padding-bottom: .25rem;
+    width: auto;
+    // display: block;
+    border-bottom: 5px solid $main-front;
+    
 }
 
 .workinfo-positioninfo, .job-date {
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .job-org {
     display: block;
     font-weight: 500;
     // argin-top: 0;
-    margin-bottom: .25rem;
+    margin: .25rem 0;
 }
 
 .job-primaryinfo {
@@ -400,8 +404,9 @@ img {
 
     /////////////about///////////////
 
-    .callmesam {
+    .callmesam, .myexperience {
         font-size: 10vw;
+        line-height: 10vw;
     }
 
     .about-container, .resume-content {
@@ -413,6 +418,9 @@ img {
         margin: 0;
     }
 
+    .job-primaryinfo {
+        flex-direction: column;
+    }
 
 
 }

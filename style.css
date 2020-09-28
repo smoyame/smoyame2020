@@ -6,6 +6,7 @@
   font-size: 20px;
   font-family: "Inconsolata", "Lucida Console", "Courier New", monospace;
   font-weight: 300;
+  line-height: 1.25rem;
   color: #000000;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
@@ -113,7 +114,8 @@ li {
 
 .callmesam, .myexperience {
   margin-top: 4.3rem;
-  font-size: 4vw;
+  font-size: 6vw;
+  line-height: 6vw;
   position: absoslute;
   margin-bottom: 2rem;
 }
@@ -130,21 +132,20 @@ li {
 .sectiontitle {
   font-size: 1.5rem;
   font-weight: 900;
-  margin: 2rem 0 .5rem;
-}
-
-.sectiontitle ul {
-  margin-top: .5rem;
+  margin: 2rem 0 .75rem;
+  padding-bottom: .25rem;
+  width: auto;
+  border-bottom: 5px solid #000000;
 }
 
 .workinfo-positioninfo, .job-date {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .job-org {
   display: block;
   font-weight: 500;
-  margin-bottom: .25rem;
+  margin: .25rem 0;
 }
 
 .job-primaryinfo {
@@ -385,8 +386,9 @@ img {
   .email, .sitecredit {
     color: #ffffff;
   }
-  .callmesam {
+  .callmesam, .myexperience {
     font-size: 10vw;
+    line-height: 10vw;
   }
   .about-container, .resume-content {
     width: 100%;
@@ -394,6 +396,12 @@ img {
   .about-body, section {
     width: 100%;
     margin: 0;
+  }
+  .job-primaryinfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
