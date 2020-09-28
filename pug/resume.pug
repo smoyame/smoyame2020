@@ -15,7 +15,7 @@ html(lang="en")
         .container
             include mixins/_header.pug
             .resume-content
-                h2.myexperience Here's some of my experience.
+                h2.myexperience 
                 section.education
                     h3.sectiontitle Education
                     +joblisting('Maryland Institute College of Art (MICA)', '2019\-Present', 'Bachelor of Fine Arts in Graphic Design Candidate', 'Expected Graduation in May 2021')
@@ -49,3 +49,7 @@ html(lang="en")
                         
                             
             include mixins/_footer.pug
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js")
+        script(src="../resumeanim.js")
