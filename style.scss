@@ -150,29 +150,35 @@ bottom: 5rem;
 ///////////// resume page ///////////////
 
 .sectiontitle {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 900;
     margin: 2rem 0 .75rem;
     padding-bottom: .25rem;
-    width: auto;
-    // display: block;
+    // width: 100%;
+    display: inline-block;
     border-bottom: 5px solid $main-front;
     
 }
 
 .workinfo-positioninfo, .job-date {
-    font-weight: 900;
+    font-weight: 700;
+}
+
+.workinfo-positioninfo {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
 }
 
 .job-org {
     display: block;
     font-weight: 500;
+    font-style: italic;
     // argin-top: 0;
-    margin: .25rem 0;
+    // margin: .25rem 0;
 }
 
 .job-primaryinfo {
-    display: flex;
+    // display: flex;
     justify-content: space-between;
     // margin-bottom: .2rem;
 }

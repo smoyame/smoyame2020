@@ -130,28 +130,30 @@ li {
 }
 
 .sectiontitle {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 900;
   margin: 2rem 0 .75rem;
   padding-bottom: .25rem;
-  width: auto;
+  display: inline-block;
   border-bottom: 5px solid #000000;
 }
 
 .workinfo-positioninfo, .job-date {
-  font-weight: 900;
+  font-weight: 700;
+}
+
+.workinfo-positioninfo {
+  font-size: 1.4rem;
+  line-height: 1.5rem;
 }
 
 .job-org {
   display: block;
   font-weight: 500;
-  margin: .25rem 0;
+  font-style: italic;
 }
 
 .job-primaryinfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
