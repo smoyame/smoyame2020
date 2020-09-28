@@ -18,7 +18,7 @@ $test3: cyan;
     font-size: 20px;
     font-family: $font;
     font-weight: 300;
-    line-height: 1.25rem;
+    // line-height: 1.25rem;
     color: $main-front;
     transition: all .2s ease;
     text-decoration: none;
@@ -142,6 +142,7 @@ bottom: 5rem;
 .about-body, section {
     width: 60vw;
     margin-left: 5%;
+    line-height: 1.25rem;
     p {
         margin-bottom: 1rem;
     }
