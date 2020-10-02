@@ -78,7 +78,7 @@ a {
 }
 
 .nav-item a:hover {
-  text-transform: uppercase;
+  text-decoration: underline;
   font-weight: 900;
 }
 
@@ -139,7 +139,7 @@ a {
 }
 
 .proj-desc:hover {
-  text-transform: uppercase;
+  text-decoration: underline;
   font-weight: 900;
 }
 
@@ -275,6 +275,7 @@ a {
     left: 0;
     padding: 5vw 5vw;
     background-color: #fff;
+    border-top: 1px solid #000;
   }
   .footer {
     -webkit-box-flex: 1;

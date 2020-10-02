@@ -77,7 +77,7 @@ a {
 }
 
 .nav-item a:hover {
-    text-transform: uppercase;
+    text-decoration: underline;
     font-weight: 900;
   }
 
@@ -140,7 +140,7 @@ a {
 }
 
 .proj-desc:hover {
-    text-transform: uppercase;
+    text-decoration: underline;
     font-weight: 900;
 }
 .proj-date::after {
@@ -251,6 +251,7 @@ a {
         padding: 5vw 5vw;
         // height: 10vh;
         background-color: $main-bright;
+        border-top: 1px solid $main-dark;
     }
 
     .footer {
