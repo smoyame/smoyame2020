@@ -1,0 +1,8 @@
+mixin slide(slideClasses, projLink, projNameClass, projName, projDescNum, projType, projDate)
+
+    section(class=slideClasses)
+                        h2.proj-name 
+                            a(class=projNameClass, href=projLink)=projName
+                        a(href=projLink, class=projDescNum).proj-desc 
+                            span.proj-type=projType
+                            span.proj-date=projDate

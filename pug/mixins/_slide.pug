@@ -1,9 +1,0 @@
-mixin slide(slideClass, titleClasses, linkLocation, projTitle, sourceImage, altText, type, date)
-    
-    div(class=slideClass)
-         h2(class=titleClasses) 
-            a(href=linkLocation)=projTitle
-         img.img-proj(src=sourceImage, alt=altText)
-         div.desc-proj 
-            p=type
-            p=date
