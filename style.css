@@ -345,5 +345,13 @@ a {
   .proj-desc span {
     font-size: 3.8vw;
   }
+  .about-main {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    margin: 2rem 2rem 40vh 2rem;
+    max-width: 100%;
+    background-color: #fff;
+  }
 }
 /*# sourceMappingURL=style.css.map */

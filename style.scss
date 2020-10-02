@@ -328,4 +328,16 @@ a {
     .proj-desc span{
         font-size: 3.8vw;
     }
+
+    /////////////////////////////////////////////////////////////////
+// about page
+/////////////////////////////////////////////////////////////////
+
+.about-main {
+    grid-column: 2 / 3;
+    margin:2rem 2rem 40vh 2rem;
+    max-width: 100%;
+    background-color: $main-bright;
+}
+
 }
