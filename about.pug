@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+include mixins/_slide.pug
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap")
+        link(rel="stylesheet", href="style.css")
+
+        title Graphic Designer | Samanta Moya Medina
+    body
+        .container
+            .sidebar
+                include mixins/_header.pug
+
+            main(class="about-main")
+                h2.callmesam 
+                .about-desc
+                    p My name is Samanta Moya Medina. I am a Graphic Design B.F.A candidate at the Maryland Institute College of Art and I also hold an Associate of Applied Science in Graphic Design from Montgomery College, Rockville. 
+                    p My focus in Graphic Design lies primarily in print publications and web design. I maintain an interest in devoting a bulk of my skills to helping the psycology of the user parse the materials I design in an easy and friendly fashion.
+                    p My thesis project is currently on track to address disparities in paraeducation, with an emphasis on the virtual divide during COVID distance teaching.
+                    p My roots are in the experiences I had as a partial caregiver to my sisters who live with Down's Syndrome and RETT Syndrome, regular translator for my parents, and holder of responsibility for my three younger sisters. I volunteer here and there when I'm not helping my family.
+                    p Fun fact: I coded this website from scratch using HTML/CSS/Javascript. It might show here and there, but drop me a line and let me know about any major bugs you encounter! I was stuck using Chrome using Windows so I doubt this site is perfect. Hear from you soon!
+
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js")
+        script(src="script.js")

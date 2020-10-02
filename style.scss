@@ -14,6 +14,10 @@ $main-font: 'Inconsolata', monospace;
 }
 //basic styling
 
+body {
+    background: radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(238,238,238,1) 90%);
+}
+
 li {
     list-style: none;
 }
@@ -97,9 +101,7 @@ a {
 
 //content
 
-.proj-name {
-    
-}
+
 
 .proj-name a{
     font-size: 10vh;
@@ -174,8 +176,27 @@ a {
     grid-column: 4 / 12;
     grid-row: 6 / 7;
 }
+/////////////////////////////////////////////////////////////////
+// about page
+/////////////////////////////////////////////////////////////////
 
+.about-main {
+    grid-column: 2 / 3;
+    margin:2rem;
+    max-width: 70%;
+}
+.callmesam {
+    font-size: 10vh;
+    margin-bottom: 10vh;
+}
 
+.about-desc p {
+    font-size: 1.35rem;
+    margin-bottom: 1.25rem;
+}
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
 @media (max-width: 1300px) {
     .proj-desc {
         width: 25vw;

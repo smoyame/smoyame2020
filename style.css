@@ -11,6 +11,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background: radial-gradient(circle, white 50%, #eeeeee 90%);
+}
+
 li {
   list-style: none;
 }
@@ -196,6 +200,24 @@ a {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6 / 7;
+}
+
+.about-main {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  margin: 2rem;
+  max-width: 70%;
+}
+
+.callmesam {
+  font-size: 10vh;
+  margin-bottom: 10vh;
+}
+
+.about-desc p {
+  font-size: 1.35rem;
+  margin-bottom: 1.25rem;
 }
 
 @media (max-width: 1300px) {
