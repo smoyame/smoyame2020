@@ -11,10 +11,6 @@
   scroll-behavior: smooth;
 }
 
-body {
-  background: radial-gradient(circle, white 50%, #eeeeee 90%);
-}
-
 li {
   list-style: none;
 }

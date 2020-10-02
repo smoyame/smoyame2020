@@ -14,9 +14,6 @@ $main-font: 'Inconsolata', monospace;
 }
 //basic styling
 
-body {
-    background: radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(238,238,238,1) 90%);
-}
 
 li {
     list-style: none;
@@ -339,5 +336,7 @@ a {
     max-width: 100%;
     background-color: $main-bright;
 }
+
+
 
 }
