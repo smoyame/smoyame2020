@@ -66,7 +66,7 @@ a {
 }
 
 .nav {
-    margin-top: 25vh;
+    margin-top: 35vh;
 }
 
 .nav-item a {
@@ -79,6 +79,10 @@ a {
     text-transform: uppercase;
     font-weight: 900;
   }
+
+.email a  {
+    font-weight: 900;
+}
 
 .main {
     display: grid;
@@ -93,13 +97,18 @@ a {
 
 //content
 
+.proj-name {
+    
+}
+
 .proj-name a{
     font-size: 10vh;
     font-weight: 700;
+    
 }
 
 .proj-name a:hover {
-    text-transform: uppercase;
+    text-decoration: underline;
     font-weight: 900;
 }
 
@@ -110,6 +119,7 @@ a {
     height: 80vh;
     width: auto;
     position: relative;
+    
 }
 
 .proj-name {
@@ -240,7 +250,6 @@ a {
     .email a{
         display: inline-block;
         padding: 5vw;
-        font-weight: 900;
     }
 //resizing type for smaller screen
     .name {

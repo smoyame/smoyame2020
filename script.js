@@ -1,3 +1,11 @@
+gsap.to (".name", {
+    text: "sam moya medina",
+    ease: "linear",
+    duration: 2,
+    delay: 5
+})
+
+
 let textReveal = (projNum, projTitle) => {
     gsap.to (`.proj-name${projNum}`, {
         duration: .8,
@@ -17,17 +25,12 @@ let textReveal = (projNum, projTitle) => {
     }
     )
 }
-textReveal(1, "the dry run")
-textReveal(2, "amass magazine")
-textReveal(3, "voter's guide")
-textReveal(4, "mailable poster")
-textReveal(5, "chapbook")
-textReveal(6, "misc materials")
+
 
 let projdescReveal = (projNum) => { 
     gsap.from (`.proj-desc${projNum}`, {
-    duration: .8,
-    ease: "power2.inOut",
+    duration: 1,
+    ease: "linear",
     clipPath: "inset(0% 100% 0% 0%)",
     scrollTrigger: {
         trigger: `.slide${projNum}`,
@@ -39,9 +42,15 @@ let projdescReveal = (projNum) => {
 }
 )
 }
+textReveal(1, "the dry run")
 projdescReveal(1)
+textReveal(2, "amass magazine")
 projdescReveal(2)
+textReveal(3, "voter's guide")
 projdescReveal(3)
+textReveal(4, "mailable poster")
 projdescReveal(4)
+textReveal(5, "chapbook")
 projdescReveal(5)
+textReveal(6, "misc materials")
 projdescReveal(6)
