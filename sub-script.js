@@ -1,5 +1,5 @@
 // project 1 ///////////////////////
-
+let proj1SubAnim = () => {
 gsap.to (".sub-proj-name1", {
     duration: 1,
     delay: .8,
@@ -18,6 +18,8 @@ gsap.to (".sub-desc1a", {
 }
 )
 
+}
+proj1SubAnim()
 // project 2 ///////////////////////
 
 gsap.to (".sub-proj-name2", {

@@ -487,4 +487,26 @@
   -ms-grid-row-span: 1;
   grid-row: 8 / 9;
 }
+
+@media (max-width: 1100px) {
+  .sub-slide {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 11;
+    grid-column: 2 / 13;
+  }
+}
+
+@media (max-width: 800px) {
+  .sub-main {
+    margin: 0 2rem 40vh 2rem;
+  }
+  .sub-slide {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+  }
+  .sub-proj-name1, .sub-proj-name2, .sub-proj-name3, .sub-proj-name4, .sub-proj-name5, .sub-proj-name6 {
+    font-size: 10vw;
+  }
+}
 /*# sourceMappingURL=sub-style.css.map */
