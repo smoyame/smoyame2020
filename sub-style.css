@@ -28,9 +28,10 @@
 
 .sub-desc0 {
   position: absolute;
-  top: 15vh;
+  top: 10vw;
   left: -12.8vw;
-  width: 20vw;
+  width: 60%;
+  opacity: 0;
 }
 
 .sub-slide1a {
