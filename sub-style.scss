@@ -18,7 +18,7 @@
 
 //////// project 1 ///////////////////////////
 
-.sub-proj-name1, .sub-proj-name2, .sub-proj-name3 {
+.sub-proj-name1, .sub-proj-name2, .sub-proj-name3, .sub-proj-name4, .sub-proj-name5, .sub-proj-name6 {
     position: absolute;
     top: 1vh;
     left: -5vw;
@@ -117,51 +117,198 @@
     grid-row: 8 / 9;
 }
 
-// PROJECT 2 ///////////////////////////////
+// PROJECT 3 ///////////////////////////////
 
 .sub-desc3a {
     position: absolute;
     top: 15vh;
-    left: -6.3vw;
+    left: -12.9vw;
     width: 60%;
     opacity: 0;
 }
 
 
 .sub-slide3a {
-    grid-column: 3 / 11;
+    grid-column: 5 / 13;
     // grid-row: 3 / 4;
 }
 
 .sub-slide3b {
-    grid-column: 2 / 10;
+    grid-column: 3 / 11;
     grid-row: 2 / 3;
 }
 
 .sub-slide3c {
-    grid-column: 4 / 12;
+    grid-column: 2 / 10;
     grid-row: 3 / 4;
 }
 
 .sub-slide3d {
-    grid-column: 2 / 10;
+    grid-column: 4 / 12;
     grid-row: 4 / 5;
 }
 .sub-slide3e {
-    grid-column: 5 / 13;
+    grid-column: 2 / 10;
     grid-row: 5 / 6;
 }
 .sub-slide3f {
-    grid-column: 3 / 11;
+    grid-column: 5 / 13;
     grid-row: 6 / 7;
 }
 
 .sub-slide3g {
-    grid-column: 2 / 10;
+    grid-column: 3 / 11;
     grid-row: 7 / 8;
 }
 
 .sub-slide3h {
+    grid-column: 2 / 10;
+    grid-row: 8 / 9;
+}
+
+
+// PROJECT 4 ///////////////////////////////
+
+.sub-desc4a {
+    position: absolute;
+    top: 15vh;
+    left: -6.2vw;
+    width: 60%;
+    opacity: 0;
+}
+
+
+.sub-slide4a {
+    grid-column: 3 / 11;
+    // grid-row: 4 / 5;
+}
+
+.sub-slide4b {
+    grid-column: 2 / 10;
+    grid-row: 2 / 3;
+}
+
+.sub-slide4c {
     grid-column: 4 / 12;
+    grid-row: 3 / 4;
+}
+
+.sub-slide4d {
+    grid-column: 2 / 10;
+    grid-row: 4 / 5;
+}
+.sub-slide4e {
+    grid-column: 5 / 13;
+    grid-row: 5 / 6;
+}
+.sub-slide4f {
+    grid-column: 3 / 11;
+    grid-row: 6 / 7;
+}
+.sub-slide4g {
+    grid-column: 2 / 10;
+    grid-row: 7 / 8;
+}
+
+.sub-slide4h {
+    grid-column: 4 / 12;
+    grid-row: 8 / 9;
+}
+
+
+//////// project 5 ///////////////////////////
+
+.sub-desc5a {
+    position: absolute;
+    top: 15vh;
+    left: 32.5vw;
+    width: 60%;
+    opacity: 0;
+}
+
+
+.sub-slide5a {
+    grid-column: 2 / 10;
+    // grid-row: 5 / 6;
+}
+
+.sub-slide5b {
+    grid-column: 4 / 12;
+    grid-row: 2 / 3;
+}
+
+.sub-slide5c {
+    grid-column: 2 / 10;
+    grid-row: 3 / 4;
+}
+.sub-slide5d {
+    grid-column: 5 / 13;
+    grid-row: 4 / 5;
+}
+
+.sub-slide5e {
+    grid-column: 3 / 11;
+    grid-row: 5 / 6;
+}
+.sub-slide5f {
+    grid-column: 2 / 10;
+    grid-row: 6 / 7;
+}
+
+.sub-slide5g {
+    grid-column: 4 / 12;
+    grid-row: 7 / 8;
+}
+
+.sub-slide5h {
+    grid-column: 2 / 10;
+    grid-row: 8 / 9;
+}
+
+// PROJECT 6 //////////////////////
+
+
+
+.sub-desc6a {
+    position: absolute;
+    top: 15vh;
+    left: -12.8vw;
+    width: 60%;
+    opacity: 0;
+}
+
+.sub-slide6a {
+    grid-column: 4 / 12;
+    // grid-row: 2 / 3;
+}
+
+.sub-slide6b {
+    grid-column: 2 / 10;
+    grid-row: 2 / 3;
+}
+.sub-slide6c {
+    grid-column: 5 / 13;
+    grid-row: 3 / 4;
+}
+
+.sub-slide6d {
+    grid-column: 3 / 11;
+    grid-row: 4 / 5;
+}
+.sub-slide6e {
+    grid-column: 2 / 10;
+    grid-row: 5 / 6;
+}
+
+.sub-slide6f {
+    grid-column: 4 / 12;
+    grid-row: 6 / 7;
+}
+.sub-slide6g {
+    grid-column: 2 / 10;
+    grid-row: 7 / 8;
+}
+.sub-slide6h {
+    grid-column: 5 / 13;
     grid-row: 8 / 9;
 }

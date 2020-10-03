@@ -43,13 +43,74 @@ gsap.to (".sub-desc2a", {
 gsap.to (".sub-proj-name3", {
     duration: 1,
     delay: .8,
-    x: "-1.5vw",
+    x: "-8vw",
     ease: "power4.Out"
     // x: 50,
 }
 )
 
 gsap.to (".sub-desc3a", {
+    duration: 1,
+    delay: 1.8,
+    opacity: 1,
+    ease: "power3.inOut"
+    // x: 50,
+}
+)
+
+// project 4 ///////////////////////
+
+gsap.to (".sub-proj-name4", {
+    duration: 1,
+    delay: .8,
+    x: "-1.3vw",
+    ease: "power4.Out"
+    // x: 50,
+}
+)
+
+gsap.to (".sub-desc4a", {
+    duration: 1,
+    delay: 1.8,
+    opacity: 1,
+    ease: "power3.inOut"
+    // x: 50,
+}
+)
+
+// project 5 ///////////////////////
+
+gsap.to (".sub-proj-name5", {
+    duration: 1,
+    delay: .8,
+    x: "37vw",
+    ease: "power4.Out"
+    // x: 50,
+}
+)
+
+gsap.to (".sub-desc5a", {
+    duration: 1,
+    delay: 1.8,
+    opacity: 1,
+    ease: "power3.inOut"
+    // x: 50,
+}
+)
+
+
+// PROJECT 6 ///////////////////////
+
+gsap.to (".sub-proj-name6", {
+    duration: 1,
+    delay: .8,
+    x: "-7.8vw",
+    ease: "power4.Out"
+    // x: 50,
+}
+)
+
+gsap.to (".sub-desc6a", {
     duration: 1,
     delay: 1.8,
     opacity: 1,
