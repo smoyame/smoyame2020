@@ -16,9 +16,9 @@
 }
 
 
-//////// project 1 ////////
+//////// project 1 ///////////////////////////
 
-.sub-proj-name1 {
+.sub-proj-name1, .sub-proj-name2, .sub-proj-name3 {
     position: absolute;
     top: 1vh;
     left: -5vw;
@@ -26,9 +26,9 @@
     font-weight: 300;
 }
 
-.sub-desc0 {
+.sub-desc1a {
     position: absolute;
-    top: 10vw;
+    top: 15vh;
     left: -12.8vw;
     width: 60%;
     opacity: 0;
@@ -67,5 +67,101 @@
 }
 .sub-slide1h {
     grid-column: 5 / 13;
+    grid-row: 8 / 9;
+}
+
+// PROJECT 2 ///////////////////////////////
+
+.sub-desc2a {
+    position: absolute;
+    top: 15vh;
+    left: 27.5vw;
+    width: 60%;
+    opacity: 0;
+}
+
+.sub-slide2a {
+    grid-column: 2 / 10;
+    
+}
+.sub-slide2b {
+    grid-column: 5 / 13;
+    grid-row: 2 / 3;
+}
+
+.sub-slide2c {
+    grid-column: 3 / 11;
+    grid-row: 3 / 4;
+}
+
+.sub-slide2d {
+    grid-column: 2 / 10;
+    grid-row: 4 / 5;
+}
+
+.sub-slide2e {
+    grid-column: 4 / 12;
+    grid-row: 5 / 6;
+}
+
+.sub-slide2f {
+    grid-column: 2 / 10;
+    grid-row: 6 / 7;
+}
+.sub-slide2g {
+    grid-column: 5 / 13;
+    grid-row: 7 / 8;
+}
+.sub-slide2h {
+    grid-column: 3 / 11;
+    grid-row: 8 / 9;
+}
+
+// PROJECT 2 ///////////////////////////////
+
+.sub-desc3a {
+    position: absolute;
+    top: 15vh;
+    left: -6.3vw;
+    width: 60%;
+    opacity: 0;
+}
+
+
+.sub-slide3a {
+    grid-column: 3 / 11;
+    // grid-row: 3 / 4;
+}
+
+.sub-slide3b {
+    grid-column: 2 / 10;
+    grid-row: 2 / 3;
+}
+
+.sub-slide3c {
+    grid-column: 4 / 12;
+    grid-row: 3 / 4;
+}
+
+.sub-slide3d {
+    grid-column: 2 / 10;
+    grid-row: 4 / 5;
+}
+.sub-slide3e {
+    grid-column: 5 / 13;
+    grid-row: 5 / 6;
+}
+.sub-slide3f {
+    grid-column: 3 / 11;
+    grid-row: 6 / 7;
+}
+
+.sub-slide3g {
+    grid-column: 2 / 10;
+    grid-row: 7 / 8;
+}
+
+.sub-slide3h {
+    grid-column: 4 / 12;
     grid-row: 8 / 9;
 }
