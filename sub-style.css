@@ -32,6 +32,10 @@
   left: -12.8vw;
   width: 60%;
   opacity: 0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-delay: .7;
+          transition-delay: .7;
 }
 
 .sub-slide1a {
@@ -109,6 +113,10 @@
   left: 27.5vw;
   width: 60%;
   opacity: 0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-delay: .7;
+          transition-delay: .7;
 }
 
 .sub-slide2a {
@@ -186,6 +194,10 @@
   left: -12.9vw;
   width: 60%;
   opacity: 0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-delay: .7;
+          transition-delay: .7;
 }
 
 .sub-slide3a {
@@ -263,6 +275,10 @@
   left: -6.2vw;
   width: 60%;
   opacity: 0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-delay: .7;
+          transition-delay: .7;
 }
 
 .sub-slide4a {
@@ -340,6 +356,10 @@
   left: 32.5vw;
   width: 60%;
   opacity: 0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-delay: .7;
+          transition-delay: .7;
 }
 
 .sub-slide5a {
@@ -417,6 +437,10 @@
   left: -12.8vw;
   width: 60%;
   opacity: 0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-delay: .7;
+          transition-delay: .7;
 }
 
 .sub-slide6a {
@@ -494,6 +518,10 @@
     -ms-grid-column-span: 11;
     grid-column: 2 / 13;
   }
+  .sub-desc1a, .sub-desc2a, .sub-desc3a, .sub-desc4a, .sub-desc5a, .sub-desc6a {
+    opacity: 1;
+    left: -5vw;
+  }
 }
 
 @media (max-width: 800px) {
@@ -507,6 +535,9 @@
   }
   .sub-proj-name1, .sub-proj-name2, .sub-proj-name3, .sub-proj-name4, .sub-proj-name5, .sub-proj-name6 {
     font-size: 10vw;
+  }
+  .sub-desc1a, .sub-desc2a, .sub-desc3a, .sub-desc4a, .sub-desc5a, .sub-desc6a {
+    left: 6vw;
   }
 }
 /*# sourceMappingURL=sub-style.css.map */
