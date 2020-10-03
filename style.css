@@ -93,7 +93,7 @@ a {
   z-index: 99;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
-  grid-column: 2 /3;
+  grid-column: 2 / 3;
   margin: 2rem 2rem 2rem 0rem;
 }
 
@@ -236,6 +236,12 @@ a {
   }
 }
 
+@media (max-width: 970px) {
+  .callmesam {
+    font-size: 8vw;
+  }
+}
+
 @media (max-width: 800px) {
   .container {
     display: block;
@@ -349,6 +355,9 @@ a {
     margin: 2rem 2rem 40vh 2rem;
     max-width: 100%;
     background-color: #fff;
+  }
+  .callmesam {
+    font-size: 12vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

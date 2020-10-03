@@ -89,7 +89,7 @@ a {
     display: grid;
     grid: repeat(6, 1fr) / repeat(12, 1fr);
     z-index: 99;
-    grid-column: 2 /3;
+    grid-column: 2 / 3;
     margin: 2rem 2rem 2rem 0rem;
     
 }
@@ -192,8 +192,15 @@ a {
     margin-bottom: 1.25rem;
 }
 
+///////////////////////////////////////////////////////////////// sub-mains for project pages
 /////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////
 @media (max-width: 1300px) {
     .proj-desc {
         width: 25vw;
@@ -214,6 +221,12 @@ a {
 }
 
 //////// the mobile query ///////
+
+@media (max-width: 970px) {
+    .callmesam {
+        font-size: 8vw;
+    }
+}
 
 @media (max-width: 800px) {
     
@@ -338,6 +351,9 @@ a {
     background-color: $main-bright;
 }
 
+.callmesam {
+    font-size: 12vw;
+}
 
 
 }

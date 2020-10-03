@@ -1,0 +1,70 @@
+.sub-main {
+    display: grid;
+    grid: repeat(8, 1fr) / repeat(12, 1fr);
+    z-index: 99;
+    grid-column: 2 / 3;
+    margin: 2rem 2rem 2rem 0rem;
+}
+
+.sub-slide {
+    background-image: url(https://via.placeholder.com/500);
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+    width: auto;
+    position: relative;
+}
+
+
+//////// project 1 ////////
+
+.sub-proj-name1 {
+    position: absolute;
+    top: 1vh;
+    left: -5vw;
+    font-size: 10vh;
+    font-weight: 300;
+}
+
+.sub-desc0 {
+    position: absolute;
+    top: 10vw;
+    left: -12.8vw;
+    width: 20vw;
+}
+
+.sub-slide1a {
+    grid-column: 4 / 12;
+}
+.sub-slide1b {
+    grid-column: 2 / 10;
+    grid-row: 2 / 3;
+}
+.sub-slide1c {
+    grid-column: 5 / 13;
+    grid-row: 3 / 4;
+}
+
+.sub-slide1d {
+    grid-column: 3 / 11;
+    grid-row: 4 / 5;
+}
+
+.sub-slide1e {
+    grid-column: 2 / 10;
+    grid-row: 5 / 6;
+}
+
+.sub-slide1f {
+    grid-column: 4 / 12;
+    grid-row: 6 / 7;
+}
+
+.sub-slide1g {
+    grid-column: 2 / 10;
+    grid-row: 7 /8;
+}
+.sub-slide1h {
+    grid-column: 5 / 13;
+    grid-row: 8 / 9;
+}
