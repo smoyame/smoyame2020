@@ -13,8 +13,21 @@
     height: 80vh;
     width: auto;
     position: relative;
+    backdrop-filter: blur(20px);
 }
 
+// .proj1filter {
+//     grid-column: 1 / 13;
+//     grid-row: 1 / 2;
+//     z-index: 50;
+//     width: 100%;
+//     height: 100%;
+//     background: none;
+//     background-color: rgba(0, 0, 0, .5);
+//     border: 1px solid red;
+//     backdrop-filter: blur(20px);
+
+// }
 
 //////// project 1 ///////////////////////////
 
@@ -24,6 +37,23 @@
     left: -5vw;
     font-size: 10vh;
     font-weight: 300;
+    // z-index: 75;
+}
+
+.sub-slide1a {
+    background-image: url(/images/thedryrun1-blur.png);
+    // background-color: rgba(255,255,255,.8);
+}
+.sub-slide1b {
+    background-image: url(/images/thedryrun2.png);
+}
+
+.sub-slide1g {
+    background-image: url(/images/thedryrun5.png);
+}
+
+.sub-slide1h {
+    background-image: url(/images/thedryrun1.png);
 }
 
 .sub-desc1a {
@@ -38,6 +68,7 @@
 
 .sub-slide1a {
     grid-column: 4 / 12;
+    grid-row: 1 / 2;
 }
 .sub-slide1b {
     grid-column: 2 / 10;
@@ -348,12 +379,16 @@
         grid-column: 1 / 13;
     }
 
+    // .sub-slide1a {
+    //     backdrop-filter: blur(20px);
+    // }
+
     .sub-proj-name1, .sub-proj-name2, .sub-proj-name3, .sub-proj-name4, .sub-proj-name5, .sub-proj-name6 {
         font-size: 10vw;
         
     }
 
     .sub-desc1a, .sub-desc2a , .sub-desc3a, .sub-desc4a, .sub-desc5a, .sub-desc6a{
-       left: 6vw;
+        left: 6vw;
     }
 }
