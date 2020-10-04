@@ -2,6 +2,19 @@ $main-bright: #fff;
 $main-dark: #000;
 $main-font: 'Inconsolata', monospace;
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        // clip-path: inset(0% 0% 100% 0%);
+    }
+    to {
+        opacity: 1;
+        // clip-path: inset(0% 0% 0% 0%);
+
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -91,7 +104,8 @@ a {
     z-index: 99;
     grid-column: 2 / 3;
     margin: 2rem 2rem 2rem 0rem;
-    
+    animation: fadeIn 1s;
+    animation-timing-function: ease-out;
 }
 
 
@@ -195,9 +209,7 @@ a {
 
 ///////////////////////////////////////////////////////////////// sub-mains for project pages
 /////////////////////////////////////////////////////////////////
-
-
-
+// SWUP
 
 
 

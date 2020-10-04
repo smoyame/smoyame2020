@@ -8,15 +8,15 @@
     <title>Graphic Designer | Samanta Moya Medina</title>
   </head>
   <body>
-    <div class="container" data-barba="wrapper">
+    <div class="container">
       <div class="sidebar">
         <header class="header">
           <h1 class="name">samanta<span class="lastname">moya medina</span></h1><span class="job">graphic designer</span>
         </header>
         <nav class="nav">
           <ul class="nav-contain">
-            <li class="nav-item"><a href="https://smoya.me">work</a></li>
-            <li class="nav-item"><a href="https://smoya.me/about.html">about</a></li>
+            <li class="nav-item"><a href="/index.html">work</a></li>
+            <li class="nav-item"><a href="/about.html">about</a></li>
             <li class="nav-item"><a href="https://www.linkedin.com/in/smoyamedina/" target="_blank">linkedin</a></li>
           </ul>
         </nav>
@@ -24,7 +24,7 @@
           <p class="email"> <a href="mailto:hi@smoya.me">hi@smoya.me</a></p>
         </footer>
       </div>
-      <main class="main" data-barba="container" data-barba-namespace="home">
+      <main class="main transition-fade" id="swup">
         <section class="slide slide1">
           <h2 class="proj-name"> <a class="proj-name1" href="/work/1.html"></a></h2><a class="proj-desc1 proj-desc" href="/work/1.html"> <span class="proj-type">publication</span><span class="proj-date">08.2019</span></a>
         </section>
@@ -45,7 +45,7 @@
         </section>
       </main>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src="/node_modules/swup/dist/swup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>

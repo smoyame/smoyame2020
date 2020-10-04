@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 include mixins/_slide.pug
+include mixins/_header.pug
 
 html(lang="en")
     head
@@ -10,18 +11,19 @@ html(lang="en")
 
         title Graphic Designer | Samanta Moya Medina
     body
-        .container(data-barba="wrapper")
+        .container()
             .sidebar
-                include mixins/_header.pug
+                +header('/index.html', '/about.html')
 
-            main(class="main" data-barba="container" data-barba-namespace="home")
+            main(class="main transition-fade" id="swup")
                 +slide('slide slide1', '/work/1.html', 'proj-name1', '', 'proj-desc1','publication', '08.2019')
                 +slide('slide slide2', '/work/2.html', 'proj-name2', '', 'proj-desc2','publication', '08.2019')
                 +slide('slide slide3', '/work/3.html', 'proj-name3', '', 'proj-desc3','publication', '08.2019')
                 +slide('slide slide4', '/work/4.html', 'proj-name4', '', 'proj-desc4','publication', '08.2019')
                 +slide('slide slide5', '/work/5.html', 'proj-name5', '', 'proj-desc5','publication', '08.2019')
                 +slide('slide slide6', '/work/6.html', 'proj-name6', '', 'proj-desc6','publication', '08.2019')
-        script(src="https://cdn.jsdelivr.net/npm/@barba/core")
+
+        script(src="/node_modules/swup/dist/swup.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js")
