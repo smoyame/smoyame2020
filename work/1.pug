@@ -10,11 +10,11 @@ html(lang="en")
 
         title Graphic Designer | Samanta Moya Medina
     body
-        .container
+        .container(data-barba="wrapper")
             .sidebar
                 include ../mixins/_header.pug
 
-            main(class="sub-main")
+            main(class="sub-main" data-barba="container" data-barba-namespace="proj1")
                 
                 div(class="sub-slide sub-slide1a")
                     //- div.proj1filter
@@ -29,8 +29,11 @@ html(lang="en")
                 div(class="sub-slide sub-slide1g")
                 div(class="sub-slide sub-slide1h")
 
+        script(src="https://cdn.jsdelivr.net/npm/@barba/core")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js")
+        
         script(src="../sub-script.js")
+        script(src="../transition.js")
