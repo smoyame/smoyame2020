@@ -142,5 +142,14 @@ responsiveAnim(".sub-proj-name1", ".sub-desc1a", "-8vw")
     responsiveAnim(".sub-proj-name4", ".sub-desc4a", "-1.3vw")
     responsiveAnim(".sub-proj-name5", ".sub-desc5a", "37vw")
     responsiveAnim(".sub-proj-name6", ".sub-desc6a", "-7.8vw")
+    gsap.to (".callmesam", {
+        duration: 1,
+        delay: .2,
+        text: "You can call me Sam!",
+        ease: "linear",
+        // x: 50,
+    }
+    )
 })
+
 

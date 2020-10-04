@@ -15,7 +15,7 @@ html(lang="en")
             .sidebar
                 +header('/index.html', '/about.html')
 
-            main(class="about-main")
+            main(class="about-main transition-fade" id="swup")
                 h2.callmesam 
                 .about-desc
                     p I am a Graphic Design B.F.A candidate at the Maryland Institute College of Art and I also hold an Associate of Applied Science in Graphic Design from Montgomery College, Rockville. 
@@ -24,7 +24,7 @@ html(lang="en")
                     p My roots are in the experiences I had as a partial caregiver to my sisters who live with Down's Syndrome and RETT Syndrome, regular translator for my parents, and holder of responsibility for my three younger sisters. I volunteer here and there when I'm not helping my family.
                     
 
-
+        script(src="https://unpkg.com/swup@latest/dist/swup.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js")
