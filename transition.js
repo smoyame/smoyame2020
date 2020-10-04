@@ -5,7 +5,7 @@ const animationEnter = (container) => {
 }
 
 const animationLeave = (container) => {
-    return gsap.from(container, {autoAlpha: 0, duration: 2, clearProps:'all', ease: 'none'})
+    return gsap.to(container, {autoAlpha: 0, duration: 2, clearProps:'all', ease: 'none'})
 }
 
 barba.init({
@@ -14,9 +14,7 @@ barba.init({
             once({next}){
                 animationEnter(next.container);
             },
-            leave({current}){
-                animationLeave(current.container);
-            },
+            leave: ({current}) => animationLeave(current.container),
             enter({next}){
                 animationEnter(next.container);
             }
