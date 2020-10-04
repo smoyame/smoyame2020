@@ -16,5 +16,7 @@
     "url": "https://github.com/smoyamedina/portfolio-website/issues"
   },
   "homepage": "https://github.com/smoyamedina/portfolio-website#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@barba/core": "^2.9.7"
+  }
 }

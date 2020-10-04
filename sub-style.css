@@ -1,21 +1,3 @@
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .sub-main {
   display: -ms-grid;
   display: grid;
@@ -25,10 +7,6 @@
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
   margin: 2rem 2rem 2rem 0rem;
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
 }
 
 .sub-slide {
