@@ -61,11 +61,11 @@ a {
     // margin: 2rem;
     display: grid;
     // height: 100%;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr;
     grid-column-gap: 3rem;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .sidebar {

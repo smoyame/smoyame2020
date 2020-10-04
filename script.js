@@ -119,11 +119,18 @@ const responsiveAnim = (subProjName, subDesc, subProjNameXVal) => {
     responsiveAnim(".sub-proj-name6", ".sub-desc6a", "-7.8vw")
     
     
+
     
+
 // page animation
+
+
 
 const swup = new Swup();
 swup.on('contentReplaced', () => {
+    //swup saves the scroll position on page transitions so i have to do this i'm so sorry
+    window.scrollTo(0, 0)
+
     textReveal(1, "the dry run")
 projdescReveal(1)
 textReveal(2, "amass magazine")

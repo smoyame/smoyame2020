@@ -41,13 +41,11 @@ a {
 .container {
   display: -ms-grid;
   display: grid;
-  overflow-y: scroll;
   -ms-grid-columns: 1fr 5fr;
       grid-template-columns: 1fr 5fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   grid-column-gap: 3rem;
-  overflow: hidden;
 }
 
 .sidebar {
