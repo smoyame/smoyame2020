@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Barlow", "Arial", sans-serif;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+* ::-moz-selection {
+  background-color: #ffcf68;
+}
+
+* ::selection {
+  background-color: #ffcf68;
+}
+
+.slide {
+  background-image: url(https://via.placeholder.com/500);
+  background-position: center center;
+  background-size: cover;
+  height: 80vh;
+  width: auto;
+  position: relative;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-column-gap: 3rem;
+}
+
+.sidebar {
+  height: 100vh;
+  padding: 2rem;
+  position: fixed;
+  max-width: 16.5%;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  grid: repeat(6, 1fr)/repeat(12, 1fr);
+  z-index: 99;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  margin: 2rem 2rem 2rem 0rem;
+}
+
+.slide1 {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 8;
+  grid-column: 4 / 12;
+  background-image: url(/images/thedryrun1.png);
+}
+
+.slide2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 8;
+  grid-column: 2 / 10;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.slide3 {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 8;
+  grid-column: 5 / 13;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+.slide4 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 8;
+  grid-column: 3 / 11;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+}
+
+.slide5 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 8;
+  grid-column: 2 / 10;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+}
+
+.slide6 {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 8;
+  grid-column: 4 / 12;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  grid-row: 6 / 7;
+}
+/*# sourceMappingURL=style.css.map */

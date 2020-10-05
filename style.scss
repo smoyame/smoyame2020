@@ -1,0 +1,96 @@
+
+// constants
+$main-bright: #fff;
+$main-dark: #000;
+$accent1: rgb(238, 61, 55);
+$accent2: rgb(255, 207, 104);
+$accent3: rgb(0, 0, 0);
+$main-font: 'Barlow', 'Arial', sans-serif;
+
+//reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: $main-font;
+    transition: all .2s ease;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    ::selection {
+        background-color: $accent2;
+    }
+}
+
+//basic styling
+.slide {
+    background-image: url(https://via.placeholder.com/500);
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+    width: auto;
+    position: relative;
+    
+}
+
+// positioning
+
+.container {
+    // margin: 2rem;
+    display: grid;
+    // height: 100%;
+    // overflow-y: scroll;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 3rem;
+    // overflow: hidden;
+}
+
+.sidebar {
+    height: 100vh;
+    padding: 2rem;
+    position: fixed;
+    max-width: 16.5%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main {
+    display: grid;
+    grid: repeat(6, 1fr) / repeat(12, 1fr);
+    z-index: 99;
+    grid-column: 2 / 3;
+    margin: 2rem 2rem 2rem 0rem;
+
+}
+
+    // slides
+    .slide1 {
+        grid-column: 4 / 12;
+        background-image: url(/images/thedryrun1.png);
+    }
+    .slide2 {
+        grid-column: 2 / 10;
+        grid-row: 2 / 3;
+    }
+    .slide3 {
+        grid-column: 5 / 13;
+        grid-row: 3 / 4;
+    }
+    
+    .slide4 {
+        grid-column: 3 / 11;
+        grid-row: 4 / 5;
+    }
+    
+    .slide5 {
+        grid-column: 2 / 10;
+        grid-row: 5 / 6;
+    }
+    
+    .slide6 {
+        grid-column: 4 / 12;
+        grid-row: 6 / 7;
+    }
