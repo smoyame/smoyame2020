@@ -11,6 +11,14 @@
   scroll-behavior: smooth;
 }
 
+* ::-moz-selection {
+  background-color: #ffcf68;
+}
+
+* ::selection {
+  background-color: #ffcf68;
+}
+
 li {
   list-style: none;
 }
@@ -78,10 +86,15 @@ a {
 .nav-item a:hover {
   text-decoration: underline;
   font-weight: 900;
+  color: black;
 }
 
 .email a {
   font-weight: 900;
+}
+
+.email a:hover {
+  color: black;
 }
 
 .main {
@@ -103,6 +116,7 @@ a {
 .proj-name a:hover {
   text-decoration: underline;
   font-weight: 900;
+  color: black;
 }
 
 .slide {
@@ -211,20 +225,17 @@ a {
 }
 
 .about-desc p {
-  font-size: 1.35rem;
   margin-bottom: 1.25rem;
 }
 
 .transition-fade {
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: .5s;
+  transition: .5s;
   opacity: 1;
 }
 
 html.is-animating .transition-fade {
   opacity: 0;
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
 }
 
 @media (max-width: 1300px) {
@@ -410,6 +421,7 @@ html.is-animating .transition-fade {
 
 .sub-slide1c {
   background-image: url(/images/typesystem-01.svg);
+  background-color: #fff;
 }
 
 .sub-slide1g {
@@ -423,12 +435,8 @@ html.is-animating .transition-fade {
 .sub-desc1a {
   position: absolute;
   top: 15vh;
-  left: -12vw;
+  left: 4vw;
   width: 60%;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-delay: .7;
-          transition-delay: .7;
 }
 
 .sub-slide1a {
@@ -506,13 +514,8 @@ html.is-animating .transition-fade {
 .sub-desc2a {
   position: absolute;
   top: 15vh;
-  left: 27.5vw;
+  left: 4vw;
   width: 60%;
-  opacity: 0;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-delay: .7;
-          transition-delay: .7;
 }
 
 .sub-slide2a {
@@ -587,13 +590,8 @@ html.is-animating .transition-fade {
 .sub-desc3a {
   position: absolute;
   top: 15vh;
-  left: -12.9vw;
+  left: 4vw;
   width: 60%;
-  opacity: 0;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-delay: .7;
-          transition-delay: .7;
 }
 
 .sub-slide3a {
@@ -668,13 +666,8 @@ html.is-animating .transition-fade {
 .sub-desc4a {
   position: absolute;
   top: 15vh;
-  left: -6.2vw;
+  left: 4vw;
   width: 60%;
-  opacity: 0;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-delay: .7;
-          transition-delay: .7;
 }
 
 .sub-slide4a {
@@ -749,13 +742,8 @@ html.is-animating .transition-fade {
 .sub-desc5a {
   position: absolute;
   top: 15vh;
-  left: 32.5vw;
+  left: 4vw;
   width: 60%;
-  opacity: 0;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-delay: .7;
-          transition-delay: .7;
 }
 
 .sub-slide5a {
@@ -830,13 +818,8 @@ html.is-animating .transition-fade {
 .sub-desc6a {
   position: absolute;
   top: 15vh;
-  left: -12.8vw;
+  left: 4vw;
   width: 60%;
-  opacity: 0;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-delay: .7;
-          transition-delay: .7;
 }
 
 .sub-slide6a {
@@ -906,16 +889,6 @@ html.is-animating .transition-fade {
   -ms-grid-row: 8;
   -ms-grid-row-span: 1;
   grid-row: 8 / 9;
-}
-
-@media (max-width: 1480px) {
-  .sub-proj-name2 {
-    display: inline-block;
-    width: 50%;
-  }
-  .sub-desc2a {
-    top: 25vh;
-  }
 }
 
 @media (max-width: 1100px) {

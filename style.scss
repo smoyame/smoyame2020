@@ -1,5 +1,8 @@
 $main-bright: #fff;
 $main-dark: #000;
+$accent1: rgb(238, 61, 55);
+$accent2: rgb(255, 207, 104);
+$accent3: rgb(0, 0, 0);
 $main-font: 'Inconsolata', monospace;
 
 // @keyframes fadeIn {
@@ -24,6 +27,9 @@ $main-font: 'Inconsolata', monospace;
     transition: all .2s ease;
     text-decoration: none;
     scroll-behavior: smooth;
+    ::selection {
+        background-color: $accent2;
+    }
 }
 //basic styling
 
@@ -35,6 +41,7 @@ li {
 a {
     text-decoration: none;
     color: $main-dark;
+    
 }
 
 .name {
@@ -92,10 +99,16 @@ a {
 .nav-item a:hover {
     text-decoration: underline;
     font-weight: 900;
+    color: $accent3;
   }
 
 .email a  {
     font-weight: 900;
+    
+}
+
+.email a:hover {
+    color: $accent3;
 }
 
 .main {
@@ -122,6 +135,7 @@ a {
 .proj-name a:hover {
     text-decoration: underline;
     font-weight: 900;
+    color: $accent3;
 }
 
 .slide {
@@ -202,7 +216,7 @@ a {
 }
 
 .about-desc p {
-    font-size: 1.35rem;
+    // font-size: 1.35rem;
     margin-bottom: 1.25rem;
 }
 
@@ -211,14 +225,16 @@ a {
 // SWUP
 
 .transition-fade {
-    transition: 1s;
+    transition: .5s;
     opacity: 1;
 }
 
 html.is-animating .transition-fade {
     opacity: 0;
-    transform: translateX(-50px);
+    // transform: translateX(-50px);
 }
+
+
 
 
 ////////////////////////////////////////////////////////////////
@@ -442,6 +458,7 @@ html.is-animating .transition-fade {
 
 .sub-slide1a {
     background-image: url(/images/thedryrun1-blur.png);
+    
     // background-color: rgba(255,255,255,.8);
 }
 .sub-slide1b {
@@ -450,6 +467,7 @@ html.is-animating .transition-fade {
 
 .sub-slide1c {
     background-image: url(/images/typesystem-01.svg);
+    background-color: $main-bright;
 }
 
 .sub-slide1g {
@@ -463,11 +481,10 @@ html.is-animating .transition-fade {
 .sub-desc1a {
     position: absolute;
     top: 15vh;
-    left: -12vw;
+    left: 4vw;
     width: 60%;
-    // opacity: 0;
-    transition-duration: 1s;
-    transition-delay:.7;
+    
+    
 }
 
 .sub-slide1a {
@@ -512,11 +529,8 @@ html.is-animating .transition-fade {
 .sub-desc2a {
     position: absolute;
     top: 15vh;
-    left: 27.5vw;
+    left: 4vw;
     width: 60%;
-    opacity: 0;
-    transition-duration: 1s;
-    transition-delay:.7;
 }
 
 .sub-slide2a {
@@ -561,11 +575,8 @@ html.is-animating .transition-fade {
 .sub-desc3a {
     position: absolute;
     top: 15vh;
-    left: -12.9vw;
+    left: 4vw;
     width: 60%;
-    opacity: 0;
-    transition-duration: 1s;
-    transition-delay:.7;
 }
 
 
@@ -613,11 +624,8 @@ html.is-animating .transition-fade {
 .sub-desc4a {
     position: absolute;
     top: 15vh;
-    left: -6.2vw;
+    left: 4vw;
     width: 60%;
-    opacity: 0;
-    transition-duration: 1s;
-    transition-delay:.7;
 }
 
 
@@ -664,11 +672,8 @@ html.is-animating .transition-fade {
 .sub-desc5a {
     position: absolute;
     top: 15vh;
-    left: 32.5vw;
+    left: 4vw;
     width: 60%;
-    opacity: 0;
-    transition-duration: 1s;
-    transition-delay:.7;
 }
 
 
@@ -717,11 +722,8 @@ html.is-animating .transition-fade {
 .sub-desc6a {
     position: absolute;
     top: 15vh;
-    left: -12.8vw;
+    left: 4vw;
     width: 60%;
-    opacity: 0;
-    transition-duration: 1s;
-    transition-delay:.7;
 }
 
 .sub-slide6a {
@@ -764,15 +766,15 @@ html.is-animating .transition-fade {
 
 //media queries
 
-@media (max-width: 1480px) {
-    .sub-proj-name2 {
-        display: inline-block;
-        width: 50%;
-    }
-    .sub-desc2a {
-        top: 25vh;
-    }
-}
+// @media (max-width: 1480px) {
+//     .sub-proj-name2 {
+//         display: inline-block;
+//         width: 50%;
+//     }
+//     .sub-desc2a {
+//         top: 25vh;
+//     }
+// }
 
 @media (max-width: 1100px) {
     .sub-slide{
