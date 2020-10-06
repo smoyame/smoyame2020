@@ -24,9 +24,9 @@ let textReveal = (projNum, projTitle) => {
 
 
 let projdescReveal = (projNum) => { 
-    gsap.from (`.proj-desc${projNum}`, {
-    duration: .8,
-    opacity: "0",
+    gsap.to (`.proj-desc${projNum}`, {
+    duration: .9,
+    opacity: "1",
     // ease: "linear",
     // clipPath: "inset(0% 0% 0% 100%)",
     
@@ -44,19 +44,19 @@ let projdescReveal = (projNum) => {
 
 
 textReveal(1, "the dry run »")
-projdescReveal(1)
 textReveal(2, "amass mag »")
-projdescReveal(2)
 textReveal(3, "voter's guide »")
-projdescReveal(3)
 textReveal(4, "mailable poster »")
-projdescReveal(4)
 textReveal(5, "chapbook »")
-projdescReveal(5)
 textReveal(6, "misc materials »")
+
+
+projdescReveal(1)
+projdescReveal(2)
+projdescReveal(3)
+projdescReveal(4)
+projdescReveal(5)
 projdescReveal(6)
-
-
 // about
 
 gsap.to (".callmesam", {
@@ -74,6 +74,8 @@ gsap.to (".callmesam", {
 const swup = new Swup();
 swup.on('animationOutDone', () => {
     window.scrollTo(0, 0)
+    // projdescReveal(1)
+    // projdescReveal(2)
 })
 swup.on('contentReplaced', () => {
     //swup saves the scroll position on page transitions so i have to do this i'm so sorry

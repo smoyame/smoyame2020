@@ -82,6 +82,7 @@ li {
   text-transform: uppercase;
   font-family: "degular-text", "Barlow", sans-serif;
   font-weight: 400;
+  opacity: 0;
 }
 
 .container {
