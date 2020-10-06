@@ -67,3 +67,37 @@ gsap.to (".callmesam", {
     // x: 50,
 }
 )
+
+
+//////SWUP
+
+const swup = new Swup();
+swup.on('animationOutDone', () => {
+    window.scrollTo(0, 0)
+})
+swup.on('contentReplaced', () => {
+    //swup saves the scroll position on page transitions so i have to do this i'm so sorry
+    // window.scrollTo(0, 0)
+
+    textReveal(1, "the dry run")
+    projdescReveal(1)
+    textReveal(2, "amass magazine")
+    projdescReveal(2)
+    textReveal(3, "voter's guide")
+    projdescReveal(3)
+    textReveal(4, "mailable poster")
+    projdescReveal(4)
+    textReveal(5, "chapbook")
+    projdescReveal(5)
+    textReveal(6, "misc materials")
+    projdescReveal(6)
+    
+    gsap.to (".callmesam", {
+        duration: 1,
+        delay: .2,
+        text: "You can call me Sam!",
+        ease: "linear",
+        // x: 50,
+    }
+    )
+})
