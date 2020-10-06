@@ -19,41 +19,18 @@
   background-color: #ffcf68;
 }
 
-.overlay {
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 80;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: left;
-          transform-origin: left;
+.transition-fade {
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
 }
 
 .header {
   z-index: 98;
-}
-
-.transition-wipe {
-  -webkit-transition: 0.7s cubic-bezier(0, 0, 0.165, 1);
-  transition: 0.7s cubic-bezier(0, 0, 0.165, 1);
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-}
-
-html.is-animating .transition-wipe {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: left;
-          transform-origin: left;
-}
-
-html.is-rendering .transition-wipe {
-  -webkit-transform-origin: right;
-          transform-origin: right;
 }
 
 .slide {
