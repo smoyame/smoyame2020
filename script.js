@@ -68,6 +68,12 @@ gsap.to (".callmesam", {
 }
 )
 
+$(document).on('mousemove', function(e){
+    $('#cursor').css({
+       left:  e.pageX -16,
+       top:   e.pageY - 16
+    });
+});
 
 //////SWUP
 
@@ -76,6 +82,7 @@ swup.on('animationOutDone', () => {
     window.scrollTo(0, 0)
     // projdescReveal(1)
     // projdescReveal(2)
+   
 })
 swup.on('contentReplaced', () => {
     //swup saves the scroll position on page transitions so i have to do this i'm so sorry

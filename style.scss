@@ -4,7 +4,7 @@ $main-bright: #fff;
 $main-dark: #000;
 $accent1: rgb(238, 61, 55);
 $accent2: rgb(255, 207, 104);
-$accent3: rgb(15, 26, 75);
+$accent3: rgb(0, 63, 105);
 // $main-font: 'Barlow', 'Arial', sans-serif;
 $main-font: 'degular', 'Barlow', sans-serif;
 $main-font-display: 'degular-display', 'Barlow', sans-serif;
@@ -70,6 +70,8 @@ html.is-animating .transition-fade {
 
 
 //basic styling
+
+
 .slide {
     background-image: url(https://via.placeholder.com/500);
     background-position: center center;
@@ -77,6 +79,7 @@ html.is-animating .transition-fade {
     height: 75vh;
     width: auto;
     position: relative;
+    // box-shadow: .5rem .5rem 0 $accent3;
     
 }
 
