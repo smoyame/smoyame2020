@@ -5,7 +5,10 @@ $main-dark: #000;
 $accent1: rgb(238, 61, 55);
 $accent2: rgb(255, 207, 104);
 $accent3: rgb(15, 26, 75);
-$main-font: 'Barlow', 'Arial', sans-serif;
+// $main-font: 'Barlow', 'Arial', sans-serif;
+$main-font: 'degular', 'Barlow', sans-serif;
+$main-font-display: 'degular-display', 'Barlow', sans-serif;
+$main-font-text: 'degular-text', 'Barlow', sans-serif;
 
 //reset
 * {
@@ -24,16 +27,46 @@ $main-font: 'Barlow', 'Arial', sans-serif;
 
 // SWUP
 
-.transition-fade {
-    transition: .5s;
-    opacity: 1;
+// .transition-fade {
+//     transition: .5s;
+//     opacity: 1;
+// }
+
+// html.is-animating .transition-fade {
+//     opacity: 0;
+    
+// }
+
+.overlay {
+    background-color: $main-bright;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 80;
+    transform: scale(0);
+    transform-origin: left;
+}
+.header {
+    z-index: 98;
 }
 
-html.is-animating .transition-fade {
-    opacity: 0;
+.transition-wipe {
+    transition: .7s cubic-bezier(0.0, 0.0, 0.165, 1);
+    transform: scaleX(0);
     
 }
 
+html.is-animating .transition-wipe {
+    transform: scaleX(1);
+    transform-origin: left;
+    
+}
+
+html.is-rendering .transition-wipe {
+    transform-origin: right;
+}
 
 
 //basic styling
@@ -55,8 +88,21 @@ li {
     list-style-type: none;
 }
 
+.name, .lastname {
+    font-weight: 700;
+    font-size: 1.1rem;
+    
+}
+
+
+.name, .job {
+    font-family: $main-font-text;
+    
+}
+
 .lastname {
     display: block;
+    margin-top: -.5rem;
 }
 
 .nav-item {
@@ -65,7 +111,8 @@ li {
 
 .proj-name1, .proj-name2, .proj-name3, .proj-name4, .proj-name5, .proj-name6 {
     font-size: 8vh;
-    font-weight: 300;
+    font-family: $main-font-display;
+    font-weight: 700;
 }
 
 .proj-name a:hover, .nav-item a:hover, .proj-desc:hover {
@@ -76,6 +123,8 @@ li {
 
 .proj-desc {
     text-transform: uppercase;
+    font-family: $main-font-text;
+    font-weight: 400;
 }
  
 
@@ -98,6 +147,7 @@ li {
     position: fixed;
     max-width: 16.5%;
     top: 0;
+    z-index: 99;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -194,8 +244,8 @@ li {
     max-width: 70%;
 }
 .callmesam {
-    font-size: 10vh;
-    margin-bottom: 10vh;
+    font-size: 8vh;
+    margin-bottom: 8vh;
 }
 
 .about-desc p {
@@ -369,7 +419,7 @@ li {
    .sub-main {
     display: grid;
     grid: repeat(8, 1fr) / repeat(12, 1fr);
-    z-index: 99;
+    z-index: 70;
     grid-column: 2 / 3;
     margin: 2rem 2rem 2rem 0rem;
 
@@ -390,8 +440,9 @@ li {
     top: 25vh;
     left: 1.8rem;
     font-size: 10vh;
-    font-weight: 300;
-    z-index: 97;
+    font-weight: 400;
+    font-family: $main-font-display;
+    z-index: 70;
     // z-index: 75;
 }
 
@@ -400,7 +451,10 @@ li {
     top: 40vh;
     left: 2rem;
     width: 40%;
-    z-index: 97;
+    z-index: 70;
+
+    font-family: $main-font-text;
+    font-weight: 400;
 }
 
 // project 1 ///////////////////////////////////////////////////////

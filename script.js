@@ -1,7 +1,7 @@
 let textReveal = (projNum, projTitle) => {
     gsap.to (`.proj-name${projNum}`, {
         duration: .5,
-        fontWeight: "600",
+        // fontWeight: "600",
         text: projTitle,
         ease: "linear",
         

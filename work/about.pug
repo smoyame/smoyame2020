@@ -8,11 +8,13 @@ html(lang="en")
         title Graphic Designer | Samanta Moya Medina
         link(rel="stylesheet", href="style.css")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600;700;800;900&display=swap")
+        link(rel="stylesheet", href="https://use.typekit.net/ojh4yrg.css")
     body.container
         .sidebar
                 +header('../index.html', '../about.html')
 
         main(class="about-main transition-fade" id="swup")
+            div.overlay(class="transition-wipe")
             h2.callmesam 
             .about-desc
                 p I am a Graphic Design B.F.A candidate at the Maryland Institute College of Art and I also hold an Associate of Applied Science in Graphic Design from Montgomery College, Rockville. 
