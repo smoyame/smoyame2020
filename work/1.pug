@@ -10,14 +10,22 @@ html(lang="en")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600;700;800;900&display=swap")
     body.container
         .sidebar
-             +header('/index.html', '/about.html')
-        main.main(id="main")
-            +slide('slide slide1', '/work/1.html', 'proj-name1', '»', 'proj-desc1','publication', '08.2019')
-            +slide('slide slide2', '/work/2.html', 'proj-name2', '»', 'proj-desc2','publication', '08.2019')
-            +slide('slide slide3', '/work/3.html', 'proj-name3', '»', 'proj-desc3','publication', '08.2019')
-            +slide('slide slide4', '/work/4.html', 'proj-name4', '»', 'proj-desc4','publication', '08.2019')
-            +slide('slide slide5', '/work/5.html', 'proj-name5', '»', 'proj-desc5','publication', '08.2019')
-            +slide('slide slide6', '/work/6.html', 'proj-name6', '»', 'proj-desc6','publication', '08.2019')
+                +header('../index.html', '../about.html')
+
+        main(class="sub-main transition-fade" id="swup")
+            
+            div(class="sub-slide sub-slide1a")
+                //- div.proj1filter
+                h2.sub-proj-name1 the dry run
+                p.sub-desc1a this is the main description for this project upon going to the main project page for it from the homepage and other stuff
+            div(class="sub-slide sub-slide1b") 
+            div(class="sub-slide sub-slide1c")
+            div(class="sub-slide sub-slide1d")
+                p.sub-desc1b thisprojectalso for so and so and so and so lorem ipsum dolor est something crazy foz and stuff
+            div(class="sub-slide sub-slide1e")
+            div(class="sub-slide sub-slide1f")
+            div(class="sub-slide sub-slide1g")
+            div(class="sub-slide sub-slide1h")
         script(src="https://unpkg.com/swup@latest/dist/swup.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js")

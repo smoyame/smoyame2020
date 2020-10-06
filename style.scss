@@ -4,7 +4,7 @@ $main-bright: #fff;
 $main-dark: #000;
 $accent1: rgb(238, 61, 55);
 $accent2: rgb(255, 207, 104);
-$accent3: rgb(0, 0, 0);
+$accent3: rgb(15, 26, 75);
 $main-font: 'Barlow', 'Arial', sans-serif;
 
 //reset
@@ -27,11 +27,43 @@ $main-font: 'Barlow', 'Arial', sans-serif;
     background-image: url(https://via.placeholder.com/500);
     background-position: center center;
     background-size: cover;
-    height: 80vh;
+    height: 75vh;
     width: auto;
     position: relative;
     
 }
+
+a {
+    color: $main-dark;
+}
+
+li {
+    list-style-type: none;
+}
+
+.lastname {
+    display: block;
+}
+
+.nav-item {
+    margin-top: .5rem;
+}
+
+.proj-name1, .proj-name2, .proj-name3, .proj-name4, .proj-name5, .proj-name6 {
+    font-size: 8vh;
+    font-weight: 300;
+}
+
+.proj-name a:hover, .nav-item a:hover, .proj-desc:hover {
+    // text-decoration: underline;
+    // color: $accent1;
+    font-weight: 700;
+}
+
+.proj-desc {
+    text-transform: uppercase;
+}
+ 
 
 // positioning
 
@@ -48,7 +80,7 @@ $main-font: 'Barlow', 'Arial', sans-serif;
 
 .sidebar {
     height: 100vh;
-    padding: 2rem;
+    padding: 2rem ;
     position: fixed;
     max-width: 16.5%;
     top: 0;
@@ -69,7 +101,7 @@ $main-font: 'Barlow', 'Arial', sans-serif;
     // slides
     .slide1 {
         grid-column: 4 / 12;
-        background-image: url(/images/thedryrun1.png);
+        // background-image: url(/images/thedryrun1.png);
     }
     .slide2 {
         grid-column: 2 / 10;
@@ -94,3 +126,52 @@ $main-font: 'Barlow', 'Arial', sans-serif;
         grid-column: 4 / 12;
         grid-row: 6 / 7;
     }
+
+    .proj-name1,
+    .proj-name2,
+    .proj-name3,
+    .proj-name4,
+    .proj-name5,
+    .proj-name6 {
+        position: fixed;
+        // top: 35vh;
+        left: 2rem;
+    }
+
+    .proj-name1 {
+        top: 25vh;
+    }
+    .proj-name2 {
+        top: 33vh;
+    }
+    .proj-name3 {
+        top: 41vh;
+    }
+
+    .proj-name4 {
+        top: 49vh;
+    }
+    .proj-name5 {
+        top: 57vh;
+    }
+    .proj-name6 {
+        top: 65vh;
+    }
+
+    .proj-desc {
+        position: static;
+        padding: 1rem;
+        // right: 2rem;
+        // top: 12rem;
+        display: flex;
+        // transform: rotate(90deg) translateY(-10.5rem);
+        width: auto;    
+        justify-content: space-between;
+    }
+
+
+
+    // .proj-desc2, .proj-desc4, .proj-desc5 {
+    //     transform: rotate(90deg) ;
+    //     // top: 6.8rem;
+    // 
