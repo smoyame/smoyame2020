@@ -210,12 +210,13 @@ li {
 }
 
 .proj-desc {
-  position: static;
+  position: absolute;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: auto;
+  width: 100%;
+  bottom: 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -257,7 +258,7 @@ li {
     display: block;
   }
   .main {
-    margin: 0 2rem 40vh 2rem;
+    margin: 0 2rem 2rem 2rem;
   }
   .sidebar {
     position: static;
@@ -413,6 +414,27 @@ li {
   z-index: 70;
   font-family: "degular-text", "Barlow", sans-serif;
   font-weight: 400;
+}
+
+.sub-slide1a {
+  background-image: url(/images/1/thedryrun1-blur.png);
+}
+
+.sub-slide1b {
+  background-image: url(/images/1/thedryrun2.png);
+}
+
+.sub-slide1c {
+  background-image: url(/images/1/typesystem-01.svg);
+  background-color: #fff;
+}
+
+.sub-slide1g {
+  background-image: url(/images/1/thedryrun5.png);
+}
+
+.sub-slide1h {
+  background-image: url(/images/1/thedryrun1.png);
 }
 
 .sub-slide1a {

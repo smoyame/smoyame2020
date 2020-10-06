@@ -223,13 +223,14 @@ li {
     }
 
     .proj-desc {
-        position: static;
+        position: absolute;
         padding: 1rem;
         // right: 2rem;
         // top: 12rem;
         display: flex;
         // transform: rotate(90deg) translateY(-10.5rem);
-        width: auto;    
+        width: 100%; 
+        bottom: 0;   
         justify-content: space-between;
     }
 
@@ -279,7 +280,7 @@ li {
     }
 
     .main {
-        margin: 0 2rem 40vh 2rem;
+        margin: 0 2rem 2rem 2rem;
         
     }
 
@@ -458,6 +459,29 @@ li {
 }
 
 // project 1 ///////////////////////////////////////////////////////
+
+.sub-slide1a {
+    background-image: url(/images/1/thedryrun1-blur.png);
+    
+    // background-color: rgba(255,255,255,.8);
+}
+.sub-slide1b {
+    background-image: url(/images/1/thedryrun2.png);
+}
+
+.sub-slide1c {
+    background-image: url(/images/1/typesystem-01.svg);
+    background-color: $main-bright;
+}
+
+.sub-slide1g {
+    background-image: url(/images/1/thedryrun5.png);
+}
+
+.sub-slide1h {
+    background-image: url(/images/1/thedryrun1.png);
+}
+
 
 .sub-slide1a {
     grid-column: 4 / 12;
