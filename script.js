@@ -55,3 +55,15 @@ textReveal(5, "chapbook »")
 projdescReveal(5)
 textReveal(6, "misc materials »")
 projdescReveal(6)
+
+
+// about
+
+gsap.to (".callmesam", {
+    duration: 1,
+    delay: .2,
+    text: "You can call me Sam!",
+    ease: "linear",
+    // x: 50,
+}
+)
