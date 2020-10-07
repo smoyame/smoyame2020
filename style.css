@@ -69,7 +69,7 @@ li {
 }
 
 .proj-name1, .proj-name2, .proj-name3, .proj-name4, .proj-name5, .proj-name6 {
-  font-size: 8vh;
+  font-size: 12vh;
   font-family: "degular-display", "Barlow", sans-serif;
   font-weight: 700;
 }
@@ -247,6 +247,11 @@ li {
     -ms-grid-column-span: 11;
     grid-column: 2 / 13;
   }
+  .proj-name1, .proj-name2, .proj-name3, .proj-name4, .proj-name5, .proj-name6 {
+    font-size: 8vh;
+    font-family: "degular-display", "Barlow", sans-serif;
+    font-weight: 700;
+  }
 }
 
 @media (max-width: 970px) {
@@ -412,7 +417,7 @@ li {
   position: fixed;
   top: 40vh;
   left: 2rem;
-  width: 40%;
+  width: 30%;
   z-index: 70;
   font-family: "degular-text", "Barlow", sans-serif;
   font-weight: 400;
