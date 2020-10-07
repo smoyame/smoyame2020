@@ -178,6 +178,7 @@ li {
     .slide3 {
         grid-column: 5 / 13;
         grid-row: 3 / 4;
+        background-image: url(/images/3/amass01.png);
     }
     
     .slide4 {
@@ -551,6 +552,8 @@ li {
 
 // project 2 //////////////////////////////////////////////////////////
 
+
+
 .sub-slide2a {
     grid-column: 2 / 10;
     
@@ -589,6 +592,12 @@ li {
 }
 
 // project 3 ///////////////////////////////////////////////
+
+.sub-slide3a {
+    background-image: url(/images/3/amass01.png);
+    
+    // background-color: rgba(255,255,255,.8);
+}
 
 .sub-slide3a {
     grid-column: 5 / 13;

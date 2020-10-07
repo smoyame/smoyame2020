@@ -148,6 +148,7 @@ li {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
+  background-image: url(/images/3/amass01.png);
 }
 
 .slide4 {
@@ -583,6 +584,10 @@ li {
   -ms-grid-row: 8;
   -ms-grid-row-span: 1;
   grid-row: 8 / 9;
+}
+
+.sub-slide3a {
+  background-image: url(/images/3/amass01.png);
 }
 
 .sub-slide3a {

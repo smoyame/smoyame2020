@@ -43,9 +43,9 @@ let projdescReveal = (projNum) => {
 
 
 
-textReveal(1, "the dry run broadsheet »")
-textReveal(2, "amass magazine »")
-textReveal(3, "voter's guide 2020 »")
+textReveal(1, "the dry run »")
+textReveal(2, "voter's guide »")
+textReveal(3, "amass mag »")
 textReveal(4, "origami poster »")
 textReveal(5, "chapbook »")
 textReveal(6, "misc materials »")
@@ -88,11 +88,11 @@ swup.on('contentReplaced', () => {
     //swup saves the scroll position on page transitions so i have to do this i'm so sorry
     // window.scrollTo(0, 0)
 
-    textReveal(1, "the dry run broadsheet »")
+    textReveal(1, "the dry run »")
     projdescReveal(1)
-    textReveal(2, "amass magazine »")
+    textReveal(2, "voter's guide »")
     projdescReveal(2)
-    textReveal(3, "voter's guide 2020 »")
+    textReveal(3, "amass mag »")
     projdescReveal(3)
     textReveal(4, "mailable poster »")
     projdescReveal(4)
