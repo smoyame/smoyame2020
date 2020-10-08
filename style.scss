@@ -2,9 +2,9 @@
 // constants
 $main-bright: #fff;
 $main-dark: #000;
-$accent1: rgb(238, 61, 55);
-$accent2: rgb(255, 207, 104);
-$accent3: rgb(0, 63, 105);
+$accent1: #ee3d37;
+$accent2: #ffc341;
+$accent3: #003f69;
 // $main-font: 'Barlow', 'Arial', sans-serif;
 $main-font: 'degular', 'Barlow', sans-serif;
 $main-font-display: 'degular-display', 'Barlow', sans-serif;
@@ -48,6 +48,23 @@ html.is-animating .transition-fade {
 //     transform: scale(0);
 //     transform-origin: left;
 // }
+
+#cursor {
+    background: $accent1;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  position:fixed;
+  filter: blur(120px);
+  transform:translate3d(-50%,-50%,0);
+  transition: transform 0.0s linear;
+  transition: background .5s;
+}
+
+// .cursor-sub {
+//     background: $accent2;
+// }
+
 .header {
     z-index: 98;
 }
@@ -105,7 +122,8 @@ li {
 
 .lastname {
     display: block;
-    margin-top: -.5rem;
+    margin-top: -.2rem;
+    line-height: 1.1rem;
 }
 
 .nav-item {
@@ -429,6 +447,7 @@ li {
 .about-main {
     grid-column: 2 / 3;
     // margin:2rem 2rem 40vh 2rem;
+    margin-bottom: 20vh;
     max-width: 100%;
     background-color: $main-bright;
 }
@@ -772,6 +791,7 @@ li {
     }
     .sub-desc1a, .sub-desc2a , .sub-desc3a, .sub-desc4a, .sub-desc5a, .sub-desc6a {
         opacity: 1;
+        width: 40%;
         // left: -5vw;
     }
     

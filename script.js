@@ -41,13 +41,13 @@ let projdescReveal = (projNum) => {
 )
 }
 
-
+//applying functions
 
 textReveal(1, "the dry run »")
-textReveal(2, "voter's guide »")
+textReveal(2, "something »")
 textReveal(3, "amass mag »")
 textReveal(4, "origami poster »")
-textReveal(5, "chapbook »")
+textReveal(5, "voter's guide »")
 textReveal(6, "misc materials »")
 
 
@@ -57,6 +57,27 @@ projdescReveal(3)
 projdescReveal(4)
 projdescReveal(5)
 projdescReveal(6)
+
+// cursor movement
+// thanks to someone on codepen
+$(document).on("click mousemove",".container",function(e){ 
+    var x = e.clientX;
+    var y = e.clientY;
+    var newposX = x - 60;
+    var newposY = y - 60; $("#cursor").css("transform","translate3d("+newposX+"px,"+newposY+"px,0px)");
+    });
+
+    //cursor hover effect
+
+let cursor = document.getElementById("cursor");
+
+let cursorColorChange = (color) => {
+    cursor.style.backgroundColor = color;
+}
+
+
+
+
 // about
 
 gsap.to (".callmesam", {
@@ -67,13 +88,6 @@ gsap.to (".callmesam", {
     // x: 50,
 }
 )
-
-$(document).on('mousemove', function(e){
-    $('#cursor').css({
-       left:  e.pageX -16,
-       top:   e.pageY - 16
-    });
-});
 
 //////SWUP
 
@@ -90,13 +104,13 @@ swup.on('contentReplaced', () => {
 
     textReveal(1, "the dry run »")
     projdescReveal(1)
-    textReveal(2, "voter's guide »")
+    textReveal(2, "something »")
     projdescReveal(2)
     textReveal(3, "amass mag »")
     projdescReveal(3)
     textReveal(4, "mailable poster »")
     projdescReveal(4)
-    textReveal(5, "chapbook »")
+    textReveal(5, "voter's guide »")
     projdescReveal(5)
     textReveal(6, "misc materials »")
     projdescReveal(6)
