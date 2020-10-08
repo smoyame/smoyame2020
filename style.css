@@ -375,7 +375,6 @@ li {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2 / 3;
-    margin: 2rem 2rem 40vh 2rem;
     max-width: 100%;
     background-color: #fff;
   }
@@ -587,13 +586,10 @@ li {
 }
 
 .sub-slide3a {
-  background-image: url(/images/3/amass01.png);
-}
-
-.sub-slide3a {
   -ms-grid-column: 5;
   -ms-grid-column-span: 8;
   grid-column: 5 / 13;
+  background-image: url(/images/3/amass01-blur.png);
 }
 
 .sub-slide3b {
@@ -603,6 +599,7 @@ li {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
+  background-image: url(/images/3/amass03.png);
 }
 
 .sub-slide3c {
@@ -612,6 +609,7 @@ li {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
+  background-image: url(/images/3/amass04.png);
 }
 
 .sub-slide3d {
@@ -621,6 +619,7 @@ li {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4 / 5;
+  background-image: url(/images/3/amass05.png);
 }
 
 .sub-slide3e {
@@ -630,6 +629,7 @@ li {
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
   grid-row: 5 / 6;
+  background-image: url(/images/3/amass06.png);
 }
 
 .sub-slide3f {
@@ -639,6 +639,7 @@ li {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6 / 7;
+  background-image: url(/images/3/amass07.png);
 }
 
 .sub-slide3g {
@@ -648,6 +649,7 @@ li {
   -ms-grid-row: 7;
   -ms-grid-row-span: 1;
   grid-row: 7 / 8;
+  background-image: url(/images/3/amass08.png);
 }
 
 .sub-slide3h {
@@ -657,6 +659,7 @@ li {
   -ms-grid-row: 8;
   -ms-grid-row-span: 1;
   grid-row: 8 / 9;
+  background-image: url(/images/3/amass01.png);
 }
 
 .sub-slide4a {
@@ -897,7 +900,7 @@ li {
     opacity: 1;
     position: absolute;
     top: 6rem;
-    margin: 2rem;
+    margin: 0 2rem;
     left: 0;
     width: calc(100% - 4rem);
   }

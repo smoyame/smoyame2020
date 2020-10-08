@@ -427,7 +427,7 @@ li {
 
 .about-main {
     grid-column: 2 / 3;
-    margin:2rem 2rem 40vh 2rem;
+    // margin:2rem 2rem 40vh 2rem;
     max-width: 100%;
     background-color: $main-bright;
 }
@@ -593,48 +593,58 @@ li {
 
 // project 3 ///////////////////////////////////////////////
 
-.sub-slide3a {
-    background-image: url(/images/3/amass01.png);
-    
-    // background-color: rgba(255,255,255,.8);
-}
 
 .sub-slide3a {
     grid-column: 5 / 13;
     // grid-row: 3 / 4;
+    background-image: url(/images/3/amass01-blur.png);
 }
 
 .sub-slide3b {
     grid-column: 3 / 11;
     grid-row: 2 / 3;
+    background-image: url(/images/3/amass03.png);
+    // background-position: -5vw center;
 }
 
 .sub-slide3c {
     grid-column: 2 / 10;
     grid-row: 3 / 4;
+    background-image: url(/images/3/amass04.png);
+    
 }
 
 .sub-slide3d {
     grid-column: 4 / 12;
     grid-row: 4 / 5;
+    background-image: url(/images/3/amass05.png);
+
 }
 .sub-slide3e {
     grid-column: 2 / 10;
     grid-row: 5 / 6;
+    background-image: url(/images/3/amass06.png);
+
 }
 .sub-slide3f {
     grid-column: 5 / 13;
     grid-row: 6 / 7;
+    background-image: url(/images/3/amass07.png);
+
 }
 
 .sub-slide3g {
     grid-column: 3 / 11;
     grid-row: 7 / 8;
+    background-image: url(/images/3/amass08.png);
+
 }
 
 .sub-slide3h {
     grid-column: 2 / 10;
     grid-row: 8 / 9;
+    background-image: url(/images/3/amass01.png);
+
 }
 
 // project 4 ////////////////////////////////////////////////////
@@ -790,8 +800,12 @@ li {
         opacity: 1;
         position: absolute;
         top: 6rem;
-        margin: 2rem;
+        margin: 0 2rem;
         left: 0;
         width: calc(100% - 4rem);
     }
+
+    // .sub-slide3b, .sub-slide3c, .sub-slide3d, .sub-slide3e, .sub-slide3f, .sub-slide3g {
+    //     height: 30vh;
+    // }
 }
