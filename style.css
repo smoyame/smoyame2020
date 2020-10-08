@@ -345,6 +345,7 @@ li {
         -ms-flex-positive: 1;
             flex-grow: 1;
     text-align: center;
+    margin-top: 0;
   }
   .nav-item a {
     margin-bottom: 0;
