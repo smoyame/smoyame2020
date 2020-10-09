@@ -35,8 +35,8 @@ html.is-animating .transition-fade {
   height: 120px;
   border-radius: 50%;
   position: fixed;
-  -webkit-filter: blur(120px);
-          filter: blur(120px);
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
   -webkit-transition: -webkit-transform 0.0s linear;
@@ -186,6 +186,7 @@ li {
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
   grid-row: 5 / 6;
+  background-image: url(/images/5/votersguide01.png);
 }
 
 .slide6 {
@@ -756,6 +757,7 @@ li {
   -ms-grid-column: 2;
   -ms-grid-column-span: 8;
   grid-column: 2 / 10;
+  background-image: url(/images/5/votersguide01-blur.png);
 }
 
 .sub-slide5b {
@@ -765,6 +767,7 @@ li {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
+  background-image: url(/images/5/votersguide03.png);
 }
 
 .sub-slide5c {
@@ -774,6 +777,7 @@ li {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
+  background-image: url(/images/5/votersguide02.png);
 }
 
 .sub-slide5d {
@@ -783,6 +787,7 @@ li {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4 / 5;
+  background-image: url(/images/5/votersguide05.png);
 }
 
 .sub-slide5e {
@@ -792,6 +797,7 @@ li {
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
   grid-row: 5 / 6;
+  background-image: url(/images/5/votersguide04.png);
 }
 
 .sub-slide5f {
@@ -801,6 +807,7 @@ li {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6 / 7;
+  background-image: url(/images/5/votersguide06.png);
 }
 
 .sub-slide5g {
@@ -819,6 +826,7 @@ li {
   -ms-grid-row: 8;
   -ms-grid-row-span: 1;
   grid-row: 8 / 9;
+  background-image: url(/images/5/votersguide01.png);
 }
 
 .sub-slide6a {
@@ -904,7 +912,7 @@ li {
 
 @media (max-width: 800px) {
   .sub-main {
-    margin: 0 2rem 40vh 2rem;
+    margin: 0 2rem 20vh 2rem;
   }
   .sub-slide {
     -ms-grid-column: 1;

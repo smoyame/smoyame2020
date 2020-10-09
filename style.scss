@@ -55,7 +55,7 @@ html.is-animating .transition-fade {
   height:120px;
   border-radius:50%;
   position:fixed;
-  filter: blur(120px);
+  filter: blur(50px);
   transform:translate3d(-50%,-50%,0);
   transition: transform 0.0s linear;
   transition: background .5s;
@@ -207,6 +207,7 @@ li {
     .slide5 {
         grid-column: 2 / 10;
         grid-row: 5 / 6;
+        background-image: url(/images/5/votersguide01.png);
     }
     
     .slide6 {
@@ -711,29 +712,35 @@ li {
 .sub-slide5a {
     grid-column: 2 / 10;
     // grid-row: 5 / 6;
+    background-image: url(/images/5/votersguide01-blur.png);
 }
 
 .sub-slide5b {
     grid-column: 4 / 12;
     grid-row: 2 / 3;
+    background-image: url(/images/5/votersguide03.png);
 }
 
 .sub-slide5c {
     grid-column: 2 / 10;
     grid-row: 3 / 4;
+    background-image: url(/images/5/votersguide02.png);
 }
 .sub-slide5d {
     grid-column: 5 / 13;
     grid-row: 4 / 5;
+    background-image: url(/images/5/votersguide05.png);
 }
 
 .sub-slide5e {
     grid-column: 3 / 11;
     grid-row: 5 / 6;
+    background-image: url(/images/5/votersguide04.png);
 }
 .sub-slide5f {
     grid-column: 2 / 10;
     grid-row: 6 / 7;
+    background-image: url(/images/5/votersguide06.png);
 }
 
 .sub-slide5g {
@@ -744,6 +751,7 @@ li {
 .sub-slide5h {
     grid-column: 2 / 10;
     grid-row: 8 / 9;
+    background-image: url(/images/5/votersguide01.png);
 }
 
 // project 6 /////////////////////////////////////////////////////////////////////
@@ -799,7 +807,7 @@ li {
 
 @media (max-width: 800px) {
     .sub-main {
-        margin: 0 2rem 40vh 2rem;
+        margin: 0 2rem 20vh 2rem;
     }
 
     .sub-slide{

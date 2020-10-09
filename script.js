@@ -10,7 +10,7 @@ let textReveal = (projNum, projTitle) => {
         scrollTrigger: {
             trigger:`.slide${projNum}`,
             // markers: true,
-            start: "top 75%",
+            start: "top 50%",
             end: "bottom: 0%",
             // end: "50%",
             toggleActions: "play reverse play reverse",
@@ -32,7 +32,7 @@ let projdescReveal = (projNum) => {
     
     scrollTrigger: {
         trigger: `.slide${projNum}`,
-        start: "top 75%",
+        start: "top 50%",
         end: "bottom: 0%",
         // markers: true,
         toggleActions: "play reverse play reverse",
@@ -67,7 +67,7 @@ $(document).on("click mousemove",".container",function(e){
     var newposY = y - 60; $("#cursor").css("transform","translate3d("+newposX+"px,"+newposY+"px,0px)");
     });
 
-    //cursor hover effect
+//cursor hover effect
 
 let cursor = document.getElementById("cursor");
 
