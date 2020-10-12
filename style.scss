@@ -19,10 +19,23 @@ $main-font-text: 'degular-text', 'Barlow', sans-serif;
     font-family: $main-font;
     transition: all .2s ease;
     text-decoration: none;
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
     ::selection {
         background-color: $accent2;
     }
+}
+
+#cursor {
+    background: $accent1;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  position:fixed;
+  filter: blur(50px);
+  transform: translate3d(-50%,-50%,0);
+  transition: transform 0.0s linear;
+  transition: background .5s;
+
 }
 
 // SWUP
@@ -37,57 +50,59 @@ html.is-animating .transition-fade {
     
 }
 
-// .overlay {
-//     background-color: $main-bright;
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100vw;
-//     height: 100vh;
-//     z-index: 80;
-//     transform: scale(0);
-//     transform-origin: left;
-// }
-
-#cursor {
-    background: $accent1;
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  position:fixed;
-  filter: blur(50px);
-  transform:translate3d(-50%,-50%,0);
-  transition: transform 0.0s linear;
-  transition: background .5s;
+.overlay {
+    background-color: $main-bright;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 80;
+    transform: scaleX(0);
+    transform-origin: left;
 }
-
-// .cursor-sub {
-//     background: $accent2;
-// }
 
 .header {
     z-index: 98;
 }
 
-// .transition-wipe {
-//     transition: .7s cubic-bezier(0.0, 0.0, 0.165, 1);
-//     transform: scaleX(0);
+.transition-wipe {
+    transition: .7s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transform: scaleX(0);
     
-// }
+}
 
-// html.is-animating .transition-wipe {
+html.is-animating .transition-wipe {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+// html.is-leaving .transition-wipe {
 //     transform: scaleX(1);
-//     transform-origin: left;
-    
 // }
-
-// html.is-rendering .transition-wipe {
+// html.is-leaving .transition-wipe {
 //     transform-origin: right;
+//     transform: scaleX(0);
 // }
 
 
 //basic styling
 
+.credit {
+    width: 25ch;
+    position: fixed;
+    background-color: $main-dark;
+    color: $main-bright;
+    padding: 1rem;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 99;
+    clip-path: inset(77% 0% 0% 91%);
+}
+
+.credit:hover {
+    clip-path: inset(0% 0% 0% 0%);
+}
 
 .slide {
     background-image: url(https://via.placeholder.com/500);
@@ -329,7 +344,7 @@ li {
     }
 
     .main {
-        margin: 0 2rem 2rem 2rem;
+        margin: 0 2rem 30vh 2rem;
         
     }
 
@@ -339,6 +354,14 @@ li {
         flex-direction: row;
         height: auto;
         flex-wrap: wrap;
+    }
+
+    .credit {
+        clip-path: inset(0 0 0 0);
+        width: calc( 100% - 4rem);
+        bottom: 6rem;
+        // opacity: .3;
+        z-index: -1;
     }
 
     .header {
@@ -389,7 +412,7 @@ li {
 
     .lastname {
         display: inline-block;
-        margin-left: 3vw;
+        margin-left: 1.5vw;
     }
 
 
@@ -502,7 +525,7 @@ li {
     position: fixed;
     top: 40vh;
     left: 2rem;
-    width: 30%;
+    width: 35%;
     z-index: 70;
 
     font-family: $main-font-text;

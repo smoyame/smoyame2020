@@ -8,7 +8,6 @@
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
   text-decoration: none;
-  scroll-behavior: smooth;
 }
 
 * ::-moz-selection {
@@ -17,16 +16,6 @@
 
 * ::selection {
   background-color: #ffc341;
-}
-
-.transition-fade {
-  -webkit-transition: .5s;
-  transition: .5s;
-  opacity: 1;
-}
-
-html.is-animating .transition-fade {
-  opacity: 0;
 }
 
 #cursor {
@@ -47,8 +36,64 @@ html.is-animating .transition-fade {
   transition: background .5s;
 }
 
+.transition-fade {
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+.overlay {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 80;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
 .header {
   z-index: 98;
+}
+
+.transition-wipe {
+  -webkit-transition: 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+html.is-animating .transition-wipe {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.credit {
+  width: 25ch;
+  position: fixed;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99;
+  -webkit-clip-path: inset(77% 0% 0% 91%);
+          clip-path: inset(77% 0% 0% 91%);
+}
+
+.credit:hover {
+  -webkit-clip-path: inset(0% 0% 0% 0%);
+          clip-path: inset(0% 0% 0% 0%);
 }
 
 .slide {
@@ -286,7 +331,7 @@ li {
     display: block;
   }
   .main {
-    margin: 0 2rem 2rem 2rem;
+    margin: 0 2rem 30vh 2rem;
   }
   .sidebar {
     position: static;
@@ -298,6 +343,13 @@ li {
     height: auto;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .credit {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+    width: calc( 100% - 4rem);
+    bottom: 6rem;
+    z-index: -1;
   }
   .header {
     -webkit-box-flex: 1;
@@ -348,7 +400,7 @@ li {
   }
   .lastname {
     display: inline-block;
-    margin-left: 3vw;
+    margin-left: 1.5vw;
   }
   .nav-contain {
     display: -webkit-box;
@@ -439,7 +491,7 @@ li {
   position: fixed;
   top: 40vh;
   left: 2rem;
-  width: 30%;
+  width: 35%;
   z-index: 70;
   font-family: "degular-text", "Barlow", sans-serif;
   font-weight: 400;
