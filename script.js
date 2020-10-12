@@ -44,7 +44,7 @@ let projdescReveal = (projNum) => {
 //applying functions
 
 textReveal(1, "the dry run »")
-textReveal(2, "something »")
+textReveal(2, "olympics 2040 »")
 textReveal(3, "amass mag »")
 textReveal(4, "origami poster »")
 textReveal(5, "voter's guide »")
@@ -104,7 +104,7 @@ swup.on('contentReplaced', () => {
 
     textReveal(1, "the dry run »")
     projdescReveal(1)
-    textReveal(2, "something »")
+    textReveal(2, "olympics 2040 »")
     projdescReveal(2)
     textReveal(3, "amass mag »")
     projdescReveal(3)

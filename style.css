@@ -203,6 +203,7 @@ li {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
+  background-image: url(images/2/logos-01.png);
 }
 
 .slide3 {
@@ -594,6 +595,7 @@ li {
   -ms-grid-column: 2;
   -ms-grid-column-span: 8;
   grid-column: 2 / 10;
+  background-image: url(images/2/logos-01blur.png);
 }
 
 .sub-slide2b {
@@ -603,6 +605,7 @@ li {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
+  background-image: url(images/2/pictrograms-01.png);
 }
 
 .sub-slide2c {
@@ -612,6 +615,7 @@ li {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
+  background-image: url(images/2/Fencing_Prototype-01.png);
 }
 
 .sub-slide2d {
@@ -621,6 +625,7 @@ li {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4 / 5;
+  background-image: url(images/2/iphone-ticket.png);
 }
 
 .sub-slide2e {
@@ -630,6 +635,7 @@ li {
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
   grid-row: 5 / 6;
+  background-image: url(images/2/aide_mascot.png);
 }
 
 .sub-slide2f {
@@ -639,6 +645,7 @@ li {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6 / 7;
+  background-image: url(images/2/id-holder-mockup.png);
 }
 
 .sub-slide2g {
@@ -648,6 +655,7 @@ li {
   -ms-grid-row: 7;
   -ms-grid-row-span: 1;
   grid-row: 7 / 8;
+  background-image: url(images/2/iphone-ticket2.png);
 }
 
 .sub-slide2h {

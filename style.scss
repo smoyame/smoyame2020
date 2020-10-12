@@ -207,6 +207,7 @@ li {
     .slide2 {
         grid-column: 2 / 10;
         grid-row: 2 / 3;
+        background-image: url(images/2/logos-01.png);
     }
     .slide3 {
         grid-column: 5 / 13;
@@ -600,35 +601,43 @@ li {
 
 .sub-slide2a {
     grid-column: 2 / 10;
+    background-image: url(images/2/logos-01blur.png);
     
 }
 .sub-slide2b {
     grid-column: 5 / 13;
     grid-row: 2 / 3;
+    background-image: url(images/2/pictrograms-01.png);
 }
 
 .sub-slide2c {
     grid-column: 3 / 11;
     grid-row: 3 / 4;
+    background-image: url(images/2/Fencing_Prototype-01.png);
 }
 
 .sub-slide2d {
     grid-column: 2 / 10;
     grid-row: 4 / 5;
+    background-image: url(images/2/iphone-ticket.png);
 }
 
 .sub-slide2e {
     grid-column: 4 / 12;
     grid-row: 5 / 6;
+    background-image: url(images/2/aide_mascot.png);
 }
 
 .sub-slide2f {
     grid-column: 2 / 10;
     grid-row: 6 / 7;
+    background-image: url(images/2/id-holder-mockup.png);
 }
 .sub-slide2g {
     grid-column: 5 / 13;
     grid-row: 7 / 8;
+    background-image: url(images/2/iphone-ticket2.png);
+
 }
 .sub-slide2h {
     grid-column: 3 / 11;
