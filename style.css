@@ -768,7 +768,7 @@ li {
   -ms-grid-column: 3;
   -ms-grid-column-span: 8;
   grid-column: 3 / 11;
-  background-image: url(images/4/envelope-1-copy.png);
+  background-image: url(images/4/envelope-1-copy-blur.png);
 }
 
 .sub-slide4b {
@@ -838,7 +838,7 @@ li {
   -ms-grid-row: 8;
   -ms-grid-row-span: 1;
   grid-row: 8 / 9;
-  background-image: url(images/other/stillinprogress.png);
+  background-image: url(images/4/envelope-1-copy.png);
 }
 
 .sub-slide5a {
@@ -985,7 +985,7 @@ li {
   -ms-grid-row: 7;
   -ms-grid-row-span: 1;
   grid-row: 7 / 8;
-  background-image: url(images/6/zine-2.jpg);
+  background-image: url(images/6/zine.jpg);
 }
 
 .sub-slide6h, .boen {
@@ -1037,6 +1037,24 @@ li {
     margin: 0 1rem;
     left: 0;
     width: calc(100% - 2rem);
+  }
+  .sub-slide2d {
+    background-image: url(images/2/Fencing-01_800.png);
+  }
+  .sub-slide6g {
+    background-image: url(images/6/zine_800.jpg);
+  }
+}
+
+@media (max-width: 500px) {
+  .sub-slide2h {
+    background-image: url(images/2/logos_800.png);
+  }
+}
+
+@media (max-width: 400px) {
+  .sub-slide2b {
+    background-image: url(images/2/Id-Holder-Mockup_800.png);
   }
 }
 /*# sourceMappingURL=style.css.map */

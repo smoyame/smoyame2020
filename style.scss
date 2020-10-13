@@ -728,7 +728,7 @@ li {
 .sub-slide4a {
     grid-column: 3 / 11;
     // grid-row: 4 / 5;
-    background-image: url(images/4/envelope-1-copy.png);
+    background-image: url(images/4/envelope-1-copy-blur.png);
     
 }
 
@@ -772,7 +772,7 @@ li {
 .sub-slide4h {
     grid-column: 4 / 12;
     grid-row: 8 / 9;
-    background-image: url(images/other/stillinprogress.png);
+    background-image: url(images/4/envelope-1-copy.png);
 
 }
 
@@ -872,7 +872,7 @@ li {
 .sub-slide6g {
     grid-column: 2 / 10;
     grid-row: 7 / 8;
-    background-image: url(images/6/zine-2.jpg);
+    background-image: url(images/6/zine.jpg);
 
 }
 .sub-slide6h, .boen {
@@ -929,8 +929,28 @@ li {
         left: 0;
         width: calc(100% - 2rem);
     }
-
     // .sub-slide3b, .sub-slide3c, .sub-slide3d, .sub-slide3e, .sub-slide3f, .sub-slide3g {
     //     height: 30vh;
     // }
+
+    .sub-slide2d {
+        background-image: url(images/2/Fencing-01_800.png);
+    }
+    .sub-slide6g {
+        background-image: url(images/6/zine_800.jpg);
+    }
+}
+
+@media (max-width: 500px) {
+    .sub-slide2h {
+        background-image: url(images/2/logos_800.png);
+    }
+}
+
+@media (max-width: 400px) {
+    .sub-slide2b {
+        background-image: url(images/2/Id-Holder-Mockup_800.png);
+    }
+
+    
 }
