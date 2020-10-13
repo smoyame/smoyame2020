@@ -24,8 +24,8 @@
   height: 150px;
   border-radius: 50%;
   position: fixed;
-  -webkit-filter: blur(150px);
-          filter: blur(150px);
+  -webkit-filter: blur(130px);
+          filter: blur(130px);
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
   -webkit-transition: -webkit-transform 0.0s linear;
@@ -34,6 +34,7 @@
   transition: transform 0.0s linear, -webkit-transform 0.0s linear;
   -webkit-transition: background .5s;
   transition: background .5s;
+  z-index: -99;
 }
 
 .transition-fade {
@@ -931,6 +932,7 @@ li {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
+  background-image: url(images/6/calvert_hillyershops.jpg);
 }
 
 .sub-slide6c {
@@ -940,6 +942,8 @@ li {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
+  background-image: url(images/6/misclogo-01.png);
+  background-color: #f8f8f8;
 }
 
 .sub-slide6d {
@@ -949,6 +953,7 @@ li {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4 / 5;
+  background-image: url(images/6/cd_resourcesheet.png);
 }
 
 .sub-slide6e {
@@ -958,15 +963,19 @@ li {
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
   grid-row: 5 / 6;
+  background-image: url(images/6/misclogo-02.png);
+  background-color: #f8f8f8;
 }
 
-.sub-slide6f {
+.sub-slide6f, .poster {
   -ms-grid-column: 4;
   -ms-grid-column-span: 8;
   grid-column: 4 / 12;
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6 / 7;
+  background-image: none;
+  background-color: #000;
 }
 
 .sub-slide6g {
@@ -976,15 +985,18 @@ li {
   -ms-grid-row: 7;
   -ms-grid-row-span: 1;
   grid-row: 7 / 8;
+  background-image: url(images/6/zine-2.jpg);
 }
 
-.sub-slide6h {
+.sub-slide6h, .boen {
   -ms-grid-column: 5;
   -ms-grid-column-span: 8;
   grid-column: 5 / 13;
   -ms-grid-row: 8;
   -ms-grid-row-span: 1;
   grid-row: 8 / 9;
+  background-image: none;
+  background-color: #000;
 }
 
 @media (max-width: 1100px) {
