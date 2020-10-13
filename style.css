@@ -20,12 +20,12 @@
 
 #cursor {
   background: #ee3d37;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   position: fixed;
-  -webkit-filter: blur(50px);
-          filter: blur(50px);
+  -webkit-filter: blur(150px);
+          filter: blur(150px);
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
   -webkit-transition: -webkit-transform 0.0s linear;
@@ -187,6 +187,7 @@ li {
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
   margin: 2rem 2rem 2rem 0rem;
+  row-gap: 2rem;
 }
 
 .slide1 {
@@ -223,6 +224,7 @@ li {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4 / 5;
+  background-image: url(images/4/envelope-1-copy.png);
 }
 
 .slide5 {
@@ -242,6 +244,7 @@ li {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6 / 7;
+  background-image: url(images/6/misc.png);
 }
 
 .proj-name1,
@@ -467,6 +470,7 @@ li {
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
   margin: 2rem 2rem 2rem 0rem;
+  row-gap: 2rem;
 }
 
 .sub-slide {
@@ -509,6 +513,18 @@ li {
 .sub-slide1c {
   background-image: url(/images/1/typesystem-01.svg);
   background-color: #fff;
+}
+
+.sub-slide1d {
+  background-image: url(images/1/thedryrun3.png);
+}
+
+.sub-slide1e {
+  background-image: url(images/1/closeup.png);
+}
+
+.sub-slide1f {
+  background-image: url(images/1/thedryrun4.png);
 }
 
 .sub-slide1g {
@@ -751,6 +767,7 @@ li {
   -ms-grid-column: 3;
   -ms-grid-column-span: 8;
   grid-column: 3 / 11;
+  background-image: url(images/4/envelope-1-copy.png);
 }
 
 .sub-slide4b {
@@ -760,6 +777,7 @@ li {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
+  background-image: url(images/4/outside.png);
 }
 
 .sub-slide4c {
@@ -769,6 +787,7 @@ li {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
+  background-image: url(images/4/envelope-3-copy.png);
 }
 
 .sub-slide4d {
@@ -778,6 +797,7 @@ li {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4 / 5;
+  background-image: url(images/4/inside.png);
 }
 
 .sub-slide4e {
@@ -787,6 +807,7 @@ li {
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
   grid-row: 5 / 6;
+  background-image: url(images/4/envelope-2-copy.png);
 }
 
 .sub-slide4f {
@@ -796,6 +817,7 @@ li {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6 / 7;
+  background-image: url(images/other/stillinprogress.png);
 }
 
 .sub-slide4g {
@@ -805,6 +827,7 @@ li {
   -ms-grid-row: 7;
   -ms-grid-row-span: 1;
   grid-row: 7 / 8;
+  background-image: url(images/4/envelope-4-copy.png);
 }
 
 .sub-slide4h {
@@ -814,6 +837,7 @@ li {
   -ms-grid-row: 8;
   -ms-grid-row-span: 1;
   grid-row: 8 / 9;
+  background-image: url(images/other/stillinprogress.png);
 }
 
 .sub-slide5a {
@@ -870,7 +894,7 @@ li {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6 / 7;
-  background-image: url(/images/5/votersguide06.png);
+  background-image: url(/images/5/votersguide07.png);
 }
 
 .sub-slide5g {
@@ -880,6 +904,7 @@ li {
   -ms-grid-row: 7;
   -ms-grid-row-span: 1;
   grid-row: 7 / 8;
+  background-image: url(/images/5/votersguide06.png);
 }
 
 .sub-slide5h {
@@ -896,6 +921,7 @@ li {
   -ms-grid-column: 4;
   -ms-grid-column-span: 8;
   grid-column: 4 / 12;
+  background-image: url(images/6/misc.png);
 }
 
 .sub-slide6b {
@@ -981,6 +1007,9 @@ li {
     -ms-grid-column: 1;
     -ms-grid-column-span: 12;
     grid-column: 1 / 13;
+  }
+  .credit {
+    display: none;
   }
   .sub-proj-name1, .sub-proj-name2, .sub-proj-name3, .sub-proj-name4, .sub-proj-name5, .sub-proj-name6 {
     font-size: 10vw;

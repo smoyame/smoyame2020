@@ -27,11 +27,11 @@ $main-font-text: 'degular-text', 'Barlow', sans-serif;
 
 #cursor {
     background: $accent1;
-  width:120px;
-  height:120px;
+  width:150px;
+  height:150px;
   border-radius:50%;
   position:fixed;
-  filter: blur(50px);
+  filter: blur(150px);
   transform: translate3d(-50%,-50%,0);
   transition: transform 0.0s linear;
   transition: background .5s;
@@ -196,6 +196,7 @@ li {
     z-index: 99;
     grid-column: 2 / 3;
     margin: 2rem 2rem 2rem 0rem;
+    row-gap: 2rem;
 
 }
 
@@ -218,6 +219,8 @@ li {
     .slide4 {
         grid-column: 3 / 11;
         grid-row: 4 / 5;
+        background-image: url(images/4/envelope-1-copy.png);
+
     }
     
     .slide5 {
@@ -229,6 +232,7 @@ li {
     .slide6 {
         grid-column: 4 / 12;
         grid-row: 6 / 7;
+        background-image: url(images/6/misc.png);
     }
 
     .proj-name1,
@@ -498,7 +502,7 @@ li {
     z-index: 70;
     grid-column: 2 / 3;
     margin: 2rem 2rem 2rem 0rem;
-
+    row-gap: 2rem;
 }
 
 .sub-slide {
@@ -547,6 +551,18 @@ li {
 .sub-slide1c {
     background-image: url(/images/1/typesystem-01.svg);
     background-color: $main-bright;
+}
+
+.sub-slide1d {
+    background-image: url(images/1/thedryrun3.png);
+}
+
+.sub-slide1e {
+    background-image: url(images/1/closeup.png);
+}
+
+.sub-slide1f {
+    background-image: url(images/1/thedryrun4.png);
 }
 
 .sub-slide1g {
@@ -711,38 +727,52 @@ li {
 .sub-slide4a {
     grid-column: 3 / 11;
     // grid-row: 4 / 5;
+    background-image: url(images/4/envelope-1-copy.png);
+    
 }
 
 .sub-slide4b {
     grid-column: 2 / 10;
     grid-row: 2 / 3;
+    
+    background-image: url(images/4/outside.png);
 }
 
 .sub-slide4c {
     grid-column: 4 / 12;
     grid-row: 3 / 4;
+    
+    background-image: url(images/4/envelope-3-copy.png);
 }
 
 .sub-slide4d {
     grid-column: 2 / 10;
     grid-row: 4 / 5;
+    background-image: url(images/4/inside.png);
 }
 .sub-slide4e {
     grid-column: 5 / 13;
     grid-row: 5 / 6;
+    background-image: url(images/4/envelope-2-copy.png);
+    
 }
 .sub-slide4f {
     grid-column: 3 / 11;
     grid-row: 6 / 7;
+    background-image: url(images/other/stillinprogress.png);
+    
 }
 .sub-slide4g {
     grid-column: 2 / 10;
     grid-row: 7 / 8;
+    background-image: url(images/4/envelope-4-copy.png);
 }
 
 .sub-slide4h {
     grid-column: 4 / 12;
     grid-row: 8 / 9;
+    background-image: url(images/other/stillinprogress.png);
+
 }
 
 // project 5 //////////////////////////////////////////////////////
@@ -778,12 +808,13 @@ li {
 .sub-slide5f {
     grid-column: 2 / 10;
     grid-row: 6 / 7;
-    background-image: url(/images/5/votersguide06.png);
+    background-image: url(/images/5/votersguide07.png);
 }
 
 .sub-slide5g {
     grid-column: 4 / 12;
     grid-row: 7 / 8;
+    background-image: url(/images/5/votersguide06.png);
 }
 
 .sub-slide5h {
@@ -797,6 +828,8 @@ li {
 .sub-slide6a {
     grid-column: 4 / 12;
     // grid-row: 2 / 3;
+    background-image: url(images/6/misc.png);
+
 }
 
 .sub-slide6b {
@@ -850,6 +883,10 @@ li {
 
     .sub-slide{
         grid-column: 1 / 13;
+    }
+
+    .credit {
+        display: none;
     }
 
     // .sub-slide1a {
