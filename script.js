@@ -10,7 +10,7 @@ let textReveal1 = (projNum, projTitle) => {
         scrollTrigger: {
             trigger:`.slide${projNum}`,
             markers: true,
-            start: "-10%",
+            start: "-40%",
             end: "40%",
             // end: "50%",
             toggleActions: "play reverse play reverse",
@@ -44,10 +44,27 @@ let textReveal = (projNum, projTitle) => {
     )
 }
 
+let projdescReveal1 = (projNum) => { 
+    gsap.to (`.proj-desc${projNum}`, {
+    duration: .7,
+    opacity: "1",
+    // ease: "linear",
+    // clipPath: "inset(0% 0% 0% 100%)",
+    
+    scrollTrigger: {
+        trigger: `.slide${projNum}`,
+        start: "-40%",
+        end: "40%",
+        // markers: true,
+        toggleActions: "play reverse play reverse",
+    }
+}
+)
+}
 
 let projdescReveal = (projNum) => { 
     gsap.to (`.proj-desc${projNum}`, {
-    duration: .9,
+    duration: .7,
     opacity: "1",
     // ease: "linear",
     // clipPath: "inset(0% 0% 0% 100%)",
@@ -55,7 +72,7 @@ let projdescReveal = (projNum) => {
     scrollTrigger: {
         trigger: `.slide${projNum}`,
         start: "top 50%",
-        end: "bottom: 0%",
+        end: "bottom 50%",
         // markers: true,
         toggleActions: "play reverse play reverse",
     }
@@ -73,7 +90,7 @@ textReveal(5, "voter's guide »")
 textReveal(6, "misc materials »")
 
 
-projdescReveal(1)
+projdescReveal1(1)
 projdescReveal(2)
 projdescReveal(3)
 projdescReveal(4)
@@ -125,7 +142,7 @@ swup.on('contentReplaced', () => {
     // window.scrollTo(0, 0)
 
     textReveal1(1, "the dry run »")
-    projdescReveal(1)
+    projdescReveal1(1)
     textReveal(2, "olympics »")
     projdescReveal(2)
     textReveal(3, "amass mag »")
