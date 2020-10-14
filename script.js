@@ -9,7 +9,7 @@ let textReveal1 = (projNum, projTitle) => {
         
         scrollTrigger: {
             trigger:`.slide${projNum}`,
-            markers: true,
+            // markers: true,
             start: "-40%",
             end: "40%",
             // end: "50%",
@@ -32,7 +32,7 @@ let textReveal = (projNum, projTitle) => {
         
         scrollTrigger: {
             trigger:`.slide${projNum}`,
-            markers: true,
+            // markers: true,
             start: "top 50%",
             end: "bottom 50%",
             // end: "50%",
