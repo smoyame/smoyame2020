@@ -350,7 +350,7 @@ li {
     }
 
     .main {
-        margin: 0 2rem 30vh 2rem;
+        margin: 0 2rem 15vh 2rem;
         
     }
 
@@ -499,7 +499,8 @@ li {
 
    .sub-main {
     display: grid;
-    grid: repeat(8, 1fr) / repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: minmax(1fr, 100%) 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     z-index: 70;
     grid-column: 2 / 3;
     margin: 2rem 2rem 2rem 0rem;
@@ -510,7 +511,7 @@ li {
     background-image: url(https://via.placeholder.com/500);
     background-position: center center;
     background-size: cover;
-    height: 80vh;
+    height: 90vh;
     width: auto;
     position: relative;
     // backdrop-filter: blur(20px);
@@ -898,7 +899,7 @@ li {
 
 @media (max-width: 800px) {
     .sub-main {
-        margin: 0 2rem 20vh 2rem;
+        margin: 0 2rem 15vh 2rem;
     }
 
     .sub-slide{

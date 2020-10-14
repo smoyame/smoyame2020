@@ -1,3 +1,26 @@
+let textReveal1 = (projNum, projTitle) => {
+    gsap.to (`.proj-name${projNum}`, {
+        duration: .5,
+        // fontWeight: "600",
+        text: projTitle,
+        ease: "linear",
+        
+        // x: 50,
+        
+        scrollTrigger: {
+            trigger:`.slide${projNum}`,
+            markers: true,
+            start: "-10%",
+            end: "40%",
+            // end: "50%",
+            toggleActions: "play reverse play reverse",
+            
+        }
+    
+    }
+    )
+}
+
 let textReveal = (projNum, projTitle) => {
     gsap.to (`.proj-name${projNum}`, {
         duration: .5,
@@ -9,9 +32,9 @@ let textReveal = (projNum, projTitle) => {
         
         scrollTrigger: {
             trigger:`.slide${projNum}`,
-            // markers: true,
+            markers: true,
             start: "top 50%",
-            end: "bottom: 0%",
+            end: "bottom 50%",
             // end: "50%",
             toggleActions: "play reverse play reverse",
             
@@ -20,7 +43,6 @@ let textReveal = (projNum, projTitle) => {
     }
     )
 }
-
 
 
 let projdescReveal = (projNum) => { 
@@ -43,7 +65,7 @@ let projdescReveal = (projNum) => {
 
 //applying functions
 
-textReveal(1, "the dry run »")
+textReveal1(1, "the dry run »")
 textReveal(2, "olympics »")
 textReveal(3, "amass mag »")
 textReveal(4, "your mail »")
@@ -102,7 +124,7 @@ swup.on('contentReplaced', () => {
     //swup saves the scroll position on page transitions so i have to do this i'm so sorry
     // window.scrollTo(0, 0)
 
-    textReveal(1, "the dry run »")
+    textReveal1(1, "the dry run »")
     projdescReveal(1)
     textReveal(2, "olympics »")
     projdescReveal(2)

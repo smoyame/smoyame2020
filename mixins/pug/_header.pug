@@ -1,9 +1,10 @@
 mixin header(workLink, aboutLink)
 
     header.header
-        h1.name samanta
-            span.lastname moya medina
-        span.job graphic designer
+        a(href="../index.html")
+            h1.name samanta
+                span.lastname moya medina
+            span.job graphic designer
     nav.nav
         ul.nav-contain(onmouseover="cursorColorChange('#003f69')" onmouseout="cursorColorChange('#ee3d37')")
             li.nav-item
