@@ -11,11 +11,11 @@
 }
 
 * ::-moz-selection {
-  background-color: #ffc341;
+  background-color: #ffba25;
 }
 
 * ::selection {
-  background-color: #ffc341;
+  background-color: #ffba25;
 }
 
 #cursor {
@@ -24,8 +24,8 @@
   height: 150px;
   border-radius: 50%;
   position: fixed;
-  -webkit-filter: blur(130px);
-          filter: blur(130px);
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
   -webkit-transition: -webkit-transform 0.0s linear;

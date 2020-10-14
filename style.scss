@@ -3,7 +3,7 @@
 $main-bright: #fff;
 $main-dark: #000;
 $accent1: #ee3d37;
-$accent2: #ffc341;
+$accent2: #ffba25;
 $accent3: #003f69;
 // $main-font: 'Barlow', 'Arial', sans-serif;
 $main-font: 'degular', 'Barlow', sans-serif;
@@ -31,7 +31,7 @@ $main-font-text: 'degular-text', 'Barlow', sans-serif;
   height:150px;
   border-radius:50%;
   position:fixed;
-  filter: blur(130px);
+  filter: blur(100px);
   transform: translate3d(-50%,-50%,0);
   transition: transform 0.0s linear;
   transition: background .5s;
