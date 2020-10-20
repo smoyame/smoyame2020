@@ -6,7 +6,7 @@ tl.from('.hidetext', {
     opacity: 0,
     delay: .5,
     duration: 1,
-    stagger: .3,
+    stagger: .1,
     y: "125%",
     ease: "power4.inOut"
 }
@@ -19,7 +19,7 @@ let oddProj = (projNum) => {
 gsap.from (`.projdesc${projNum}`, {
     opacity: 0,
     x: "10%",
-    ease: "power3.inOut",
+    ease: "power4.out",
     scrollTrigger: {
         trigger: `.project${projNum}`,
         start: "top 50%",
@@ -35,7 +35,7 @@ let evenProj = (projNum) => {
     gsap.from (`.projdesc${projNum}`, {
         opacity: 0,
         x: "-10%",
-        ease: "power3.inOut",
+        ease: "power4.out",
         scrollTrigger: {
             trigger: `.project${projNum}`,
             // start: "top 45%",
@@ -74,7 +74,7 @@ swup.on('animationOutDone', () => {
 gsap.from('.sub-proj-desc', {
     opacity: 0,
     duration: 1,
-    ease: "power4.inOut",
+    ease: "power4.out",
     x:"-25%"
 })
 
@@ -91,7 +91,7 @@ swup.on('contentReplaced', () => {
     gsap.from('.sub-proj-desc', {
         opacity: 0,
         duration: 1,
-        ease: "power4.inOut",
+        ease: "power4.out",
         x:"-25%"
     })
 

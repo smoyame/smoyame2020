@@ -330,7 +330,7 @@ a {
 
 .about-desc p, .about-desc b {
     margin-top: 1rem;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 1200px) {
@@ -345,16 +345,16 @@ a {
 
     .about-desc {
         grid-column: 1 / 13;
-        margin: 0 1rem;
+        margin: 0 2rem;
     }
 
     .hiimsam {
         font-size: 15vw;
     }
 
-    .about-desc p, .about-desc b {
-        font-size: 1rem;
-    }
+    // .about-desc p, .about-desc b {
+    //     // font-size: 1.5rem;
+    // }
 }
 
 @media (max-width: 800px) {
@@ -454,6 +454,11 @@ a {
 
 @media (max-width: 800px ) {
 
+    .about-desc {
+        // grid-column: 1 / 13;
+        margin: 0 1rem;
+    }
+
 
     .sub-hero {
         margin-bottom: 55vh;
@@ -482,6 +487,10 @@ a {
     .sub-images a{
         display: block;
         margin-bottom: 2rem;
+    }
+
+    .footer {
+        margin-bottom: 4rem
     }
 
 }
