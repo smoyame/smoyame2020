@@ -1,0 +1,50 @@
+include ../mixins/_slide.pug
+include ../mixins/_header.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Graphic Designer | Samanta Moya Medina
+        link(rel="stylesheet", href="https://use.typekit.net/ojh4yrg.css")
+        link(rel="stylesheet", href="style.css")
+        link(rel="stylesheet", href="fluidbox.min.css")
+    body
+        div#main
+            +header('/', "../#works", "/about.html")
+            .content(class="transition-fade" id="swup")
+                section.sub-hero(class="sub-hero1")
+                    .sub-proj-desc(class="sub-proj-desc1")
+                        h3.sub-proj-type Publication
+                        h2.sub-proj-name The Dry Run
+                        p.sub-proj-para The Dry Run is an experimental broadsheet publication that is inspired by Daniel Keyes' Flowers for Algernon. This 3-page dry run explores Charlie's experiences in the form of complex typographical hierarchy.
+                        date.sub-proj-date 
+                            a(href="../index.html#works") ← Back to Home
+                section.sub-images
+                    a.image1(href="../images/1/thedryrun2.png")
+                        img(src="../images/1/thedryrun2.png", alt="sdf", srcset="")
+                    a.image2(href="../images/1/thedryrun4.png")
+                        img.image2(src="../images/1/thedryrun4.png", alt="sdf", srcset="")
+                    a.image3(href="../images/1/typesystem-01.svg")
+                        img.image3(src="../images/1/typesystem-01.svg", alt="sdf", srcset="")
+                    a.image4(href="../images/1/closeup.png")
+                        img.image4(src="../images/1/closeup.png", alt="sdf", srcset="")
+                    a.image5(href="../images/1/thedryrun1.png")
+                        img.image5(src="../images/1/thedryrun1.png", alt="sdf", srcset="")
+               
+
+            footer.footer
+                span.email smoyamedina@mica.edu
+
+        script(src="https://unpkg.com/swup@latest/dist/swup.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js")
+        script(src="../jquery.fluidbox.min.js")
+
+        script(src="/script.js")
+        
