@@ -42,17 +42,25 @@ html.is-animating .transition-fade {
   width: 10vw;
   text-align: center;
   margin-left: 1rem;
+  background-color: rgba(220, 220, 220, 0.25);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
 }
 
 .nav-item:hover, .name:hover {
-  background-color: #FFF;
   text-decoration: underline;
 }
 
 .name, .nav-item {
-  border: 1px solid #000;
   padding: .5rem;
   display: block;
+}
+
+.name {
+  background-color: rgba(220, 220, 220, 0.25);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  padding: .5rem 1rem;
 }
 
 a {
@@ -155,7 +163,7 @@ a {
 }
 
 .footer {
-  border-top: 1px solid #000;
+  background-color: rgba(220, 220, 220, 0.25);
   margin-top: 4rem;
   padding: 2rem;
 }

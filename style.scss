@@ -49,17 +49,27 @@ html.is-animating .transition-fade {
     width: 10vw;
     text-align: center;
     margin-left: 1rem;
+    background-color:rgba(220, 220, 220, 0.25);
+    backdrop-filter: blur(20px);
 }
 
+
+
 .nav-item:hover, .name:hover {
-    background-color:$main-bright;
+    
     text-decoration: underline;
 }
 
 .name, .nav-item {
-    border: 1px solid $main-dark;
+    // border: 1px solid $main-dark;
     padding: .5rem;
     display: block;
+}
+
+.name {
+    background-color:rgba(220, 220, 220, 0.25);
+    backdrop-filter: blur(20px);
+    padding: .5rem 1rem;
 }
 
 a {
@@ -162,9 +172,9 @@ a {
 // footer
 
 .footer {
-    // background-color: $main-dark;
+    background-color:rgba(220, 220, 220, 0.25);
     // color: $main-bright;
-    border-top: 1px solid $main-dark;
+    // border-top: 1px solid $main-dark;
     margin-top: 4rem;
     padding: 2rem;
     
