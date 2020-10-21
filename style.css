@@ -125,6 +125,7 @@ a {
 
 .proj-img {
   height: 100%;
+  max-width: 80%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;

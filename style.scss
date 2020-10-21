@@ -133,7 +133,7 @@ a {
 
 .proj-img {
     height: 100%;
-    // width: 80%;
+    max-width: 80%;
     object-fit: cover;
     object-position: center;
     position: absolute;
