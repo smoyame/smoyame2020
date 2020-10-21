@@ -125,7 +125,6 @@ a {
 
 .proj-img {
   height: 100%;
-  width: 80%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -264,7 +263,6 @@ a {
 
 .sub-images img, .sub-images .image3, .sub-images .image5 {
   width: 100%;
-  height: 70vh;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;

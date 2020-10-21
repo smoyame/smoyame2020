@@ -1,4 +1,11 @@
 
+
+/// fluidbox
+
+$(function () {
+    $('.sub-images a').fluidbox();
+})
+
 //hero text up in
 let tl = gsap.timeline()
 
@@ -81,6 +88,10 @@ gsap.from('.sub-proj-desc', {
 
 swup.on('contentReplaced', () => {
 
+    $(function () {
+        $('.sub-images a').fluidbox();
+    })
+
     oddProj(1);
     evenProj(2);
     oddProj(3);
@@ -96,14 +107,7 @@ swup.on('contentReplaced', () => {
     })
 
 
-    $(function () {
-        $('.sub-images a').fluidbox();
-    })
+   
 }
 )
 
-/// fluidbox
-
-$(function () {
-    $('.sub-images a').fluidbox();
-})
