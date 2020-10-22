@@ -125,7 +125,7 @@ a {
 
 .proj-img {
   height: 100%;
-  max-width: 80%;
+  width: 80%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -177,7 +177,7 @@ a {
 }
 
 .sub-hero1 {
-  background-image: url(images/1/thedryrun5.png);
+  background-image: url(images/1/thedryrun1.png);
 }
 
 .sub-hero2 {
