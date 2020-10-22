@@ -6,6 +6,25 @@ $(function () {
     $('.sub-images a').fluidbox();
 })
 
+//shapes
+
+gsap.to('.triangle', {
+    duration: 300, 
+    rotation: 360, 
+    transformOrigin: "43.27% 41.25%",
+    repeat: -1,
+    ease: "linear",
+})
+
+gsap.to('.square', {
+    duration: 460, 
+    rotation: -360, 
+    transformOrigin: "50% 50%",
+    repeat: -1,
+    ease: "linear",
+})
+
+
 //hero text up in
 let tl = gsap.timeline()
 
@@ -18,7 +37,6 @@ tl.from('.hidetext', {
     ease: "power4.inOut"
 }
 )
-
 
 //project slides
 
@@ -64,11 +82,6 @@ evenProj(4);
 oddProj(5);
 evenProj(6);
 
-
-
-
-
-
 //SWUP 
 const swup = new Swup();
 
@@ -111,3 +124,4 @@ swup.on('contentReplaced', () => {
 }
 )
 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

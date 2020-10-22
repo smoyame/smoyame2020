@@ -11,6 +11,42 @@
   list-style-type: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+.shapes {
+  z-index: -999;
+}
+
+.circle {
+  position: absolute;
+  top: -10%;
+  right: -8%;
+  height: 80vh;
+  z-index: -999;
+}
+
+.square {
+  position: absolute;
+  top: 60%;
+  right: 3%;
+  height: 25%;
+  z-index: -999;
+}
+
+.triangle {
+  position: absolute;
+  top: 15%;
+  right: 25%;
+  height: 35%;
+  z-index: -999;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: none;
+  transition: none;
+}
+
 .transition-fade {
   -webkit-transition: .5s;
   transition: .5s;
@@ -330,8 +366,8 @@ a {
 
 .about-desc {
   -ms-grid-column: 3;
-  -ms-grid-column-span: 7;
-  grid-column: 3 / 10;
+  -ms-grid-column-span: 4;
+  grid-column: 3 / 7;
 }
 
 .hiimsam {
@@ -345,7 +381,7 @@ a {
 
 @media (max-width: 1200px) {
   .nav-item {
-    width: 15vw;
+    width: 16vw;
   }
   .project {
     -ms-grid-column: 1;
@@ -358,12 +394,33 @@ a {
     grid-column: 1 / 13;
     margin: 0 2rem;
   }
+  .about-desc p, .about-desc b {
+    -webkit-backdrop-filter: blur(100px);
+            backdrop-filter: blur(100px);
+  }
   .hiimsam {
     font-size: 15vw;
   }
 }
 
 @media (max-width: 800px) {
+  .circle {
+    top: -10%;
+    right: -8%;
+    height: 40vh;
+  }
+  .square {
+    top: 25vh;
+    right: 10%;
+    height: 10%;
+  }
+  .triangle {
+    top: 13%;
+    right: 55%;
+    height: 15%;
+    -webkit-transition: none;
+    transition: none;
+  }
   .header {
     margin: 1rem 1rem 0 1rem;
     width: calc(100% - 2rem);

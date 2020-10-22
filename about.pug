@@ -11,7 +11,7 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
     body
         div#main
-            +header('/index.html', "/../#work", "/about.html")
+            +header('/index.html', "/../index.html#work", "/about.html")
             .content(class="transition-fade about-main" id="swup")
                 section.about-desc
                     h2.hiimsam Hi, I'm Sam.
@@ -24,7 +24,10 @@ html(lang="en")
                
             footer.footer
                 span.email smoyamedina@mica.edu
-
+        .shapes
+            img(class="circle" src="/images/other/circle.svg", alt="", srcset="")
+            img(class="triangle" src="/images/other/triangle.svg", alt="", srcset="")
+            img(class="square" src="/images/other/square.svg", alt="", srcset="")
         script(src="https://unpkg.com/swup@latest/dist/swup.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js")

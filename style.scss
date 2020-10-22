@@ -17,7 +17,42 @@ $main-bright: #FFF;
     list-style-type: none;
 }
 
+body {
+    overflow-x: hidden;
+}
+/// svg
 
+.shapes {
+    z-index: -999;  
+}
+
+.circle {
+    
+    position: absolute;
+    top: -10%;
+    right: -8%;
+    height: 80vh;
+    z-index: -999; 
+}
+
+.square {
+    position: absolute;
+    top: 60%;
+    right: 3%;
+    height: 25%;
+    z-index: -999; 
+    // transform: rotate(360deg) translateZ(0);
+}
+
+.triangle {
+    position: absolute;
+    top: 15%;
+    right: 25%;
+    height: 35%;
+    z-index: -999; 
+    transform: rotate(90deg);
+    transition: none;
+}
 
 // SWUP
 
@@ -331,7 +366,7 @@ a {
 }
 
 .about-desc {
-    grid-column: 3 / 10;
+    grid-column: 3 / 7;
 }
 
 .hiimsam {
@@ -346,7 +381,7 @@ a {
 @media (max-width: 1200px) {
 
     .nav-item {
-        width: 15vw;
+        width: 16vw;
     }
 
     .project {
@@ -356,6 +391,11 @@ a {
     .about-desc {
         grid-column: 1 / 13;
         margin: 0 2rem;
+        
+    }
+
+    .about-desc p, .about-desc b {
+        backdrop-filter: blur(100px);
     }
 
     .hiimsam {
@@ -368,6 +408,27 @@ a {
 }
 
 @media (max-width: 800px) {
+
+
+    .circle {
+        top: -10%;
+        right: -8%;
+        height: 40vh;
+
+    }
+    
+    .square {
+        top: 25vh;
+        right: 10%;
+        height: 10%;
+    }
+    
+    .triangle {
+        top: 13%;
+        right: 55%;
+        height: 15%;
+        transition: none;
+    }
 
     .header {
         margin: 1rem 1rem 0 1rem;
