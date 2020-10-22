@@ -17,20 +17,22 @@ $main-bright: #FFF;
     list-style-type: none;
 }
 
-.content {
-    overflow-x: hidden;
-}
 /// svg
 
+#main {
+    overflow-x: hidden;
+}
+
 .shapes {
-    z-index: -999;  
+    z-index: -999; 
+    overflow: x-hidden; 
 }
 
 .circle {
     
     position: absolute;
-    top: -10%;
-    right: -8%;
+    top: 0;
+    right: 0;
     height: 80vh;
     z-index: -999; 
 }
@@ -411,8 +413,8 @@ a {
 
 
     .circle {
-        top: -10%;
-        right: -8%;
+        top: 0;
+        right: 0;
         height: 40vh;
 
     }
