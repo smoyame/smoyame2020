@@ -9,9 +9,9 @@ html(lang="en")
         title Graphic Designer | Samanta Moya Medina
         link(rel="stylesheet", href="https://use.typekit.net/ojh4yrg.css")
         link(rel="stylesheet", href="style.css")
-    body
+    body(onunload="")
         div#main
-            +header('/index.html', "/../index.html#work", "/about.html")
+            +header('/index.html', "/../../#works", "/about.html")
             .content(class="transition-fade about-main" id="swup")
                 section.about-desc
                     h2.hiimsam Hi, I'm Sam.
@@ -21,13 +21,13 @@ html(lang="en")
                     p My roots are in the experiences I had as a partial caregiver to my sisters who live with Down's Syndrome and RETT Syndrome, regular translator for my parents, and holder of responsibility for my three younger sisters.
                     
                     p <b>Want to work together? </b>Drop me a line!
-               
+                .shapes
+                    img(class="circle" src="/images/other/circle-01.svg", alt="", srcset="")
+                    img(class="triangle" src="/images/other/triangle.svg", alt="", srcset="")
+                    img(class="square" src="/images/other/square.svg", alt="", srcset="")
             footer.footer
                 span.email smoyamedina@mica.edu
-        .shapes
-            img(class="circle" src="/images/other/circle-01.svg", alt="", srcset="")
-            img(class="triangle" src="/images/other/triangle.svg", alt="", srcset="")
-            img(class="square" src="/images/other/square.svg", alt="", srcset="")
+        
         script(src="https://unpkg.com/swup@latest/dist/swup.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js")

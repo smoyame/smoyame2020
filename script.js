@@ -105,6 +105,24 @@ swup.on('contentReplaced', () => {
         $('.sub-images a').fluidbox();
     })
 
+    //shapes
+
+    gsap.to('.triangle', {
+        duration: 300, 
+        rotation: 360, 
+        transformOrigin: "43.27% 41.25%",
+        repeat: -1,
+        ease: "linear",
+    })
+
+    gsap.to('.square', {
+        duration: 460, 
+        rotation: -360, 
+        transformOrigin: "50% 50%",
+        repeat: -1,
+        ease: "linear",
+    })
+
     oddProj(1);
     evenProj(2);
     oddProj(3);
@@ -124,4 +142,8 @@ swup.on('contentReplaced', () => {
 }
 )
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+//page back button hack test
+
+window.addEventListener("pageshow", () => {
+    // update hidden input field
+  });

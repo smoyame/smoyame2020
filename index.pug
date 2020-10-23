@@ -9,11 +9,10 @@ html(lang="en")
         title Graphic Designer | Samanta Moya Medina
         link(rel="stylesheet", href="https://use.typekit.net/ojh4yrg.css")
         link(rel="stylesheet", href="style.css")
-
         link(rel="stylesheet", href="fluidbox.min.css")
-    body
+    body(onunload="")
         div#main
-            +header('/index.html', "#works", "/about.html")
+            +header('/index.html', "index.html#works", "/about.html")
             .content(class="transition-fade" id="swup")
                 section.hero
                     .text-contain
