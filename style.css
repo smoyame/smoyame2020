@@ -119,18 +119,32 @@ a {
   padding-bottom: 15vh;
 }
 
-.intro, .job, .job2 {
+.job, .job2 {
   display: block;
   position: relative;
-  overflow: hidden;
-  height: 7.5vw;
+  height: 6.5vw;
   width: calc(100vw - 9rem);
+}
+
+.intro .hidetext {
+  font-size: 3.25vw;
+  font-weight: 300;
+}
+
+.intro {
+  height: 3.5vw;
+  display: block;
+  width: calc(100vw - 9rem);
+}
+
+.job2 {
+  top: -1.5vw;
 }
 
 .hidetext {
   font-family: "Degular Display", sans-serif;
   font-weight: 700;
-  font-size: 6vw;
+  font-size: 5vw;
   position: absolute;
   -webkit-transition: none;
   transition: none;
@@ -435,13 +449,22 @@ a {
   }
   .nav {
     position: fixed;
-    bottom: 1rem;
-    width: calc(100% - 2rem);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 1rem;
+    background-color: rgba(220, 220, 220, 0.25);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
   }
   .nav-item {
     margin-left: 0rem;
+    padding: 1rem;
     width: 25vw;
     font-size: 5vw;
+    background-color: rgba(220, 220, 220, 0);
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
   }
   li {
     display: -webkit-box;
@@ -457,11 +480,18 @@ a {
   }
   .intro, .job, .job2 {
     overflow: hidden;
-    height: 10.5vw;
+    height: 11vw;
     width: calc(100vw - 2rem);
   }
   .hidetext {
     font-size: 9vw;
+  }
+  .intro .hidetext {
+    font-size: 6vw;
+  }
+  .intro {
+    position: relative;
+    top: 4.5vw;
   }
   .work {
     display: block;
