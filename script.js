@@ -7,7 +7,6 @@ $(function () {
 })
 
 //shapes
-
 gsap.to('.triangle', {
     duration: 300, 
     rotation: 360, 
@@ -30,11 +29,11 @@ let tl = gsap.timeline()
 
 tl.from('.hidetext', {
     opacity: 0,
-    delay: .5,
+    delay: .15,
     duration: 1,
     stagger: .1,
     y: "125%",
-    ease: "power4.inOut"
+    ease: "power4.out"
 }
 )
 
@@ -82,12 +81,7 @@ evenProj(4);
 oddProj(5);
 evenProj(6);
 
-//SWUP 
-const swup = new Swup();
 
-swup.on('animationOutDone', () => {
-    window.scrollTo(0, 0)   
-})
 
 //SUB PAGES
 
@@ -98,6 +92,12 @@ gsap.from('.sub-proj-desc', {
     x:"-25%"
 })
 
+//SWUP 
+const swup = new Swup();
+
+swup.on('animationOutDone', () => {
+    window.scrollTo(0, 0)   
+})
 
 swup.on('contentReplaced', () => {
 
@@ -123,6 +123,18 @@ swup.on('contentReplaced', () => {
         ease: "linear",
     })
 
+    let tl = gsap.timeline()
+
+    tl.from('.hidetext', {
+        opacity: 0,
+        delay: .15,
+        duration: 1,
+        stagger: .1,
+        y: "125%",
+        ease: "power4.out"
+    }
+    )
+
     oddProj(1);
     evenProj(2);
     oddProj(3);
@@ -137,7 +149,14 @@ swup.on('contentReplaced', () => {
         x:"-25%"
     })
 
+    jQuery( document ).ready(function( $ ) {
 
+        //Use this inside your document ready jQuery 
+        $(window).on('popstate', function() {
+           location.reload(true);
+        });
+     
+     });
    
 }
 )
@@ -152,3 +171,4 @@ jQuery( document ).ready(function( $ ) {
     });
  
  });
+
