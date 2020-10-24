@@ -135,7 +135,7 @@ a {
     display:block;
     position: relative;
     overflow: hidden;
-    height: 7.5vw;
+    height: 6.5vw;
     width: calc(100vw - 9rem);
     // outline: 1px solid red;
 
@@ -145,7 +145,7 @@ a {
 .hidetext {
     font-family: $main-font-display;
     font-weight: 700;
-    font-size: 6vw;
+    font-size: 5vw;
     position: absolute;
     transition: none;
 }
