@@ -17,7 +17,6 @@
 
 .shapes {
   z-index: -999;
-  overflow: x-hidden;
 }
 
 .circle {
@@ -31,7 +30,7 @@
 .square {
   position: absolute;
   top: 60%;
-  right: 3%;
+  right: 4%;
   height: 25%;
   z-index: -999;
 }
@@ -39,7 +38,7 @@
 .triangle {
   position: absolute;
   top: 15%;
-  right: 25%;
+  right: 29%;
   height: 35%;
   z-index: -999;
   -webkit-transform: rotate(90deg);
@@ -105,7 +104,7 @@ a {
 }
 
 .hero {
-  margin: 0 4rem;
+  margin: 0 2rem;
   height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,12 +126,12 @@ a {
 }
 
 .intro .hidetext {
-  font-size: 3.25vw;
+  font-size: 2.25vw;
   font-weight: 300;
 }
 
 .intro {
-  height: 3.5vw;
+  height: 2vw;
   display: block;
   width: calc(100vw - 9rem);
 }
@@ -143,7 +142,7 @@ a {
 
 .hidetext {
   font-family: "Degular Display", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 5vw;
   position: absolute;
   -webkit-transition: none;
@@ -204,12 +203,14 @@ a {
 
 .proj-name {
   font-size: 5vw;
+  font-weight: 600;
   margin-top: -.5vw;
 }
 
 .proj-type {
   text-transform: uppercase;
-  border-bottom: 3px solid #000;
+  font-weight: 300;
+  border-bottom: 1px solid #000;
   display: inline-block;
 }
 
@@ -287,11 +288,16 @@ a {
 
 .sub-proj-name {
   font-size: 4vw;
+  font-weight: 600;
+  line-height: 4vw;
   margin-top: -.5rem;
+  margin-bottom: 1vw;
 }
 
 .sub-proj-type {
-  border-bottom: 3px solid #000;
+  font-weight: 300;
+  margin-bottom: 1vw;
+  border-bottom: 1px solid #000;
   display: inline-block;
 }
 
@@ -487,11 +493,11 @@ a {
     font-size: 9vw;
   }
   .intro .hidetext {
-    font-size: 6vw;
+    font-size: 5vw;
   }
   .intro {
     position: relative;
-    top: 4.5vw;
+    top: 5.5vw;
   }
   .work {
     display: block;

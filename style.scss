@@ -2,6 +2,8 @@ $main-font: 'Degular', sans-serif;
 $main-font-text: 'Degular Text', sans-serif;
 $main-font-display: 'Degular Display', sans-serif;
 
+
+
 $main-dark: #000;
 $main-bright: #FFF;
 
@@ -15,6 +17,7 @@ $main-bright: #FFF;
     text-decoration: none;
     // scroll-behavior: smooth;
     list-style-type: none;
+
 }
 
 // .fluidbox__ghost {
@@ -29,7 +32,6 @@ $main-bright: #FFF;
 
 .shapes {
     z-index: -999; 
-    overflow: x-hidden; 
 }
 
 .circle {
@@ -44,7 +46,7 @@ $main-bright: #FFF;
 .square {
     position: absolute;
     top: 60%;
-    right: 3%;
+    right: 4%;
     height: 25%;
     z-index: -999; 
     // transform: rotate(360deg) translateZ(0);
@@ -53,7 +55,7 @@ $main-bright: #FFF;
 .triangle {
     position: absolute;
     top: 15%;
-    right: 25%;
+    right: 29%;
     height: 35%;
     z-index: -999; 
     transform: rotate(90deg);
@@ -120,7 +122,7 @@ a {
 ////hero
 
 .hero {
-    margin: 0 4rem;
+    margin: 0 2rem;
     height: 90vh;
     display: flex;
     align-items: flex-end;
@@ -142,12 +144,12 @@ a {
 }
 
 .intro .hidetext {
-    font-size: 3.25vw;
+    font-size: 2.25vw;
     font-weight: 300;
 }
 
 .intro {
-    height: 3.5vw;
+    height: 2vw;
     display: block;
     width: calc(100vw - 9rem);
 }
@@ -158,11 +160,14 @@ a {
 
 .hidetext {
     font-family: $main-font-display;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 5vw;
     position: absolute;
     transition: none;
 }
+
+////content
+
 
 //// main
 
@@ -214,12 +219,14 @@ a {
 
 .proj-name {
     font-size: 5vw;
+    font-weight: 600;
     margin-top: -.5vw;
 }
 
 .proj-type {
     text-transform: uppercase;
-    border-bottom: 3px solid $main-dark;
+    font-weight: 300;
+    border-bottom: 1px solid $main-dark;
     // width: 100%;
     display: inline-block;
 }
@@ -321,11 +328,16 @@ a {
 
 .sub-proj-name {
     font-size: 4vw;
+    font-weight: 600;
+    line-height: 4vw;
     margin-top: -.5rem;
+    margin-bottom: 1vw;
 }
 
 .sub-proj-type {
-    border-bottom: 3px solid $main-dark;
+    font-weight: 300;
+    margin-bottom: 1vw;
+    border-bottom: 1px solid $main-dark;
     display: inline-block;
 }
 
@@ -518,12 +530,12 @@ a {
     }
 
     .intro .hidetext {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     .intro {
         position: relative;
-        top: 4.5vw;
+        top: 5.5vw;
     }
 
 
