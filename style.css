@@ -218,6 +218,16 @@ a {
   background-color: rgba(220, 220, 220, 0.25);
   margin-top: 4rem;
   padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.email, .credit {
+  display: block;
 }
 
 .sub-hero {

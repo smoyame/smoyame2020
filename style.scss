@@ -239,7 +239,12 @@ a {
     // border-top: 1px solid $main-dark;
     margin-top: 4rem;
     padding: 2rem;
-    
+    display: flex;
+    justify-content: space-between;
+}
+
+.email, .credit {
+    display: block;
 }
 
 
