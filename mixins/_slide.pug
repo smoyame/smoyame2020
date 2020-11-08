@@ -1,9 +1,0 @@
-mixin slide(projLink, projNum, projDescNum, projType, projTypeNum, projName, projNameNum, projDate, projDateNum, projImgSrc, projImgAlt)
-    section.project(class=projNum)
-        a(href=projLink)
-            .proj-desc(class=projDescNum)
-                h3.proj-type(class=projTypeNum)=projType
-                h2.proj-name(class=projNameNum)=projName
-                date(class=projDateNum)=projDate
-        a(href=projLink)
-            img.proj-img(src=projImgSrc, alt=projImgAlt, srcset="")
