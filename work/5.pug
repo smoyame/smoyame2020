@@ -1,0 +1,56 @@
+include ../mixins/_header.pug
+include ../mixins/_projectcard.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Samanta Moya Medina | Graphic Designer
+        include ../mixins/_stylesheets.pug
+        
+    body
+        +header('/index.html', "/index.html", "/about.html")
+        main.main(id="swup" class="transition-fade")
+            section.sub-hero
+                .sub-hero-img
+                    img(src="/images/5/votersguide01.png" alt="aaa")
+                .sub-hero-bg-box1
+                .sub-text-contain
+                    span.sub-proj-type Publication
+                    h2.sub-proj-name Voter's Guide
+                    p.sub-proj-para The challenge was to compile information about voter rights into a one-stop publication for the United States and Territories, with attention to how over whelming so much information might be. This voter's guide was made to encourage informed voter activism. The main focus of this one-stop-shop publication is to clearly and easily display much needed information the moment someone faces a page.
+                    span.sub-proj-type-underline Publication
+
+            section.sub-project
+                .sub-bgblock2a
+                .sub-bgblock2b
+                .sub-bgblock2c
+                figure.imagecard2a(class="imagecard zoom-effect" )
+                    .aspectRatioPlaceholder
+                        .aspect-ratio-fill(style="padding-bottom: 66%;")
+                        img.image(class="img" data-width="1750" data-height="1150" src="/images/5/votersguide03.png")
+                figure.imagecard2b(class="imagecard zoom-effect" )
+                    .aspectRatioPlaceholder
+                        .aspect-ratio-fill(style="padding-bottom: 66%;")
+                        img.image(class="img" data-width="1750" data-height="1150" src="/images/5/votersguide02.png")
+                figure.imagecard2c(class="imagecard zoom-effect" )
+                    .aspectRatioPlaceholder
+                        .aspect-ratio-fill(style="padding-bottom: 66%;")
+                        img.image(class="img" data-width="1750" data-height="1150" src="/images/5/votersguide04.png")
+                figure.imagecard2d(class="imagecard zoom-effect" )
+                    .aspectRatioPlaceholder
+                        .aspect-ratio-fill(style="padding-bottom: 66%;")
+                        img.image(class="img" data-width="1750" data-height="1150" src="/images/5/votersguide07.png")
+                figure.imagecard2e(class="imagecard zoom-effect" )
+                    .aspectRatioPlaceholder
+                        .aspect-ratio-fill(style="padding-bottom: 66%;")
+                        img.image(class="img" data-width="1750" data-height="1150" src="/images/5/votersguide06.png")
+            section.bottomhero
+                .text-contain-bottom 
+                    //- a(href="/6.html").bottomhero-text Next project →  
+                    a(href="/4.html").bottomhero-text ← Previous project
+                    a(href="/about.html").bottomhero-text Learn more about me
+        include ../mixins/_footer.pug
+
+        include ../mixins/_scripts.pug

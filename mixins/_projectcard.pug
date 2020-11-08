@@ -1,0 +1,9 @@
+mixin projectcard(projNum, projLink,projInfoNum, projTypeNum, projType, projNameNum, projName, projTypeUnderlineNum, projImgSrc, projAlt)
+    section.project(class=projNum)
+                a(href=projLink)
+                    .proj-info(class=projInfoNum)
+                        h3.proj-type(class=projTypeNum)=projType
+                        h2.proj-name(class=projNameNum)=projName
+                        h3.proj-type(class=`${projTypeUnderlineNum} proj-type-underline`)=projType
+                a.proj-image-contain(href=projLink)
+                    img.proj-img(src=projImgSrc, alt=projAlt, srcset="")
