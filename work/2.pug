@@ -1,56 +1,54 @@
-include ../mixins/_header.pug
 include ../mixins/_projectcard.pug
+include ../mixins/_sidebar.pug
+include ../mixins/_mobile-sidebar.pug
+
 
 <!DOCTYPE html>
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Samanta Moya Medina | Graphic Designer
-        include ../mixins/_stylesheets.pug
-        
+        title Samanta Moya Medina // Graphic Designer
+        link(rel="stylesheet", href="https://use.typekit.net/ojh4yrg.css")
+        link(rel="stylesheet", href="style.css")
     body
-        +header('/index.html', "/index.html", "/about.html")
-        main.main(id="swup" class="transition-fade")
-            section.sub-hero
-                .sub-hero-img
-                    img(src="/images/2/logos-01.png" alt="aaa")
-                .sub-hero-bg-box1
-                .sub-text-contain
-                    span.sub-proj-type Branding
-                    h2.sub-proj-name Olympics
-                    p.sub-proj-para I was challenged to brand an Olympic Games held at a future date. This project brands the 2040 olympics set in Buenos Aires, Argentina. Visual callbacks to the Argentinian tradition of Fileteado Porteño and modular indigenous patterns place an emphasis on unity and peace that the Olympics tries to achieve through global sportsmanship.
-                    span.sub-proj-type-underline Branding
-
-            section.sub-project
-                .sub-bgblock2a
-                .sub-bgblock2b
-                .sub-bgblock2c
-                figure.imagecard2a(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/2/id-holder-mockup.png")
-                figure.imagecard2b(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/2/iphone-ticket.png")
-                figure.imagecard2c(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/2/iphone-ticket2.png")
-                figure.imagecard2d(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/2/pictrograms-01.png")
-                figure.imagecard2e(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/2/logos.png")
-            section.bottomhero
-                .text-contain-bottom 
-                    a(href="/3.html").bottomhero-text Next project →  
-                    a(href="/1.html").bottomhero-text ← Previous project
-                    a(href="/about.html").bottomhero-text Learn more about me
-        include ../mixins/_footer.pug
-
-        include ../mixins/_scripts.pug
+        +mobile-sidebar('../', '../#work')
+        .container
+            +sidebar('../#work', '../about.html')
+            main.sub-main(id="swup" class="transition-fade")
+                //- section.hero
+                //-     .text-contain
+                //-         p.tagline The Dry Run
+                .work-hero
+                    .sub-proj-info
+                        h3.sub-proj-type Branding
+                        h2.sub-proj-name The 2040 Olympics
+                        h3.sub-proj-deets Buenos Aires, Argentina 
+                    img.sub-proj-hero-img(src="../images/2/logos-01.png")
+                    .sub-proj-desc
+                        p I was challenged to brand an Olympic Games held at a future date. This project brands the 2040 olympics set in Buenos Aires, Argentina. Visual callbacks to the Argentinian tradition of Fileteado Porteño and modular indigenous patterns place an emphasis on unity and peace that the Olympics tries to achieve through global sportsmanship.
+            
+                .work-body
+                    figure.imagecard2a(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/2/id-holder-mockup.png")
+                    figure.imagecard2b(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/2/iphone-ticket.png")
+                    figure.imagecard2c(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/2/iphone-ticket2.png")
+                    figure.imagecard2d(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/2/pictrograms-01.png")
+                    figure.imagecard2e(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/2/logos.png")
+    
+                script(src="../medium-lightbox.js")
+                include ../mixins/_scripts.pug

@@ -1,56 +1,59 @@
-include ../mixins/_header.pug
 include ../mixins/_projectcard.pug
+include ../mixins/_sidebar.pug
+include ../mixins/_mobile-sidebar.pug
+
 
 <!DOCTYPE html>
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Samanta Moya Medina | Graphic Designer
-        include ../mixins/_stylesheets.pug
-        
+        title Samanta Moya Medina // Graphic Designer
+        link(rel="stylesheet", href="https://use.typekit.net/ojh4yrg.css")
+        link(rel="stylesheet", href="style.css")
     body
-        +header('/index.html', "/index.html", "/about.html")
-        main.main(id="swup" class="transition-fade")
-            section.sub-hero
-                .sub-hero-img
-                    img(src="/images/4/envelope-1-copy.png" alt="aaa")
-                .sub-hero-bg-box1
-                .sub-text-contain
-                    span.sub-proj-type Personal
-                    h2.sub-proj-name Your Mail
-                    p.sub-proj-para This project is an attempt to try to visually imply the hierarchy of steps to take in order to fold the paper into an envelope you could use to mail something to someone. The envelope itself turns into a memory of the journey traveled and the time that passed.
-                    span.sub-proj-type-underline Personal
+        +mobile-sidebar('../', '../#work')
+        .container
+            +sidebar('../#work', '../about.html')
+            main.sub-main
+                //- section.hero
+                //-     .text-contain
+                //-         p.tagline The Dry Run
+                .work-hero
+                    .sub-proj-info
+                        h3.sub-proj-type Publication
+                        h2.sub-proj-name The Dry Run
+                        h3.sub-proj-deets 11" x 22" Broadsheet 
+                    img.sub-proj-hero-img(src="../images/1/thedryrun1.png")
+                    .sub-proj-desc
+                        p I was challenged to create a newspaper based on the content of a story I hold dear to me. The Dry Run is an experimental broadsheet publication that is inspired by Daniel Keyes' Flowers for Algernon. This 3-page dry run explores Charlie's experiences in the form of complex typographical hierarchy.
+            
+                .work-body
+                    figure.imagecard4a(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/4/envelope-2-copy.png")
+                    figure.imagecard4b(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/4/inside.png")
+                    figure.imagecard4c(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/4/envelope-3-copy.png")
+                    figure.imagecard4d(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/4/envelope-4-copy.png")
+                    figure.imagecard4e(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/4/outside.png")
+    
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js")
+    script(src="medium-lightbox.js")
 
-            section.sub-project
-                .sub-bgblock1a
-                .sub-bgblock1b
-                .sub-bgblock1c
-                figure.imagecard1a(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/4/envelope-2-copy.png")
-                figure.imagecard1b(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/4/inside.png")
-                figure.imagecard1c(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/4/envelope-3-copy.png")
-                figure.imagecard1d(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/4/envelope-4-copy.png")
-                figure.imagecard1e(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/4/outside.png")
-            section.bottomhero
-                .text-contain-bottom 
-                    a(href="/5.html").bottomhero-text Next project →
-                    a(href="/3.html").bottomhero-text ← Previous project
-                    a(href="/about.html").bottomhero-text Learn more about me
-        include ../mixins/_footer.pug
-
-        include ../mixins/_scripts.pug
+    script(src="script.js")

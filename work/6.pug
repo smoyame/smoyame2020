@@ -1,56 +1,68 @@
-include ../mixins/_header.pug
 include ../mixins/_projectcard.pug
+include ../mixins/_sidebar.pug
+include ../mixins/_mobile-sidebar.pug
+
 
 <!DOCTYPE html>
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Samanta Moya Medina | Graphic Designer
-        include ../mixins/_stylesheets.pug
-        
+        title Samanta Moya Medina // Graphic Designer
+        link(rel="stylesheet", href="https://use.typekit.net/ojh4yrg.css")
+        link(rel="stylesheet", href="style.css")
     body
-        +header('/index.html', "/index.html", "/about.html")
-        main.main  
-            section.sub-hero
-                .sub-hero-img
-                    img(src="/images/1/thedryrun1.png" alt="aaa")
-                .sub-hero-bg-box1
-                .sub-text-contain
-                    span.sub-proj-type Misc
-                    h2.sub-proj-name Experiments
-                    p.sub-proj-para This is a collection of miscellaneous prints, posters, and projects.
-                    span.sub-proj-type-underline Misc
+        +mobile-sidebar('../', '../#work')
+        .container
+            +sidebar('../#work', '../about.html')
+            main.sub-main
+                //- section.hero
+                //-     .text-contain
+                //-         p.tagline The Dry Run
+                .work-hero
+                    .sub-proj-info
+                        h3.sub-proj-type Miscellaneous
+                        h2.sub-proj-name Experiments
+                        h3.sub-proj-deets Motion Graphics, Illustration, Risograph, Logos, and other extras.
+                    img.sub-proj-hero-img(src="../images/6/misc.png")
+                    .sub-proj-desc
+                        //- p I was challenged to create a newspaper based on the content of a story I hold dear to me. The Dry Run is an experimental broadsheet publication that is inspired by Daniel Keyes' Flowers for Algernon. This 3-page dry run explores Charlie's experiences in the form of complex typographical hierarchy.
+            
+                .work-body
+                    figure.imagecard6gif(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/6/hearme.gif")
+                    figure.imagecard6label(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/6/calvert_hillyershops.jpg")
+                    figure.imagecard6boen(class="imagecard zoom-effect" )
+                        iframe(class="boen" src="https://player.vimeo.com/video/467599316", width="100%" height="100%", frameborder="0" allow="autoplay; fullscreen" allowfullscreen)
+                    figure.imagecard6graffiti(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/6/graffiti_wall.png")
+                    figure.imagecard6spaceman(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 30%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/6/spaceman.png")
+                    figure.imagecard6ncsncf(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 30%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/6/NCSNCF_lockup.png")
+                    figure.imagecard6lucid1(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 30%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/6/zine-2.jpg")
+                    figure.imagecard6lucid2(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 30%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/6/zine.jpg")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js")
+    script(src="medium-lightbox.js")
 
-            section.sub-project
-                .sub-bgblock3a
-                .sub-bgblock3b
-                .sub-bgblock3c
-                figure.imagecard3a(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/1/thedryrun4.png")
-                figure.imagecard3b(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/1/thedryrun3.png")
-                figure.imagecard3c(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/1/thedryrun5.png")
-                figure.imagecard3d(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/1/typesystem-01-01-01.png")
-                figure.imagecard3e(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/1/closeup.png")
-            section.bottomhero
-                .text-contain-bottom 
-                    a(href="/7.html").bottomhero-text Next project →  
-                    a(href="/6.html").bottomhero-text ← Previous project
-                    a(href="/about.html").bottomhero-text Learn more about me
-        include ../mixins/_footer.pug
-
-        include ../mixins/_scripts.pug
+    script(src="script.js")

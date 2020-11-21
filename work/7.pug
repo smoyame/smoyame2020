@@ -1,55 +1,61 @@
-include ../mixins/_header.pug
 include ../mixins/_projectcard.pug
+include ../mixins/_sidebar.pug
+include ../mixins/_mobile-sidebar.pug
+
 
 <!DOCTYPE html>
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Samanta Moya Medina | Graphic Designer
-        include ../mixins/_stylesheets.pug
-        
+        title Samanta Moya Medina // Graphic Designer
+        link(rel="stylesheet", href="https://use.typekit.net/ojh4yrg.css")
+        link(rel="stylesheet", href="style.css")
     body
-        +header('/index.html', "/index.html", "/about.html")
-        main.main  
-            section.sub-hero
-                .sub-hero-img
-                    img(src="/images/1/thedryrun1.png" alt="aaa")
-                .sub-hero-bg-box1
-                .sub-text-contain
-                    span.sub-proj-type Thesis
-                    h2.sub-proj-name The Stigma Against the Intellectually Disabled
-                    p.sub-proj-para My thesis project is on track to address the social stigma against people with intellectual disabilities, with an emphasis on the exposed underfunding of programs during COVID.
-                    span.sub-proj-type-underline Thesis
+        +mobile-sidebar('../', '../#work')
+        .container
+            +sidebar('../#work', '../about.html')
+            main.sub-main
+                //- section.hero
+                //-     .text-contain
+                //-         p.tagline The Dry Run
+                .work-hero
+                    .sub-proj-info
+                        h3.sub-proj-type Thesis
+                        h2.sub-proj-name The Stigma Against People who Live With Intellectual Disabilities
+                        h3.sub-proj-deets Ongoing project until May 2021 
+                    img.sub-proj-hero-img(src="../images/thesis/mindmap.gif")
+                    .sub-proj-desc
+                        p As recent as 70 years ago it was a common practice to institutionalize, involuntarily sterilize, or give up those who were born with conditions like Down’s Syndrome, RETT Syndrome, or severe autism. Some of these practices are still carried out at times. 
+                        p During COVID-19 several things were made clear: there is severe lack in legislative protections, educational equity, and social understanding of what people who live with intellectual disabilities deserve. What they deserve is the same quality of life that any one else is afforded.
+                        p It’s not just a matter of fixing their educational situation, getting new laws passed, or getting people to feel for those with these disabilities–it is a matter of making these individuals seen and normalized. It is a matter of removing the stigma that prevents the ease of progress for intellectual disability advocacy in the first place.
+            
+                .work-body
+                    figure.imagecard1a(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/1/typesystem-01-01-01.png")
+                    figure.imagecard1b(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/1/thedryrun3.png")
+                    figure.imagecard1c(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/1/thedryrun5.png")
+                    figure.imagecard1d(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/1/thedryrun4.png")
+                    figure.imagecard1e(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 30%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/1/closeup.png")
+    
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js")
+    script(src="medium-lightbox.js")
 
-            section.sub-project
-                .sub-bgblock1a
-                .sub-bgblock1b
-                .sub-bgblock1c
-                figure.imagecard1a(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/1/thedryrun4.png")
-                figure.imagecard1b(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/1/thedryrun3.png")
-                figure.imagecard1c(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/1/thedryrun5.png")
-                figure.imagecard1d(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/1/typesystem-01-01-01.png")
-                figure.imagecard1e(class="imagecard zoom-effect" )
-                    .aspectRatioPlaceholder
-                        .aspect-ratio-fill(style="padding-bottom: 66%;")
-                        img.image(class="img" data-width="1750" data-height="1150" src="/images/1/closeup.png")
-            section.bottomhero
-                .text-contain-bottom 
-                    a(href="/6.html").bottomhero-text ← Previous project
-                    a(href="/about.html").bottomhero-text Learn more about me →
-        include ../mixins/_footer.pug
-
-        include ../mixins/_scripts.pug
+    script(src="script.js")

@@ -1,0 +1,16 @@
+mixin mobile-sidebar(homeLink, workLink, aboutLink)
+    header.header-mobile
+            a.title(href=homeLink)
+                h1.name samanta moya medina
+                span.job graphic designer
+    .navfoot-contain-mobile
+        nav.nav
+            ul.nav-contain
+                li.nav-item
+                    a(href=workLink) work
+                li.nav-item
+                    a(href=aboutLink) about
+                li.nav-item
+                    a(href="https://www.linkedin.com/in/smoyamedina/" target="_blank") linkedin
+                li.nav-item(class="nav-item-email")
+                    a(href="mailto:hi@smoya.me") contact

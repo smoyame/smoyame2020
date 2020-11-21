@@ -1,0 +1,20 @@
+mixin sidebar(workLink, aboutLink)
+    .sidebar
+        header.header
+            a.title(href="/index.html")
+                h1.name samanta moya medina
+                span.job graphic designer
+            
+        .navfoot-contain
+            nav.nav
+                ul.nav-contain
+                    li.nav-item
+                        a(href=workLink) work
+                    li.nav-item
+                        a(href=aboutLink) about
+                    li.nav-item
+                        a(href="https://www.linkedin.com/in/smoyamedina/" target="_blank") linkedin
+                    li.nav-item
+                        a(href="mailto:hi@smoya.me") hi@smoya.me
+            footer.footer
+                p.credit &#169; samanta moya medina

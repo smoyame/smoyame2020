@@ -1,48 +1,32 @@
-include mixins/_header.pug
 include mixins/_projectcard.pug
+include mixins/_sidebar.pug
+include mixins/_mobile-sidebar.pug
+
 
 <!DOCTYPE html>
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Samanta Moya Medina | Graphic Designer
-        include mixins/_stylesheets.pug
-        
+        title Samanta Moya Medina // Graphic Designer
+        link(rel="stylesheet", href="https://use.typekit.net/ojh4yrg.css")
+        link(rel="stylesheet", href="style.css")
     body
-        +header('/index.html', "/index.html", "/about.html")
-        main.main(id="swup" class="transition-fade")
-            section.hero-bg
-                .hero-bg-img
-                .hero-bg-box1
-                .hero-bg-box2
-            section.hero
-                .text-contain
-                    span.intro
-                        p(class="hidetext") You can call me Sam!
-                    span.job
-                        p(class="hidetext") I'm a graphic designer     
-                    span.job2 
-                        p(class="hidetext") who's here to help.
-            main.projects
-                .sectiontitle
-                    p.sectiontitle-text My Projects
-                +projectcard('project1', '/1.html', 'proj-info1', 'proj-type1', 'Publication', 'proj-name1', 'The Dry Run', 'proj-type-underline1', 'images/1/thedryrun1.png', 'a picture of a picnic')
-                +projectcard('project2', '/2.html', 'proj-info2', 'proj-type2', 'Branding', 'proj-name2', 'Olympics', 'proj-type-underline2', 'images/2/logo-01.png', 'a picture of a picnic')
-                +projectcard('project3', '/3.html', 'proj-info3', 'proj-type3', 'Publication', 'proj-name3', 'AMASS', 'proj-type-underline3', 'images/3/amass01.png', 'a picture of a picnic')
-                +projectcard('project4', '/4.html', 'proj-info4', 'proj-type4', 'Personal', 'proj-name4', 'Your Mail', 'proj-type-underline4', 'images/4/envelope-1-copy.png', 'a picture of a picnic')
-                +projectcard('project5', '/5.html', 'proj-info5', 'proj-type5', 'Publication', 'proj-name5', 'Voter\'s Guide', 'proj-type-underline5', 'images/5/votersguide01.png', 'a picture of a picnic')
-                //- +projectcard('project6', '6.html', 'proj-info6', 'proj-type6', 'Personal', 'proj-name6', 'Experiments', 'proj-type-underline6', 'https://images.unsplash.com/photo-1603908050635-25e6484f12d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80', 'a picture of a picnic')
-                //- +projectcard('project7', '7.html', 'proj-info7', 'proj-type7', 'Thesis', 'proj-name7', 'The Stigma Against the Intellectually Disabled', 'proj-type-underline7', 'images/thesis/mindmap_yellow.jpg', 'a picture of a picnic')
-                //- .thesis-cta
-                    h4.thesis-cta-text Check out my thesis progress!
-                .bg-block
-                .bg-block2
-                .bg-block3
-                //- .bg-block4
-            section.bottomhero
-                .text-contain-bottom 
-                    a(href="/about.html").bottomhero-text Learn more about me
-        include mixins/_footer.pug
-
-        include mixins/_scripts.pug
+        +mobile-sidebar('/', '/index.html#work')
+        .container
+            +sidebar('/index.html#work', '/about.html')
+            main.main(id="swup" class="transition-fade")
+                section.hero
+                    .text-contain
+                        p.tagline I'm a graphic designer who's here to help.
+                div#work
+                +projectcard('/1.html', 'project1', 'projdesc1', 'Publication', 'proj-type1', 'The Dry Run', 'proj-name1', 'images/1/thedryrun5.png', 'Just a Placeholder.')
+                +projectcard('/2.html', 'project2', 'projdesc2', 'Branding', 'proj-type2','Olympics 2040', 'proj-name2', '/images/2/logo-01.png', 'Just a Placeholder.')
+                +projectcard('/3.html', 'project3', 'projdesc3', 'Publication', 'proj-type3','Amass Magazine', 'proj-name3', '/images/3/amass01.png', 'Just a Placeholder.')
+                //- +projectcard('/4.html', 'project4', 'projdesc4', 'personal', 'proj-type4','Your Mail', 'proj-name4', '/images/4/envelope-1-copy.png', 'Just a Placeholder.')
+                +projectcard('/5.html', 'project5', 'projdesc5', 'Publication', 'proj-type5','Voter\'s Guide', 'proj-name5', '/images/5/votersguide01.png', 'Just a Placeholder.')
+                +projectcard('/6.html', 'project6', 'projdesc6', 'Misc', 'proj-type6','Experiments', 'proj-name6', '/images/6/misc.png', 'Just a Placeholder.')
+                //- +projectcard('/7.html', 'project7', 'projdesc7', 'Thesis', 'proj-type7','Thesis Research: Intellectual Disability Awareness', 'proj-name7', '/images/thesis/mindmap_blue.jpg', 'Just a Placeholder.')
+                
+                script(src="medium-lightbox.js")
+                include mixins/_scripts.pug
