@@ -13,9 +13,9 @@ html(lang="en")
         link(rel="stylesheet", href="https://use.typekit.net/ojh4yrg.css")
         link(rel="stylesheet", href="style.css")
     body
-        +mobile-sidebar('/', '/index.html#work', '/about.html')
+        +mobile-sidebar('/', '/#work', '/about')
         .container
-            +sidebar('/index.html#work', '/about.html')
+            +sidebar('/#work', '/about')
             main.main(id="swup" class="transition-fade")
                 section.hero
                     .text-contain
@@ -26,13 +26,13 @@ html(lang="en")
                     .hero-sectitle
                         h1.proj-sectitle Projects
                 div#work
-                +projectcard('/8.html', 'project8', 'projdesc8', 'Interaction', 'proj-type8', 'The Dinner Party', 'proj-name8', 'images/8/dinnerparty_splash.png', 'Just a Placeholder.')
-                +projectcard('/1.html', 'project1', 'projdesc1', 'Publication', 'proj-type1', 'The Dry Run', 'proj-name1', 'images/1/thedryrun5.png', 'Just a Placeholder.')
-                +projectcard('/2.html', 'project2', 'projdesc2', 'Branding', 'proj-type2','Olympics 2040', 'proj-name2', '/images/2/logos-01.png', 'Just a Placeholder.')
-                +projectcard('/3.html', 'project3', 'projdesc3', 'Publication', 'proj-type3','Amass Magazine', 'proj-name3', '/images/3/amass01.png', 'Just a Placeholder.')
+                +projectcard('/8', 'project8', 'projdesc8', 'Interaction', 'proj-type8', 'The Dinner Party', 'proj-name8', 'images/8/dinnerparty_splash.png', 'Just a Placeholder.')
+                +projectcard('/1', 'project1', 'projdesc1', 'Publication', 'proj-type1', 'The Dry Run', 'proj-name1', 'images/1/thedryrun5.png', 'Just a Placeholder.')
+                +projectcard('/2', 'project2', 'projdesc2', 'Branding', 'proj-type2','Olympics 2040', 'proj-name2', '/images/2/logos-01.png', 'Just a Placeholder.')
+                +projectcard('/3', 'project3', 'projdesc3', 'Publication', 'proj-type3','Amass Magazine', 'proj-name3', '/images/3/amass01.png', 'Just a Placeholder.')
                 //- +projectcard('/4.html', 'project4', 'projdesc4', 'personal', 'proj-type4','Your Mail', 'proj-name4', '/images/4/envelope-1-copy.png', 'Just a Placeholder.')
-                +projectcard('/5.html', 'project5', 'projdesc5', 'Publication', 'proj-type5','Voter\'s Guide', 'proj-name5', '/images/5/votersguide01.png', 'Just a Placeholder.')
-                +projectcard('/6.html', 'project6', 'projdesc6', 'Misc', 'proj-type6','Experiments', 'proj-name6', '/images/6/misc.png', 'Just a Placeholder.')
+                +projectcard('/5', 'project5', 'projdesc5', 'Publication', 'proj-type5','Voter\'s Guide', 'proj-name5', '/images/5/votersguide01.png', 'Just a Placeholder.')
+                +projectcard('/6', 'project6', 'projdesc6', 'Misc', 'proj-type6','Experiments', 'proj-name6', '/images/6/misc.png', 'Just a Placeholder.')
                 //- +projectcard('/7.html', 'project7', 'projdesc7', 'Thesis', 'proj-type7','Thesis Research: Intellectual Disability Awareness', 'proj-name7', '/images/thesis/mindmap_blue.jpg', 'Just a Placeholder.')
                 
             script(src="medium-lightbox.js")
