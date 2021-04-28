@@ -108,7 +108,7 @@ paddValue = (num) => {
 
 
 for (source = 0; source < section.length; source++) {
-    imgInfo.onload = function() {
+    imgInfo(source).onload = function() {
     applySize = (source) => {
           //apply new data w and h
       imgInfo(source).setAttribute("data-width", natW(source))
