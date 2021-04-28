@@ -80,7 +80,7 @@ for (i = 0; i < acc.length; i++) {
   });
 
 }
-
+//adapted from w3schools example
 
 
 
@@ -126,6 +126,8 @@ Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => 
     fillerPad(source).style.paddingBottom = paddValue(source) + "%";
   }
 });
+
+// from https://stackoverflow.com/questions/11071314/javascript-execute-after-all-images-have-loaded
 
 //document.getElementsByClassName("aspect-ratio-fill").closest(".process-panel")
 
