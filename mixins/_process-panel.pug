@@ -1,0 +1,12 @@
+mixin process-panel(pStepName, pStepImgW, pStepImgH, pStepImgSrc, pStepImgAlt)
+    .process-panel
+        figure.panel-image(class="imagecard zoom-effect" )
+            .aspectRatioPlaceholder
+                .aspect-ratio-fill
+                img.image(src=pStepImgSrc, class="img", data-width=pStepImgW, data-height=pStepImgH, alt=pStepImgAlt, srcset="")
+        .panel-text
+            h5.sub-proj-procstep=pStepName
+            if block
+                block
+            else
+                p No content provided

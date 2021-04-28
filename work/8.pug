@@ -1,0 +1,97 @@
+include ../mixins/_projectcard.pug
+include ../mixins/_sidebar.pug
+include ../mixins/_mobile-sidebar.pug
+include ../mixins/_process-panel.pug
+
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Samanta Moya Medina // Graphic Designer
+        link(rel="icon" type="image/png" href="/images/favicon.png")
+        link(rel="stylesheet", href="https://use.typekit.net/ojh4yrg.css")
+        link(rel="stylesheet", href="style.css")
+    body
+        +mobile-sidebar('../', '../#work')
+        .container
+            +sidebar('../#work', '../about.html')
+            main.sub-main(id="swup" class="transition-fade")
+                //- section.hero
+                //-     .text-contain
+                //-         p.tagline The Dry Run
+                .work-hero
+                    .sub-proj-info
+                        h3.sub-proj-type Interaction
+                        h2.sub-proj-name The Dinner Party
+                        h3.sub-proj-deets A collection of items 
+                    img.sub-proj-hero-img(src="../images/8/dinnerparty_splash.png")
+                    h4.sub-proj-steptitle Origin
+                    .sub-proj-desc
+                        p As a result of increased physical distancing during the pandemic, we've lost the opportunity to connect with one another in person. In order to bridge the gap that has been created between us and those we wish we could see in person, I conceptualized and designed different items for an imaginary party based off of information I gathered from interviewing someone representative of the typical person at one of my gatherings. This includes something to announce the gathering, something to utilize during the gathering, and something to take home afterward.
+                .work-process
+                    button.sub-proj-steptitle(class="accordion" id="process") The Process
+                    .process-contain
+                        +process-panel('Interview Research', '10', '2', "/images/8/process/notes_v2.png", "This is a placeholder.")
+                                p I interviewed a friend who is outside of my quarantine bubble. These conversational notes revealed that my friend valued informality at gatherings and resulted in a lot of talk about the implications of the term 'Dinner Party.' 
+                                p I combined these findings with other more objective answers to determine the main focus of the items that I would design for the gathering.
+                        
+                        +process-panel('Visual Research', '1072', '1268', '/images/8/process/visualinsp.png', 'This is a placeholder.')
+                                p There was an emphasis on informality, genuine interaction, and tactility that is provided at in-person events that is not necessarily available online. 
+                                p Additionally, there was an awareness of the inherent privilege that came with holding dinner parties in the past. I looked into initiatives with a similar fleeting or spontaneous occurances; like pop-up shops or sticker bombing.
+                        
+                        +process-panel('Iteration', '1024', '1150', '/../images/8/process/iterations.png', 'This is a placeholder.')
+                                p I used the invitation as a starting point to establish a visual language and to investigate which key ideas I wanted to focus on throughout the gathering.
+                                p My first option focused on emphasizing the people at the gathering as pieces of each other's experiences thanks to their unique characteristics. My second option used the envelope as a proxy for in-person, physical touch. My third option utilized a die-cut card that would be used as a manual viewfinder.
+                        
+                        +process-panel('Stickers', '1349', '1282', '/images/8/process/stickers_iter.png', 'This is a placeholder.')
+                                p At the actual gathering, I wanted to emphasize personality by creating stickers with phrases that spoke to informal phrases that are often said.
+                                p I created phrases, prompts to write for, or ice-breaking statements. I also included blank iterations to allow for customization.
+                                p They are designed to be 2.5" x 2.5".
+
+                        +process-panel('Invitation Refinement', '1035', '1165', 'images/8/process/invite_iter.png', 'This is a placeholder.')
+                                p I chose the envelope direction, and tested the structure to see if certain shapes and spatial relationships made the process for folding apparent. I even sent several iterations to others to provide unbiased feedback.
+                                p Through a lot of experimentation, I landed on a layout that seemed to balance both the usability and novelty.
+
+                        +process-panel('Sweater Take-away', '1134', '1251', 'images/8/process/sweater_iter.png', 'This is a placeholder.')
+                                p To take home, I wanted there to be some sentimentality and an allusion to ritual. To keep with physical sensations, materials, and movements I decided to utilize embroidery on a sweater that someone could simulate closeness with.
+                                p Additionally, everyone takes away with them a MANTRA. This MANTRA is a reminder for the wearer, so it is only able to be quickly read by the owner when they choose to do so. 
+                                p To accompany my take-away, and to keep in the spirit of expression and physical acts, I also created patches.
+
+                        a(href="#process")
+                            .process-collapse Collapse Process Section 
+                            
+                h4.sub-proj-steptitle Final Outcome
+                .work-body
+                    figure.imagecard8a(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/8/dinnerparty_unfolded.png")
+                    figure.imagecard8b(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/8/dinnerparty_patch1.png")
+                    figure.imagecard8c(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/8/dinnerparty_sweater.png")
+                    figure.imagecard8d(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/8/dinnerparty_stickers.png")
+                    figure.imagecard8e(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/8/dinnerparty_patch2.png")
+                    figure.imagecard8f(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/8/dinnerparty_folded.png")
+                    figure.imagecard8g(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/8/dinnerparty_patch3.png")
+    
+                script(src="../medium-lightbox.js")
+                include ../mixins/_scripts.pug

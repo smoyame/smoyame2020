@@ -1,5 +1,5 @@
 //tagline animation
-gsap.from('.tagline', {
+gsap.from('.text-contain', {
     duration: .5,
     opacity: 0,
     // text:" ",
@@ -8,8 +8,8 @@ gsap.from('.tagline', {
     scrollTrigger: {
         trigger:'.hero',
         // markers: true,
-        start: "top 50%",
-        end: "bottom 60%",
+        start: "top 40%",
+        end: "bottom 45%",
         toggleActions: "play reverse play reverse",
         
         }
@@ -43,10 +43,166 @@ textReveal(4)
 textReveal(5)
 textReveal(6)
 textReveal(7)
+textReveal(8)
 
 //medium lightbox
 MediumLightbox('figure.zoom-effect');
 
+//accordion testing - scrapped first run with animation. has extra click at start to set then it works, but then theres also making it work across mobile. gah!!!!
+//this version is courtesy
+var acc = document.getElementsByClassName("accordion");
+var i;
+let collapseBtn = document.getElementsByClassName("process-collapse");
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let panel = document.querySelector(".process-contain");
+    if (getComputedStyle(panel).display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+for (i = 0; i < acc.length; i++) {
+  collapseBtn[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let panel = document.querySelector(".process-contain");
+    if (getComputedStyle(panel).display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+    var idP = document.getElementById("process");
+    idP.scrollIntoView();
+  });
+
+}
+
+
+
+
+// automatically setting height of process images
+
+const section = document.getElementsByClassName("process-panel")
+
+fillerPad = (n) => {
+  return section[n].querySelector(".aspect-ratio-fill")
+}
+
+imgInfo = (val) => {
+  return fillerPad(val).nextSibling
+} 
+
+natW = (v) => {return imgInfo(v).naturalWidth;}
+natH = (v) => {return imgInfo(v).naturalHeight;}
+
+paddValue = (num) => {
+  let newPadVal = (natH(num) / natW(num)) * 100;
+  return newPadVal;
+}
+
+  //applying ratio to padding and to dataset
+for (source = 0; source < section.length; source++) {
+  applySize = (source) => {
+        //apply new data w and h
+    imgInfo(source).setAttribute("data-width", natW(source))
+    imgInfo(source).setAttribute("data-height", natH(source))
+    //apply padding to aspectratiofill div
+    fillerPad(source).style.paddingBottom = paddValue(source) + "%";  
+  }
+  applySize(source)
+}
+
+
+// applySize(0)
+// applySize(1)
+
+// for (i = 0; i < acc.length; i++) {
+//   acc[i].addEventListener("click", function() {
+//     let process = document.querySelector(".process-contain");
+//     let cacheProcessHeight = getComputedStyle(process).height;
+
+
+//     this.classList.toggle("active");
+//     var panel = document.querySelector(".work-process");
+//     if (panel.style.maxHeight) {
+//       panel.style.height = "4vw";
+//       panel.style.overflow = "hidden"
+//     } else {
+//     //   panel.style.maxHeight = panel.scrollHeight + "px";
+//     panel.style.height = "auto"
+//     panel.style.overflow = "visible"
+//   }
+
+
+//   });
+
+//   collapseBtn[i].addEventListener("click", function() {
+//     let process = document.querySelector(".process-contain");
+//     let cacheProcessHeight = getComputedStyle(process).height;
+
+
+//     this.classList.toggle("active");
+//     var panel = document.querySelector(".process-contain");
+//     if (panel.style.maxHeight) {
+//       // panel.style.maxHeight = null;
+//       panel.style.overflow = "hidden"
+
+//     } else {
+//     //   panel.style.maxHeight = panel.scrollHeight + "px";
+//       panel.style.maxHeight = "inherit"
+//       panel.style.overflow = "visible"
+//   }
+
+//   var idP = document.getElementById("process");
+//       idP.scrollIntoView();
+
+
+//   });
+// }
+
+// FIRST RUN
+// var acc = document.getElementsByClassName("accordion");
+// var i;
+
+
+// let initContainer = document.querySelector(".work-process");
+// let cacheContainerHeight = getComputedStyle(initContainer).height;
+
+// for (i = 0; i < acc.length; i++) {
+//   acc[i].addEventListener("click", function() {
+//     /* Toggle between adding and removing the "active" class,
+//     to highlight the button that controls the panel */
+    
+
+//     this.classList.toggle("active");
+
+//     let process = document.querySelector(".process-contain");
+//     let cacheProcessHeight = getComputedStyle(process).height;
+//     let container = document.querySelector(".work-process");
+    
+
+    
+    
+//     /* Toggle between hiding and showing the active panel */
+    
+//     if (container.style.maxHeight !== "4vw") {
+//         container.style.maxHeight = "4vw";
+//     } else {
+//         container.style.maxHeight = cacheProcessHeight;
+//     }
+
+//   });
+// }
+
+
+
+// mediaQuery.addListener(handleSizeChange)
+
+// handleSizeChange(mediaQuery);
 
 //swup
 

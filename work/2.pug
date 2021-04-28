@@ -1,6 +1,7 @@
 include ../mixins/_projectcard.pug
 include ../mixins/_sidebar.pug
 include ../mixins/_mobile-sidebar.pug
+include ../mixins/_process-panel.pug
 
 
 <!DOCTYPE html>
@@ -9,6 +10,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Samanta Moya Medina // Graphic Designer
+        link(rel="icon" type="image/png" href="/images/favicon.png")
         link(rel="stylesheet", href="https://use.typekit.net/ojh4yrg.css")
         link(rel="stylesheet", href="style.css")
     body
@@ -25,9 +27,44 @@ html(lang="en")
                         h2.sub-proj-name The 2040 Olympics
                         h3.sub-proj-deets Buenos Aires, Argentina 
                     img.sub-proj-hero-img(src="../images/2/logos-01.png")
+                    h4.sub-proj-steptitle Origin
                     .sub-proj-desc
                         p I was challenged to brand an Olympic Games held at a future date. This project brands the 2040 olympics set in Buenos Aires, Argentina. Visual callbacks to the Argentinian tradition of Fileteado Porteño and modular indigenous patterns place an emphasis on unity and peace that the Olympics tries to achieve through global sportsmanship.
-            
+                .work-process
+                    button.sub-proj-steptitle(class="accordion" id="process") The Process
+                    .process-contain
+                        +process-panel('Initial Research', '10', '2', "/images/2/process/initresearch.png", "This is a placeholder.")
+                                p Research into the city, its history, and cultural landmarks provided strong initial visual references off of which to develop the visual language for the Games. 
+                                p Additionally, research into the historical context revealed sensitivities to the multicultural and indigenous populations in the area that I would incorporate into the visual identity.
+                                p I grounded my visual motifs and influences in a Project Brief that declared the audience I was addressing, the overall brand tone and style, theme, and more.
+                        
+                        +process-panel('Visual Identity Ideation', '1072', '1268', '/images/2/process/identityidea.png', 'This is a placeholder.')
+                                p From these options, I took two of the most promising compositions and polished them in Illustrator to compare both directions. 
+                                p Of the two, after recieving critique and feedback, I chose the second option due to its more confident structure. The first option did not exude the personality of a sporting event as much as the second.
+                        
+                        +process-panel('Logo tune-up', '1024', '1150', '/images/2/process/logofix.png', 'This is a placeholder.')
+                                p I took the opportunity to fine-tune some of the proportions, sharp edges, and colors of the logo.
+                                p At the same time, I chose to make a Paralympic variation of the logo to stand alongside it. From its first iteration I adjusted the composition and proportions to stand equally alongside the Olympic Logo.
+                        
+                        +process-panel('Visual Motif & Process Book', '1349', '1282', '/images/2/process/motifbook.png', 'This is a placeholder.')
+                                p In order to reference the visual style already presenting Buenos Aires, such as the handlettering, I chose to draw various flourishes that could be utilized throughout the development of collateral.
+                                p This also creates a referential unity with the logos themselves. Also, it is initially arranged in a diamond, that can then be patterned across planes.
+                                p As a test run for the visual motifs and type hierarchy, I laid out some pages with practical information concerning actual information I gathered to persuade a hypothetical Olympic Commitee.
+
+                        +process-panel('Pictograms & Mascot', '1035', '1165', 'images/2/process/pictobird.png', 'This is a placeholder.')
+                                p Using the visual motif, I set off to create a set of 12 pictograms that would then be used to represent the various sports.
+                                p Throughout the process, I referenced a few other sets of pictograms that shared a similar visual style. Cross-referencing helped me quickly gauge which lines of actions were most effective in communicating events.
+                                p In the spirit of the name Buenos Aires and its flowing visual identity, I decided to conceptualize a mascot that would best represent these characteristics.
+                                p Her name is Aide (Ai-dey) which is of Basque origin. It refers to the minor air goddess of the same name that helps or hinders the living.
+
+                        +process-panel('Tickets & ID Badge', '1134', '1251', 'images/2/process/typeitems.png', 'This is a placeholder.')
+                                p I referenced previous iterations of Olympic Game tickets to note what information and details were crucial to a fully functioning ticket for Buenos Aires.
+                                p After re-arranging the type hierarchy and sections a couple of times, I landed on the final iteration that included the incorporation of an anti-counterfeit measure. 
+                                p Using the established text hierarchy and color use from the tickets and references, I also developed Olympic ID iterations for Buenos Aires.
+
+                        a(href="#process")
+                            .process-collapse Collapse Process Section 
+                h4.sub-proj-steptitle Final Outcome
                 .work-body
                     figure.imagecard2a(class="imagecard zoom-effect" )
                         .aspectRatioPlaceholder
@@ -49,6 +86,18 @@ html(lang="en")
                         .aspectRatioPlaceholder
                             .aspect-ratio-fill(style="padding-bottom: 66%;")
                             img.image(class="img" data-width="1750" data-height="1150" src="/images/2/logos.png")
+                    figure.imagecard2f(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/2/aide_mascot_transp.png")
+                    figure.imagecard2g(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/2/proposal-book_3.png")
+                    figure.imagecard2h(class="imagecard zoom-effect" )
+                        .aspectRatioPlaceholder
+                            .aspect-ratio-fill(style="padding-bottom: 66%;")
+                            img.image(class="img" data-width="1750" data-height="1150" src="/images/2/proposal-book_1.png")
     
                 script(src="../medium-lightbox.js")
                 include ../mixins/_scripts.pug

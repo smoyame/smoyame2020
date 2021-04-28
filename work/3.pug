@@ -1,6 +1,7 @@
 include ../mixins/_projectcard.pug
 include ../mixins/_sidebar.pug
 include ../mixins/_mobile-sidebar.pug
+include ../mixins/_process-panel.pug
 
 
 <!DOCTYPE html>
@@ -9,6 +10,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Samanta Moya Medina // Graphic Designer
+        link(rel="icon" type="image/png" href="/images/favicon.png")
         link(rel="stylesheet", href="https://use.typekit.net/ojh4yrg.css")
         link(rel="stylesheet", href="style.css")
     body
@@ -25,9 +27,31 @@ html(lang="en")
                         h2.sub-proj-name Amass Magazine
                         h3.sub-proj-deets 9" x 12", 14 page publication concept 
                     img.sub-proj-hero-img(src="../images/3/amass01.png")
+                    h4.sub-proj-steptitle Origin
                     .sub-proj-desc
                         p I was challenged to create a print publication and execute branding choices that would hold the publication's brand together. AMASS magazine is a loud, 14-page publication made to capture the voices of those less heard and immortalize the infamous that wring them dry. It's focused on the divide between actions and consequences when they affect the average American instead of a fellow corporate partner.
-            
+                .work-process
+                    button.sub-proj-steptitle(class="accordion" id="process") The Process
+                    .process-contain
+                        +process-panel('Initial Research', '10', '2', "/images/3/process/02visresearch.png", "This is a placeholder.")
+                                p I started by looking at forms of protest and advocacy culture. I wanted to incorporate common ‘in-your-face’ color palettes and type choices to preserve the immediacy and courage behind calls to action for the greater good. 
+                                p I looked into publications that shared bold typography in order to guide the grid and type system.
+                        +process-panel('Type System', '1072', '1268', '/images/3/process/03type.png', 'This is a placeholder.')
+                                p I created a type sampler in order to quickly experience various pairings and families without having to wait until after collecting my materials. 
+                                p I ended up choosing Neue Haas Grotesk Pro due to its wide range and ability to stand confidently in its bolder weights while allowing an easy reading experience in its lighter ones.
+                        
+                        +process-panel('Visuals and Cover', '1024', '1150', '/images/3/process/04voicecover.png', 'This is a placeholder.')
+                                p I created a few test covers to pin down the visual voice for the entire publication. Following feedback pointing out the eye-catching nature of the yellow cover, I decided to go forward with that option.
+                                p I created a draft for the table of contents to further explore creative potential for this visual identity and type system.
+                        
+                        +process-panel('Visual Motif & Process Book', '1349', '1282', '/images/3/process/05sketches.png', 'This is a placeholder.')
+                                p I sketched a few layouts as they came to mind. Though I was unsure what type of imagery would be present along the content, I tried to make sure they shared equal footing.
+                                p I used the sketches to explore decisions concerning number of columns, the style for starting articles, incorporation of tear-out pages, and other style guide considerations.
+                                p These sketches also made it easy to make notes for critiques to apply to my next iteration after recieving feedback
+
+                        a(href="#process")
+                            .process-collapse Collapse Process Section 
+                h4.sub-proj-steptitle Final Outcome
                 .work-body
                     figure.imagecard3a(class="imagecard zoom-effect" )
                         .aspectRatioPlaceholder
@@ -51,4 +75,4 @@ html(lang="en")
                             img.image(class="img" data-width="1750" data-height="1150" src="/images/3/amass08.png")
     
         script(src="../medium-lightbox.js")
-        include mixins/_scripts.pug
+        include ../mixins/_scripts.pug
