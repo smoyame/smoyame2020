@@ -108,15 +108,13 @@ paddValue = (num) => {
 
 
 for (source = 0; source < section.length; source++) {
-    imgInfo(source).onload = function() {
-    applySize = (source) => {
-          //apply new data w and h
-      imgInfo(source).setAttribute("data-width", natW(source))
-      imgInfo(source).setAttribute("data-height", natH(source))
-      //apply padding to aspectratiofill div
-      fillerPad(source).style.paddingBottom = paddValue(source) + "%";  
-    }
-    applySize(source)
+    imgInfo(source).onload = () => {
+        //apply new data w and h
+    imgInfo(source).setAttribute("data-width", natW(source))
+    imgInfo(source).setAttribute("data-height", natH(source))
+    //apply padding to aspectratiofill div
+    fillerPad(source).style.paddingBottom = paddValue(source) + "%";  
+    
   }
 }
 
