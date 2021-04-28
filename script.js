@@ -106,19 +106,28 @@ paddValue = (num) => {
 
   //applying ratio to padding and to dataset
 
+// let testGrabImgEl = 
 
-for (source = 0; source < section.length; source++) {
-    imgInfo(source).onload = () => {
-        //apply new data w and h
+// for (source = 0; source < section.length; source++) {
+//     imgInfo(source) = (event) => {
+//         //apply new data w and h
+//     event.target.setAttribute("data-width", event.target.naturalWidth)
+//     event.target.setAttribute("data-height", event.target.naturalHeight)
+//     //apply padding to aspectratiofill div
+//     event.target.previousSibling.style.paddingBottom = (event.target.naturalHeight/event.target.naturalWidth)*100 + "%";  
+//   }
+// }
+
+Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
+  for (source = 0; source < section.length; source++) {
     imgInfo(source).setAttribute("data-width", natW(source))
     imgInfo(source).setAttribute("data-height", natH(source))
     //apply padding to aspectratiofill div
-    fillerPad(source).style.paddingBottom = paddValue(source) + "%";  
-    
+    fillerPad(source).style.paddingBottom = paddValue(source) + "%";
   }
-}
+});
 
-
+//document.getElementsByClassName("aspect-ratio-fill").closest(".process-panel")
 
 // applySize(0)
 // applySize(1)
