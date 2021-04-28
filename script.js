@@ -106,8 +106,9 @@ paddValue = (num) => {
 
   //applying ratio to padding and to dataset
 
-imgInfo.onload = function() {
-  for (source = 0; source < section.length; source++) {
+
+for (source = 0; source < section.length; source++) {
+    imgInfo.onload = function() {
     applySize = (source) => {
           //apply new data w and h
       imgInfo(source).setAttribute("data-width", natW(source))
@@ -118,6 +119,7 @@ imgInfo.onload = function() {
     applySize(source)
   }
 }
+
 
 
 // applySize(0)
