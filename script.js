@@ -54,6 +54,7 @@ MediumLightbox('figure.zoom-effect');
 var cursor, links;
 cursor = document.querySelector('.custom-cursor');
 links = document.querySelectorAll('a');
+btn = document.querySelector('button');
 window.initCursor = false;
 for (var i = 0; i < links.length; i++) {
   var selfLink = links[i];
@@ -65,6 +66,7 @@ for (var i = 0; i < links.length; i++) {
     cursor.classList.remove("custom-cursor--link");
   });
 }
+
 window.onmousemove = function (e) {
   var mouseX, mouseY;
   mouseX = e.clientX;
@@ -88,7 +90,12 @@ window.onmouseout = function (e) {
   window.initCursor = false;
 };
 
-
+btn.addEventListener("mouseover", function() {
+  cursor.classList.add("custom-cursor--link");
+});
+btn.addEventListener("mouseout", function() {
+  cursor.classList.remove("custom-cursor--link");
+});
 //accordion testing - scrapped first run with animation. has extra click at start to set then it works, but then theres also making it work across mobile. gah!!!!
 //this version is courtesy
 var acc = document.getElementsByClassName("accordion");
