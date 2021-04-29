@@ -402,12 +402,25 @@ html.is-animating .transition-fade {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.process-panel::before {
+  content: "✧";
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.process-panel:last-of-type::before {
+  display: none;
 }
 
 .panel-text {
-  -webkit-box-flex: 2;
-      -ms-flex: 2 2 0px;
-          flex: 2 2 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 34.5%;
+          flex: 1 0 34.5%;
   width: 100%;
 }
 
@@ -418,20 +431,32 @@ html.is-animating .transition-fade {
 .sub-proj-procstep {
   text-transform: uppercase;
   font-weight: 500;
+  margin-bottom: .75rem;
 }
 
 .panel-image {
-  -webkit-box-flex: 3;
-      -ms-flex: 3 3 0px;
-          flex: 3 3 0;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 0 60%;
+          flex: 2 0 60%;
   display: block;
-  width: 50%;
+  width: 100%;
 }
 
-.process-panel:nth-child(odd) .panel-image {
+.process-panel:nth-child(even) .panel-image {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+}
+
+.process-panel:nth-child(odd) {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.process-panel:nth-child(even)::before {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
 }
 
 .accordion {
@@ -933,14 +958,13 @@ html.is-animating .transition-fade {
   .sub-proj-hero-img {
     margin-top: 0;
   }
-  .process-panel {
-    display: block;
-  }
   .process-panel .imagecard {
     height: auto;
+    margin-bottom: 0;
   }
   .panel-image {
     max-width: inherit;
+    margin-bottom: 0;
   }
   .panel-text {
     margin-bottom: 1rem;

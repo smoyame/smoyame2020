@@ -437,10 +437,28 @@ html.is-animating .transition-fade {
     gap: 2rem;
     margin-bottom: 2rem;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.process-panel::before {
+    content:"✧";
+    text-align: center;
+    // flex:
+    // height: \\;
+    // margin: 0 auto;
+    width: 100%;
+    display: block;
+    
+    // border: 1px solid $main-dark;
+    // border-style: ridge;
+}
+
+.process-panel:last-of-type::before {
+    display: none;
 }
 
 .panel-text {
-    flex: 2 2 0;
+    flex: 1 0 34.5%;
     width: 100%;
     p {
         margin-bottom: .5rem;
@@ -450,18 +468,26 @@ html.is-animating .transition-fade {
 .sub-proj-procstep {
     text-transform: uppercase;
     font-weight: 500;
-    // margin-bottom: .75rem;
+    margin-bottom: .75rem;
 }
 
 .panel-image {
-    flex: 3 3 0;
+    flex: 2 0 60%;
     display: block;
-    width: 50%;
+    width: 100%;
     // height: auto;
 }
 
-.process-panel:nth-child(odd) .panel-image {
+.process-panel:nth-child(even) .panel-image {
     order: 2;
+}
+
+.process-panel:nth-child(odd) {
+    flex-wrap: wrap-reverse;
+}
+
+.process-panel:nth-child(even)::before {
+    order: 5;
 }
 
 // .reveal-process {
@@ -936,20 +962,14 @@ html.is-animating .transition-fade {
         margin-top: 0;
     }
 
-    // .work-process {
-    //     max-height: 2.7rem;
-    // }
-
-    .process-panel {
-        display: block;
-        .imagecard {
-            height: auto;
-        }
+    .process-panel .imagecard {
+        height: auto;
+        margin-bottom: 0;
     }
-
 
     .panel-image {
         max-width: inherit;
+        margin-bottom: 0;
     }
 
     .panel-text {
