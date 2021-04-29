@@ -16,26 +16,37 @@ $main-passion: rgb(228, 80, 80);
     text-decoration: none;
     scroll-behavior: smooth;
     list-style-type: none;
+    cursor: none;
     transition: .2s;
 }
+html, body {
+    background-color: $main-bright;
+}
+
 
 a {
     color: $main-dark;
 }
 
-// ::-webkit-scrollbar {
-//     width: 16px;
-    
-//   }
+// cursor
 
-::-webkit-scrollbar-track {
-    background-color: $main-bright;
-    border-left: 1px solid $main-dark;
-}
-
-::-webkit-scrollbar-thumb {
-    background: $main-dark;
-}
+.custom-cursor {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    width: 40px;
+    height: 40px;
+    // filter: blur(5px);
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 500ms cubic-bezier(0,.51,.47,1);
+    transform: translate(-50%, -50%) scale(.75);
+    z-index: 1000;
+  }
+  .custom-cursor--link {
+    transform: translate(-50%, -50%) scale(3);
+  }
 
 ///swup
 

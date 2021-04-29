@@ -48,6 +48,47 @@ textReveal(8)
 //medium lightbox
 MediumLightbox('figure.zoom-effect');
 
+//cursor courtesy of Nikita on codepen
+//https://codepen.io/chloyka/pen/VwZeRdy
+
+var cursor, links;
+cursor = document.querySelector('.custom-cursor');
+links = document.querySelectorAll('a');
+window.initCursor = false;
+for (var i = 0; i < links.length; i++) {
+  var selfLink = links[i];
+
+  selfLink.addEventListener("mouseover", function() {
+    cursor.classList.add("custom-cursor--link");
+  });
+  selfLink.addEventListener("mouseout", function() {
+    cursor.classList.remove("custom-cursor--link");
+  });
+}
+window.onmousemove = function (e) {
+  var mouseX, mouseY;
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  if (!window.initCursor) {
+
+    jQuery(document).find('.custom-cursor').css({
+      opacity: 1
+    });
+    window.initCursor = true;
+  }
+  jQuery(document).find('.custom-cursor').css({
+    top: mouseY + 'px',
+    left: mouseX + 'px'
+  })
+};
+window.onmouseout = function (e) {
+  jQuery(document).find('.custom-cursor').css({
+    opacity: 0
+  });
+  window.initCursor = false;
+};
+
+
 //accordion testing - scrapped first run with animation. has extra click at start to set then it works, but then theres also making it work across mobile. gah!!!!
 //this version is courtesy
 var acc = document.getElementsByClassName("accordion");
