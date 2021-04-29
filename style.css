@@ -286,11 +286,23 @@ html.is-animating .transition-fade {
 }
 
 .about-hero {
-  height: 40vh;
-  background-image: url(images/other/mindmap-black-01.jpg);
-  background-size: cover;
-  background-position: bottom;
+  height: 30vh;
+  background-color: black;
   margin-top: -2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.about-main {
+  border-bottom: 1px solid black;
 }
 
 .about-text-contain {
@@ -306,6 +318,49 @@ html.is-animating .transition-fade {
   line-height: 3vw;
   width: 30vw;
   font-weight: 700;
+}
+
+.abt-sectitle {
+  display: block;
+  font-family: "Degular-Display", sans-serif;
+  font-size: 3vw;
+  line-height: 3vw;
+  color: white;
+  width: 60%;
+  font-weight: 500;
+}
+
+.about-contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 2.01rem;
+  gap: 2rem;
+  overflow: hidden;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.abt-illus {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  display: block;
+  height: 60vh;
+  width: auto;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.about {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  padding-bottom: 2rem;
 }
 
 .about p {
@@ -922,6 +977,14 @@ html.is-animating .transition-fade {
   .about-hero {
     margin-left: -1rem;
     margin-right: -1rem;
+    height: 50vh;
+  }
+  .about-hero .hero-sectitle {
+    position: absolute;
+    top: 50vh;
+  }
+  .about-contain {
+    margin-top: 10vh;
   }
   .about-text-contain {
     position: relative;
@@ -929,11 +992,22 @@ html.is-animating .transition-fade {
     top: 40vh;
     left: 1rem;
     font-size: 9vw;
+    margin-left: 1rem;
+    position: static;
+    margin-bottom: 1rem;
+    width: 89vw;
   }
   .about-tagline {
     font-size: 9vw;
     line-height: 9vw;
+    color: white;
     width: 100%;
+  }
+  .abt-sectitle {
+    font-size: 9vw;
+    line-height: 9vw;
+    width: 100%;
+    color: black;
   }
   .about {
     margin-top: 10vh;

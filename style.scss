@@ -313,12 +313,20 @@ html.is-animating .transition-fade {
 //about
 
 .about-hero {
-    height: 40vh;
-    background-image: url(images/other/mindmap-black-01.jpg);
-    background-size: cover;
-    background-position: bottom;
+    height: 30vh;
+    // background-image: url(images/other/mindmap-black-01.jpg);
+    // background-size: cover;
+    background-color: $main-dark;
+    // background-position: bottom;
     // overflow: hidden;
     margin-top: -2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.about-main {
+    border-bottom: 1px solid $main-dark;
 }
 
 .about-text-contain {
@@ -339,7 +347,40 @@ html.is-animating .transition-fade {
     font-weight: 700;
 }
 
+.abt-sectitle {
+    display: block;
+    font-family: $main-font-display;
+    $projnamesize: 3vw;
+    font-size: $projnamesize;
+    line-height: $projnamesize;
+    color: $main-bright;
+    width: 60%;
+    font-weight: 500;
+}
+
+.about-contain {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2.01rem;
+    gap: 2rem;
+    overflow: hidden;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.abt-illus {
+    flex: 0 0 30%;
+    display: block;
+    
+    // margin-bottom: -2rem;
+    height: 60vh;
+    width: auto;
+    align-self: flex-end;
+}
+
 .about {
+    flex: 1 0 50%;
+    padding-bottom: 2rem;
     p{
         margin-top: 1rem;
     }
@@ -913,6 +954,15 @@ html.is-animating .transition-fade {
     .about-hero {
         margin-left: -1rem;
         margin-right: -1rem;
+        height: 50vh;
+        .hero-sectitle {
+            position: absolute;
+            top: 50vh;
+        }
+    }
+
+    .about-contain {
+        margin-top: 10vh;
     }
 
     .about-text-contain {
@@ -921,13 +971,24 @@ html.is-animating .transition-fade {
         top: 40vh;
         left: 1rem;
         font-size: 9vw;
-
+        margin-left: 1rem;
+        position: static;
+        margin-bottom: 1rem;
+        width: 89vw;
     }
 
     .about-tagline{
         font-size: 9vw;
         line-height: 9vw;
+        color: $main-bright;
         width: 100%;
+    }
+
+    .abt-sectitle {
+        font-size: 9vw;
+        line-height: 9vw;
+        width: 100%;
+        color: $main-dark;
     }
 
     .about{

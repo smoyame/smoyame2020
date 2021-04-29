@@ -16,16 +16,19 @@ html(lang="en")
         +mobile-sidebar('/', '/#work')
         .container
             +sidebar('/#work', '/about.html')
-            main.main(id="swup" class="transition-fade")
+            main.about-main(id="swup" class="transition-fade")
                 section.about-hero
                     .about-text-contain
-                        p.about-tagline You can call me Sam!
-
-                .about
-                    p I am a <b>Graphic Design B.F.A candidate</b> at the Maryland Institute College of Art and I also hold an <b>Associate of Applied Science in Graphic Design</b> from Montgomery College, Rockville. 
-                    p My focus in Graphic Design lies in typographic systems and front-end web development. I maintain an interest in using my skills to disseminate information for the greater good.
-                    p My thesis project is on track to address the social stigma against people with intellectual disabilities, with an emphasis on the exposed underfunding of programs during COVID.
-                    p My passion for design stems from my experiences as the older sister of two siblings who live with disabilities, the translator for my parents growing up, and as a witness to people in need over the course of my life. There is no design consideration too small if it means improving the experience for those who need it most.
+                        p.about-tagline You can call me Sam. <br> Or Sami. <br> Or Samantha. 
+                    .hero-sectitle
+                        h1.abt-sectitle Currently finishing my B.F.A. and getting vaccinated.
+                .about-contain
+                    .about
+                        p I am a <b>Graphic Design B.F.A candidate</b> at the Maryland Institute College of Art (MICA) and I also hold an <b>Associate of Applied Science in Graphic Design</b> from Montgomery College, Rockville. 
+                        p My focus in Graphic Design lies in typographic systems and front-end web development. I maintain an interest in using my skills to disseminate information for the greater good.
+                        p My thesis project is on track to address the social stigma against people with intellectual disabilities, with an emphasis on the exposed underfunding of programs during COVID.
+                        p My passion for design stems from my experiences as the older sister of two siblings who live with disabilities, the translator for my parents growing up, and as a witness to people in need over the course of my life. There is no design consideration too small if it means improving the experience for those who need it most.
+                    img.abt-illus(src="/images/other/meillus-01.png")
 
                 script(src="medium-lightbox.js")            
                 include mixins/_scripts.pug
