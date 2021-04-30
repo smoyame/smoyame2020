@@ -14,7 +14,7 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
     body
         +mobile-sidebar('/', '/#work', '/about')
-        .container
+        .container(class="fade-in")
             +sidebar('/#work', '/about')
             main.main(id="swup" class="transition-fade")
                 section.hero
@@ -22,9 +22,9 @@ html(lang="en")
                         p.tagline I'm a graphic designer who's here to help.
                         span.nice 
                             p.nice-to nice to meet you
-                            p.star ✧
+                            p.star ✦
                     .hero-sectitle
-                        h1.proj-sectitle Projects
+                        h1.proj-sectitle(id="work") Projects
                 div#work
                 +projectcard('/8', 'project8', 'projdesc8', 'Interaction', 'proj-type8', 'The Dinner Party', 'proj-name8', 'images/8/dinnerparty_splash.png', 'Just a Placeholder.')
                 +projectcard('/1', 'project1', 'projdesc1', 'Publication', 'proj-type1', 'The Dry Run', 'proj-name1', 'images/1/thedryrun5.png', 'Just a Placeholder.')
@@ -39,3 +39,4 @@ html(lang="en")
                 
             script(src="medium-lightbox.js")
             include mixins/_scripts.pug
+    //- script(src="pageanim.js") 

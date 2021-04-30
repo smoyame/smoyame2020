@@ -1,21 +1,67 @@
-//tagline animation
+// gsap.from('.sidebar', {
+//   x: '-200',
+//   opacity: 0,
+//   duration: 2,
+//   ease: "power4.inOut"
+// })
+
+//test transition
+
+
+
+
+
+
+//for reference after .hero animates
+
+  //tagline animation
 gsap.from('.text-contain', {
-    duration: .5,
-    opacity: 0,
-    // text:" ",
-    // padSpace: true,
-    ease: "power4.inOut",
-    scrollTrigger: {
-        trigger:'.hero',
-        // markers: true,
-        start: "top 40%",
-        end: "bottom 45%",
-        toggleActions: "play reverse play reverse",
-        
-        }
-    }
+  duration: .35,
+  opacity: 0,
+  // text:" ",
+  // padSpace: true,
+  ease: "power4.inOut",
+  scrollTrigger: {
+      trigger:'.hero',
+      // markers: true,
+      start: "top 40%",
+      end: "bottom 45%",
+      toggleActions: "play reverse play reverse",
+      
+      },
+      clearProps: 'all'
+  }
 )
 
+gsap.from('.container', {
+  duration: 1.5,
+  ease: "power4.inOut",
+  opacity: 0,
+  "clip-path": "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+  // onComplete: textContainAnim
+})
+
+reverseWipe = () => {
+  gsap.to('.container', {
+    duration: 1.5,
+    ease: "power4.inOut",
+    opacity: 0,
+    "clip-path": "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
+    // onComplete: textContainAnim
+  })
+}
+
+
+
+
+// gsap.from('.hero', {
+//   y: '-100',
+//   opacity: 0,
+//   duration: 2,
+//   ease: "power4.inOut",
+//   clearProps: 'all',
+//   onComplete: textAnim
+// })
 
 //project slides on home page
 let textReveal = (projNum) => {
@@ -44,6 +90,7 @@ textReveal(5)
 textReveal(6)
 textReveal(7)
 textReveal(8)
+
 
 //medium lightbox
 MediumLightbox('figure.zoom-effect');

@@ -10,8 +10,8 @@
   scroll-behavior: smooth;
   list-style-type: none;
   cursor: none;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 html, body {
@@ -31,10 +31,10 @@ a {
   height: 40px;
   border-radius: 50%;
   background-color: white;
-  -webkit-transition: -webkit-transform 1.5s cubic-bezier(0, 1.04, 0.48, 0.99);
-  transition: -webkit-transform 1.5s cubic-bezier(0, 1.04, 0.48, 0.99);
-  transition: transform 1.5s cubic-bezier(0, 1.04, 0.48, 0.99);
-  transition: transform 1.5s cubic-bezier(0, 1.04, 0.48, 0.99), -webkit-transform 1.5s cubic-bezier(0, 1.04, 0.48, 0.99);
+  -webkit-transition: -webkit-transform 1.5s cubic-bezier(0, 0.75, 0.25, 1);
+  transition: -webkit-transform 1.5s cubic-bezier(0, 0.75, 0.25, 1);
+  transition: transform 1.5s cubic-bezier(0, 0.75, 0.25, 1);
+  transition: transform 1.5s cubic-bezier(0, 0.75, 0.25, 1), -webkit-transform 1.5s cubic-bezier(0, 0.75, 0.25, 1);
   -webkit-transform: translate(-50%, -50%) scale(0.75);
           transform: translate(-50%, -50%) scale(0.75);
   z-index: 1000;
@@ -128,9 +128,14 @@ html.is-animating .transition-fade {
   padding: 2rem;
   display: -ms-grid;
   display: grid;
+  background: white;
   gap: 2rem;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+  -webkit-transition: none;
+  transition: none;
 }
 
 .sidebar {
@@ -148,6 +153,8 @@ html.is-animating .transition-fade {
   position: sticky;
   top: 2rem;
   height: calc(100vh - 4rem);
+  -webkit-transition: none;
+  transition: none;
 }
 
 .title {
@@ -169,6 +176,8 @@ html.is-animating .transition-fade {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .text-contain {
@@ -190,10 +199,11 @@ html.is-animating .transition-fade {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: .5rem;
+}
+
+.nice-to {
+  margin-right: .5rem;
 }
 
 .hero-sectitle {
@@ -223,14 +233,25 @@ html.is-animating .transition-fade {
 }
 
 .header {
-  padding-bottom: .5rem;
+  padding-bottom: .3rem;
   border-bottom: 1px solid black;
 }
 
-.header .job::before {
-  content: "✧";
-  font-family: "Degular-Display", sans-serif;
-  margin-right: .25rem;
+.name, .job {
+  display: inline-block;
+  min-width: auto;
+  white-space: nowrap;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .nav {
@@ -244,22 +265,33 @@ html.is-animating .transition-fade {
   padding: .25rem 0 .3rem;
 }
 
-.nav-item a:hover::after {
+.nav-item a::after {
   content: '→';
   display: inline-block;
   position: absolute;
   right: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s cubic-bezier(0, 0.75, 0.25, 1);
+  transition: opacity 0.25s cubic-bezier(0, 0.75, 0.25, 1);
+}
+
+.nav-item a:hover::after {
+  opacity: 1;
 }
 
 .main {
   padding-bottom: 1rem;
   border-bottom: 1px solid black;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .project {
   background-color: #e0e0e0;
   position: relative;
   margin-bottom: 2rem;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .project:last-child {
@@ -891,7 +923,7 @@ html.is-animating .transition-fade {
   }
   .hero-sectitle {
     position: absolute;
-    bottom: -5rem;
+    bottom: -7.5rem;
   }
   .proj-sectitle {
     font-size: 9vw;
@@ -907,6 +939,9 @@ html.is-animating .transition-fade {
   .name, .job {
     font-size: .75rem;
     line-height: .5rem;
+  }
+  .star {
+    margin: 0 .5rem;
   }
   .header-mobile {
     display: block;
@@ -931,13 +966,8 @@ html.is-animating .transition-fade {
   .header-mobile .job {
     display: inline-block;
   }
-  .header-mobile .job {
-    margin-left: .5rem;
-  }
-  .header-mobile .job::before {
-    content: "✧";
-    font-family: "Degular-Display", sans-serif;
-    margin-right: .5rem;
+  .header-mobile .star {
+    line-height: .5rem;
   }
   .navfoot-contain-mobile {
     display: block;
@@ -981,6 +1011,10 @@ html.is-animating .transition-fade {
   }
   .proj-img {
     height: 55vh;
+  }
+  .proj-img[src~="images/8/dinnerparty_splash.png"] {
+    -o-object-position: left top;
+       object-position: left top;
   }
   .proj-name {
     position: absolute;
