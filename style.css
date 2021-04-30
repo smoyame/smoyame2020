@@ -136,12 +136,6 @@ html.is-animating .transition-fade {
   transition: none;
 }
 
-.container::before {
-  background-color: white;
-  height: 100px;
-  width: 100px;
-}
-
 .sidebar {
   display: -webkit-box;
   display: -ms-flexbox;
