@@ -132,10 +132,14 @@ html.is-animating .transition-fade {
   gap: 2rem;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
-  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
   -webkit-transition: none;
   transition: none;
+}
+
+.container::before {
+  background-color: white;
+  height: 100px;
+  width: 100px;
 }
 
 .sidebar {
@@ -149,6 +153,7 @@ html.is-animating .transition-fade {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: white;
   position: -webkit-sticky;
   position: sticky;
   top: 2rem;
@@ -354,6 +359,9 @@ html.is-animating .transition-fade {
 
 .about-main {
   border-bottom: 1px solid black;
+  background-color: white;
+  -webkit-clip-path: polygon(-100% -10%, 100% -10%, 100% 100%, -100% 100%);
+          clip-path: polygon(-100% -10%, 100% -10%, 100% 100%, -100% 100%);
 }
 
 .about-text-contain {
@@ -421,6 +429,11 @@ html.is-animating .transition-fade {
 .sub-main {
   padding-bottom: 1.4rem;
   border-bottom: 1px solid black;
+  background-color: white;
+  -webkit-transition: none;
+  transition: none;
+  -webkit-clip-path: polygon(-100% -10%, 100% -10%, 100% 100%, -100% 100%);
+          clip-path: polygon(-100% -10%, 100% -10%, 100% 100%, -100% 100%);
 }
 
 .sub-proj-info {
@@ -1013,8 +1026,8 @@ html.is-animating .transition-fade {
     height: 55vh;
   }
   .proj-img[src~="images/8/dinnerparty_splash.png"] {
-    -o-object-position: left top;
-       object-position: left top;
+    -o-object-position: left center;
+       object-position: left center;
   }
   .proj-name {
     position: absolute;

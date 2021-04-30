@@ -13,43 +13,73 @@
 
 
 //for reference after .hero animates
-
+const textContain = document.querySelector('.text-contain')
+if(textContain !== null) {
   //tagline animation
-gsap.from('.text-contain', {
-  duration: .35,
-  opacity: 0,
-  // text:" ",
-  // padSpace: true,
-  ease: "power4.inOut",
-  scrollTrigger: {
-      trigger:'.hero',
-      // markers: true,
-      start: "top 40%",
-      end: "bottom 45%",
-      toggleActions: "play reverse play reverse",
-      
-      },
-      clearProps: 'all'
-  }
-)
+  gsap.from('.text-contain', {
+    duration: .35,
+    opacity: 0,
+    // text:" ",
+    // padSpace: true,
+    ease: "power4.inOut",
+    scrollTrigger: {
+        trigger:'.hero',
+        // markers: true,
+        start: "top 40%",
+        end: "bottom 45%",
+        toggleActions: "play reverse play reverse",
+        
+        },
+        clearProps: 'all'
+    }
+  )
+}
 
-gsap.from('.container', {
-  duration: 1.5,
-  ease: "power4.inOut",
-  opacity: 0,
-  "clip-path": "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-  // onComplete: textContainAnim
-})
+//control when load anims run
+/*
+const prevIsMe = document.referrer.includes("127.0.0.1")
+const firstMain = document.querySelector(".main");
 
-reverseWipe = () => {
-  gsap.to('.container', {
-    duration: 1.5,
+if (firstMain !== null && prevIsMe !== true )  {
+  //onpage load
+  gsap.from('.container', {
+    duration: 2,
     ease: "power4.inOut",
     opacity: 0,
-    "clip-path": "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
+    "clip-path": "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
     // onComplete: textContainAnim
   })
-}
+} 
+
+const subMain = document.querySelector('.sub-main')
+if (subMain !== null ) {
+  
+    gsap.from('.sub-main', {
+      duration: 2,
+      ease: "power4.inOut",
+      opacity: 0,
+      // "overflow": "visible",
+      "clip-path": "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+      clearProps: 'all'
+    })
+  
+} 
+
+const aboutMain = document.querySelector('.about-main')
+if (aboutMain !== null ) {
+  
+    gsap.from('.about-main', {
+      duration: 2,
+      ease: "power4.inOut",
+      opacity: 0,
+      "clip-path": "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+      clearProps: 'all'
+      // onComplete: textContainAnim
+    })
+  
+} 
+
+*/
 
 
 
@@ -82,6 +112,7 @@ let textReveal = (projNum) => {
     )
 }
 
+//for homepage
 textReveal(1)
 textReveal(2)
 textReveal(3)
@@ -137,12 +168,16 @@ window.onmouseout = function (e) {
   window.initCursor = false;
 };
 
-btn.addEventListener("mouseover", function() {
-  cursor.classList.add("custom-cursor--link");
-});
-btn.addEventListener("mouseout", function() {
-  cursor.classList.remove("custom-cursor--link");
-});
+if (btn !== null) {
+  btn.addEventListener("mouseover", function() {
+    cursor.classList.add("custom-cursor--link");
+  });
+  btn.addEventListener("mouseout", function() {
+    cursor.classList.remove("custom-cursor--link");
+  });
+}
+
+
 //accordion testing - scrapped first run with animation. has extra click at start to set then it works, but then theres also making it work across mobile. gah!!!!
 //this version is courtesy
 var acc = document.getElementsByClassName("accordion");
