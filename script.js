@@ -1,9 +1,5 @@
-// gsap.from('.sidebar', {
-//   x: '-200',
-//   opacity: 0,
-//   duration: 2,
-//   ease: "power4.inOut"
-// })
+links = document.querySelectorAll('a');
+btn = document.querySelector('button');
 
 //project slides on home page
 let textReveal = (projNum) => {
@@ -24,18 +20,7 @@ let textReveal = (projNum) => {
   )
 }
 
-//for homepage
-// textReveal(1)
-// textReveal(2)
-// textReveal(3)
-// textReveal(4)
-// textReveal(5)
-// textReveal(6)
-// textReveal(7)
-// textReveal(8)
-
 //test transition
-
 let projReveal = (projNum) => {
   gsap.from(`.project${projNum}`, {
       duration: .5,
@@ -45,7 +30,7 @@ let projReveal = (projNum) => {
       scrollTrigger: {
           trigger:`.project${projNum}`,
           // markers: true,
-          start: "top 90%",
+          start: "top 99%",
           end: "bottom 60%",
           toggleActions: "play none none none",
           // scrub: true
@@ -56,12 +41,88 @@ let projReveal = (projNum) => {
   )
 }
 
+
+
+//barba test
+
+const animationEnter = (container) => {
+  return gsap.fromTo(container, {
+    "clipPath": "polygon(-55% 0%, -55% 0%, -55% 100%, -55% 100%)",
+    // opacity: 0,
+    // delay: .125,
+  }, {
+    "clipPath": "polygon(-55% 0%, 100% 0%, 100% 100%, -55% 100%)",
+    ease: "circ.inOut",
+    // opacity: 1,
+    duration: 1,
+  });
+}
+const animationLeave = (container) => {
+  return gsap.fromTo(container, {
+    "clipPath": "polygon(-55% 0%, 100% 0%, 100% 100%, -55% 100%)",
+    // opacity: 0,
+    // delay: .125,
+  }, {
+    "clipPath": "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
+    ease: "circ.inOut",
+    // opacity: 1,
+    duration: 1,
+  }
+  );
+}
+let homeAnim = (i) => {
+    for (i=1; i < 9; i++) {
+      const homeProjContain = document.querySelector(`.project${i}`)
+      //check if div exists to avoid warnings in console
+      if (homeProjContain !== null) {
+        projReveal(i)
+      }
+    }
+    
+    for (i=1; i < 9; i++) {
+      const projNameContain = document.querySelector(`.proj-name${i}`)
+      //check if div exists to avoid warnings in console
+      if (projNameContain !== null) {
+      textReveal(i)
+      }
+    }
+}
+
+// barba.init({
+//   transitions: [
+//     {
+//       once({next}){
+//         animationEnter(next.container);
+//       },
+//       leave: ({current}) => animationLeave(current.container),
+//       enter({next}){
+//         animationEnter(next.container);
+//       }
+//     }
+//   ]
+// });
+
+// barba.hooks.beforeEnter( (data) => {
+//   homeAnim(data)
+// }
+// )
+
+
+
 for (i=1; i < 9; i++) {
-  projReveal(i)
+  const homeProjContain = document.querySelector(`.project${i}`)
+  //check if div exists to avoid warnings in console
+  if (homeProjContain !== null) {
+    projReveal(i)
+  }
 }
 
 for (i=1; i < 9; i++) {
+  const projNameContain = document.querySelector(`.proj-name${i}`)
+  //check if div exists to avoid warnings in console
+  if (projNameContain !== null) {
   textReveal(i)
+  }
 }
 
 
@@ -89,71 +150,8 @@ if(textContain !== null) {
   )
 }
 
-//control when load anims run
-/*
-const prevIsMe = document.referrer.includes("127.0.0.1")
-const firstMain = document.querySelector(".main");
-
-if (firstMain !== null && prevIsMe !== true )  {
-  //onpage load
-  gsap.from('.container', {
-    duration: 2,
-    ease: "power4.inOut",
-    opacity: 0,
-    "clip-path": "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-    // onComplete: textContainAnim
-  })
-} 
-
-const subMain = document.querySelector('.sub-main')
-if (subMain !== null ) {
-  
-    gsap.from('.sub-main', {
-      duration: 2,
-      ease: "power4.inOut",
-      opacity: 0,
-      // "overflow": "visible",
-      "clip-path": "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-      clearProps: 'all'
-    })
-  
-} 
-
-const aboutMain = document.querySelector('.about-main')
-if (aboutMain !== null ) {
-  
-    gsap.from('.about-main', {
-      duration: 2,
-      ease: "power4.inOut",
-      opacity: 0,
-      "clip-path": "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-      clearProps: 'all'
-      // onComplete: textContainAnim
-    })
-  
-} 
-
-*/
-
-
-
-
-// gsap.from('.hero', {
-//   y: '-100',
-//   opacity: 0,
-//   duration: 2,
-//   ease: "power4.inOut",
-//   clearProps: 'all',
-//   onComplete: textAnim
-// })
-
-
-
 //medium lightbox
 MediumLightbox('figure.zoom-effect');
-
-
-
 
 //accordion testing - scrapped first run with animation. has extra click at start to set then it works, but then theres also making it work across mobile. gah!!!!
 //this version is courtesy
@@ -211,20 +209,7 @@ paddValue = (num) => {
   return newPadVal;
 }
 
-  //applying ratio to padding and to dataset
-
-// let testGrabImgEl = 
-
-// for (source = 0; source < section.length; source++) {
-//     imgInfo(source) = (event) => {
-//         //apply new data w and h
-//     event.target.setAttribute("data-width", event.target.naturalWidth)
-//     event.target.setAttribute("data-height", event.target.naturalHeight)
-//     //apply padding to aspectratiofill div
-//     event.target.previousSibling.style.paddingBottom = (event.target.naturalHeight/event.target.naturalWidth)*100 + "%";  
-//   }
-// }
-
+//applying ratio to padding and to dataset
 Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
   for (source = 0; source < section.length; source++) {
     imgInfo(source).setAttribute("data-width", natW(source))
@@ -240,49 +225,220 @@ Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => 
 //https://codepen.io/chloyka/pen/VwZeRdy
 
 var cursor, links;
-cursor = document.querySelector('.custom-cursor');
-links = document.querySelectorAll('a');
-btn = document.querySelector('button');
-window.initCursor = false;
-for (var i = 0; i < links.length; i++) {
-  var selfLink = links[i];
+// cursor = document.querySelector('.custom-cursor');
+// //using link and btn from above
+// window.initCursor = false;
+// for (var i = 0; i < links.length; i++) {
+//   var selfLink = links[i];
 
-  selfLink.addEventListener("mouseover", function() {
-    cursor.classList.add("custom-cursor--link");
-  });
-  selfLink.addEventListener("mouseout", function() {
-    cursor.classList.remove("custom-cursor--link");
-  });
-}
+//   selfLink.addEventListener("mouseover", function() {
+//     cursor.classList.add("custom-cursor--link");
+//   });
+//   selfLink.addEventListener("mouseout", function() {
+//     cursor.classList.remove("custom-cursor--link");
+//   });
+// }
 
-window.onmousemove = function (e) {
-  var mouseX, mouseY;
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  if (!window.initCursor) {
+// window.onmousemove = function (e) {
+//   var mouseX, mouseY;
+//   mouseX = e.clientX;
+//   mouseY = e.clientY;
+//   if (!window.initCursor) {
 
-    jQuery(document).find('.custom-cursor').css({
-      opacity: 1
-    });
-    window.initCursor = true;
-  }
-  jQuery(document).find('.custom-cursor').css({
-    top: mouseY + 'px',
-    left: mouseX + 'px'
-  })
-};
-window.onmouseout = function (e) {
-  jQuery(document).find('.custom-cursor').css({
-    opacity: 0
-  });
+//     jQuery(document).find('.custom-cursor').css({
+//       opacity: 1
+//     });
+//     window.initCursor = true;
+//   }
+//   jQuery(document).find('.custom-cursor').css({
+//     top: mouseY + 'px',
+//     left: mouseX + 'px'
+//   })
+// };
+// window.onmouseout = function (e) {
+//   jQuery(document).find('.custom-cursor').css({
+//     opacity: 0
+//   });
+//   window.initCursor = false;
+// };
+
+// if (btn !== null) {
+//   btn.addEventListener("mouseover", function() {
+//     cursor.classList.add("custom-cursor--link");
+//   });
+//   btn.addEventListener("mouseout", function() {
+//     cursor.classList.remove("custom-cursor--link");
+//   });
+// }
+
+const mediaQuery = window.matchMedia('(min-width: 851px)')
+
+if (mediaQuery.matches) {
+  cursor = document.querySelector('.custom-cursor');
+  //using link and btn from above
   window.initCursor = false;
+  for (var i = 0; i < links.length; i++) {
+    var selfLink = links[i];
+
+    selfLink.addEventListener("mouseover", function() {
+      cursor.classList.add("custom-cursor--link");
+    });
+    selfLink.addEventListener("mouseout", function() {
+      cursor.classList.remove("custom-cursor--link");
+    });
+  };
+
+  window.onmousemove = function (e) {
+    var mouseX, mouseY;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    if (!window.initCursor) {
+      jQuery(document).find('.custom-cursor').css({
+        opacity: 1
+      });
+      window.initCursor = true;
+    }
+    jQuery(document).find('.custom-cursor').css({
+      top: mouseY + 'px',
+      left: mouseX + 'px'
+    })
+  };
+  window.onmouseout = function (e) {
+    jQuery(document).find('.custom-cursor').css({
+      opacity: 0
+    });
+    window.initCursor = false;
+  };
+  if (btn !== null) {
+    btn.addEventListener("mouseover", function() {
+      cursor.classList.add("custom-cursor--link");
+    });
+    btn.addEventListener("mouseout", function() {
+      cursor.classList.remove("custom-cursor--link");
+    });
+  };
 };
 
-if (btn !== null) {
-  btn.addEventListener("mouseover", function() {
-    cursor.classList.add("custom-cursor--link");
-  });
-  btn.addEventListener("mouseout", function() {
-    cursor.classList.remove("custom-cursor--link");
-  });
-}
+
+/* Page transitions reserved for later
+const containerBefore = CSSRulePlugin.getRule("body::before");
+  //both used below too
+  links = document.querySelectorAll('a');
+  btn = document.querySelector('button');
+
+//fade ins for main, sub, and about
+const firstMain = document.querySelector(".main");
+
+window.addEventListener("load", function(){
+  if (firstMain !== null )  {
+    let tl = gsap.timeline({duration: 1})
+    tl.from(containerBefore, {
+      "clipPath": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      ease: "circ.inOut",
+      // "visibility" : "hidden",
+      // onComplete: textContainAnim
+    })
+    tl.from(containerBefore, {
+      opacity: 1,
+      ease: "circ.in",
+      delay: .125
+    }, .975
+    )
+    gsap.from(firstMain, {
+      opacity: 0,
+      ease: "circ.in",
+      // "visibility": "hidden",
+    })
+  } 
+
+  const aboutMain = document.querySelector(".about-main");
+  if (aboutMain !== null )  {
+    gsap.from(aboutMain, {
+      opacity: 0,
+      ease: "circ.in",
+      // "visibility" : "hidden"
+      // delay: .125,
+    }
+    );
+    let tl = gsap.timeline({duration: 1, clearProps: 'all'});
+    tl.from(containerBefore, {
+      "clipPath": "polygon(35% 0%, 100% 0%, 100% 100%, 35% 100%)",
+      ease: "circ.inOut"
+      // onComplete: textContainAnim
+    })
+    tl.from(containerBefore, {
+      opacity: 1,
+      ease: "circ.in",
+      delay: .125
+    }, .975
+    );
+  };
+
+  const subMain = document.querySelector(".sub-main")
+  if (subMain !== null )  {
+    gsap.from(subMain, {
+      opacity: 0,
+      ease: "circ.in",
+      // delay: .125,
+      // "visibility" : "hidden"
+    }
+    );
+    let tl = gsap.timeline({duration: 1, clearProps: 'all'});
+    tl.from(containerBefore, {
+      "clipPath": "polygon(35% 0%, 100% 0%, 100% 100%, 35% 100%)",
+      ease: "circ.inOut"
+      // onComplete: textContainAnim
+    })
+    tl.from(containerBefore, {
+      opacity: 1,
+      ease: "circ.in",
+      delay: .125
+    }, .975
+    );
+
+  };
+
+  // for fade-out
+
+
+  links.forEach(storedLink => storedLink.addEventListener("click", function(event) {
+    
+    let exeLink = event.currentTarget.href
+    event.preventDefault();
+    function grabIntPg () {
+      window.location = exeLink
+    }
+    gsap.fromTo(containerBefore, {
+      "clipPath": "polygon(35% 0%, 35% 0%, 35% 100%, 35% 100%)",
+      opacity: 0,
+      // delay: .125,
+    }, {
+      "clipPath": "polygon(35% 0%, 100% 0%, 100% 100%, 35% 100%)",
+      ease: "circ.inOut",
+      opacity: 1,
+      duration: 1,
+      onComplete: grabIntPg
+    }
+    );
+    gsap.to('.text-contain', {
+      opacity: 0,
+      ease: "circ.inOut",
+      duration: .75,
+    })
+    gsap.to('.sub-proj-info', {
+      opacity: 0,
+      ease: "circ.inOut",
+      duration: .75,
+    })
+    gsap.to('.proj-name', {
+      opacity: 0,
+      ease: "circ.inOut",
+      duration: .75,
+    })
+
+
+  })
+  )
+
+})
+*/

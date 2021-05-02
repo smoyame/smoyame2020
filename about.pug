@@ -3,6 +3,7 @@ include mixins/_sidebar.pug
 include mixins/_mobile-sidebar.pug
 
 
+
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -14,9 +15,9 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
     body
         +mobile-sidebar('/', '/#work')
-        .container
+        .container(data-barba="wrapper")
             +sidebar('/#work', '/about.html')
-            main.about-main(id="swup" class="transition-fade")
+            main.about-main(data-barba="container" data-barba-namespace="content")
                 section.about-hero
                     .about-text-contain
                         p.about-tagline You can call me Sam. <br> Or Sami. <br> Or Samanta. 
@@ -30,5 +31,5 @@ html(lang="en")
                         p My passion for design stems from my experiences as the older sister of two siblings who live with disabilities, the translator for my parents growing up, and as a witness to people in need over the course of my life. There is no design consideration too small if it means improving the experience for those who need it most.
                     img.abt-illus(src="/images/other/meillus-01.png")
 
-            script(src="medium-lightbox.js")            
-            include mixins/_scripts.pug
+        script(src="medium-lightbox.js")            
+        include mixins/_scripts.pug

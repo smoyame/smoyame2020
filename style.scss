@@ -38,7 +38,6 @@ a {
     mix-blend-mode: difference;
     width: 40px;
     height: 40px;
-    // filter: blur(5px);
     border-radius: 50%;
     background-color: white;
     transition: transform 1.5s cubic-bezier(0,.75,.25,1);
@@ -51,10 +50,10 @@ a {
 
 ///swup
 
-.transition-fade {
-    transition: 1s cubic-bezier(.58,.11,.93,.49);
-    opacity: 1;
-}
+// .transition-fade {
+//     transition: 1s cubic-bezier(.58,.11,.93,.49);
+//     opacity: 1;
+// }
 
 html.is-leaving .transition-fade {
     // transform: translateX(300vw);
@@ -141,40 +140,43 @@ html.is-animating .transition-fade {
 //xxxxxxxxxxxxxxxxxxxxx
 
 
-
-
-
 ////////////////////////////////////////
 
 //layout
 
 .container {
-    padding: 2rem;
     display: grid;
     background: $main-bright;
     gap: 2rem;
     grid-template-columns: 1fr 2fr;
-    // clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
     transition: none;
 }
 
-// .container::before {
-//     // position: fixed;
-//     // left: 0;
-//     // top: 0;
+// body::before {
+//     content: "";
+//     display: block;
+//     position: fixed;
+//     width: 100%;
+//     height: 100%;
+//     opacity: 0;
 //     background-color: $main-bright;
-//     // z-index: 99999;
-//     height: 100px;
-//     width: 100px;
+//     // margin-top: -2rem;
+//     // margin-left: -2rem;
+//     z-index: 999;
+//     // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+//     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+//     transition: none;
 // }
 
 .sidebar {
     display: flex;
+    top: 2rem;
     flex-direction: column;
     justify-content: space-between;
     background-color: $main-bright;
     position: sticky;
-    top: 2rem;
+    margin: 2rem 0 2rem 2rem;
     height: calc(100vh - 4rem);
     transition: none;
 }
@@ -206,6 +208,9 @@ html.is-animating .transition-fade {
     position: fixed;
     top: 6rem;
     left: 2rem;
+    opacity: 1;
+
+    visibility: visible;
 }
 
 .tagline {
@@ -303,10 +308,17 @@ html.is-animating .transition-fade {
     opacity: 1;
 }
 
+main {
+    margin: 0 2rem 2rem 0;
+}
+
 .main {
     padding-bottom: 1rem;
+    margin-bottom: 2rem;
     border-bottom: 1px solid $main-dark;
     transition: none;
+    opacity: 1;
+    visibility: visible;
 }
 
 .project {
@@ -384,6 +396,9 @@ html.is-animating .transition-fade {
     border-bottom: 1px solid $main-dark;
     background-color: $main-bright;
     // clip-path: polygon(-100% -10%, 100% -10%, 100% 100%, -100% 100%);
+    transition: none;
+    opacity: 1;
+    visibility: visible;
 }
 
 .about-text-contain {
@@ -393,6 +408,10 @@ html.is-animating .transition-fade {
     position: fixed;
     top: 6rem;
     left: 2rem;
+    opacity: 1;
+    transition: none;
+    // clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)
+
 }
 
 .about-tagline {
@@ -450,13 +469,15 @@ html.is-animating .transition-fade {
     border-bottom: 1px solid $main-dark;
     background-color: $main-bright;
     transition: none;
-    clip-path: polygon(-100% -10%, 100% -10%, 100% 100%, -100% 100%);
+    opacity: 1;
+    visibility: visible;
 }
 
 .sub-proj-info {
     position: fixed;
     left: 2rem;
     top: 6rem;
+    transition: none;
 }
 
 .sub-proj-info {
@@ -867,6 +888,10 @@ html.is-animating .transition-fade {
 
     }
 
+    main {
+        margin: 0 0 2rem 0;
+    }
+
     .hero {
         margin-left: -1rem;
         margin-top: .75rem;
@@ -875,10 +900,11 @@ html.is-animating .transition-fade {
     }
 
     .text-contain {
-        margin-left: 1rem;
+        // margin-left: 1rem;
+        margin: 0 1rem 1rem 1rem;
         position: static;
-        margin-bottom: 1rem;
-        width: 89vw;
+        // margin-bottom: 1rem;
+        // width: 89vw;
         font-size: 9vw;
     }
 
@@ -891,6 +917,7 @@ html.is-animating .transition-fade {
 
     .hero-sectitle {
         position: absolute;
+        // padding-left: 0;
         top: calc(55vh - 5vw);
     }
 
@@ -941,12 +968,6 @@ html.is-animating .transition-fade {
         .star {
             line-height: .5rem;
         }
-
-        // .job::before {
-        //     content:"✧";
-        //     font-family: $main-font-display;
-        //     margin-right: .5rem;
-        // }
     }
 
     

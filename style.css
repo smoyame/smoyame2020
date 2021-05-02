@@ -45,12 +45,6 @@ a {
           transform: translate(-50%, -50%) scale(3);
 }
 
-.transition-fade {
-  -webkit-transition: 1s cubic-bezier(0.58, 0.11, 0.93, 0.49);
-  transition: 1s cubic-bezier(0.58, 0.11, 0.93, 0.49);
-  opacity: 1;
-}
-
 html.is-leaving .transition-fade {
   opacity: 0;
 }
@@ -125,13 +119,14 @@ html.is-animating .transition-fade {
 }
 
 .container {
-  padding: 2rem;
   display: -ms-grid;
   display: grid;
   background: white;
   gap: 2rem;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
   -webkit-transition: none;
   transition: none;
 }
@@ -140,6 +135,7 @@ html.is-animating .transition-fade {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  top: 2rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -150,7 +146,7 @@ html.is-animating .transition-fade {
   background-color: white;
   position: -webkit-sticky;
   position: sticky;
-  top: 2rem;
+  margin: 2rem 0 2rem 2rem;
   height: calc(100vh - 4rem);
   -webkit-transition: none;
   transition: none;
@@ -185,6 +181,8 @@ html.is-animating .transition-fade {
   position: fixed;
   top: 6rem;
   left: 2rem;
+  opacity: 1;
+  visibility: visible;
 }
 
 .tagline {
@@ -274,11 +272,18 @@ html.is-animating .transition-fade {
   opacity: 1;
 }
 
+main {
+  margin: 0 2rem 2rem 0;
+}
+
 .main {
   padding-bottom: 1rem;
+  margin-bottom: 2rem;
   border-bottom: 1px solid black;
   -webkit-transition: none;
   transition: none;
+  opacity: 1;
+  visibility: visible;
 }
 
 .project {
@@ -351,6 +356,10 @@ html.is-animating .transition-fade {
 .about-main {
   border-bottom: 1px solid black;
   background-color: white;
+  -webkit-transition: none;
+  transition: none;
+  opacity: 1;
+  visibility: visible;
 }
 
 .about-text-contain {
@@ -359,6 +368,9 @@ html.is-animating .transition-fade {
   position: fixed;
   top: 6rem;
   left: 2rem;
+  opacity: 1;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .about-tagline {
@@ -421,14 +433,16 @@ html.is-animating .transition-fade {
   background-color: white;
   -webkit-transition: none;
   transition: none;
-  -webkit-clip-path: polygon(-100% -10%, 100% -10%, 100% 100%, -100% 100%);
-          clip-path: polygon(-100% -10%, 100% -10%, 100% 100%, -100% 100%);
+  opacity: 1;
+  visibility: visible;
 }
 
 .sub-proj-info {
   position: fixed;
   left: 2rem;
   top: 6rem;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .sub-proj-info {
@@ -904,6 +918,9 @@ html.is-animating .transition-fade {
     display: block;
     padding: 1rem 1rem 1rem 1rem;
   }
+  main {
+    margin: 0 0 2rem 0;
+  }
   .hero {
     margin-left: -1rem;
     margin-top: .75rem;
@@ -911,10 +928,8 @@ html.is-animating .transition-fade {
     position: relative;
   }
   .text-contain {
-    margin-left: 1rem;
+    margin: 0 1rem 1rem 1rem;
     position: static;
-    margin-bottom: 1rem;
-    width: 89vw;
     font-size: 9vw;
   }
   .tagline {

@@ -15,9 +15,9 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
     body
         +mobile-sidebar('../', '../#work', '../about')
-        .container
+        .container(data-barba="wrapper")
             +sidebar('../#work', '../about.html')
-            main.sub-main(id="swup" class="transition-fade")
+            main.sub-main(data-barba="container" data-barba-namespace="project8")
                 //- section.hero
                 //-     .text-contain
                 //-         p.tagline The Dry Run
