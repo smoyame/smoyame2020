@@ -191,7 +191,7 @@ html.is-animating .transition-fade {
     // background-position: center;
     // overflow: hidden;
     margin-top: -2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -228,10 +228,6 @@ html.is-animating .transition-fade {
 
 .hero-sectitle {
     padding: 1rem;
-}
-
-#work {
-    height: 2rem;
 }
 
 .proj-img {
@@ -376,11 +372,8 @@ html.is-animating .transition-fade {
 
 .about-hero {
     height: 30vh;
-    // background-image: url(images/other/mindmap-black-01.jpg);
-    // background-size: cover;
     background-color: $main-dark;
-    // background-position: bottom;
-    // overflow: hidden;
+    width: auto;
     margin-top: -2rem;
     display: flex;
     flex-direction: column;
@@ -390,7 +383,7 @@ html.is-animating .transition-fade {
 .about-main {
     border-bottom: 1px solid $main-dark;
     background-color: $main-bright;
-    clip-path: polygon(-100% -10%, 100% -10%, 100% 100%, -100% 100%);
+    // clip-path: polygon(-100% -10%, 100% -10%, 100% 100%, -100% 100%);
 }
 
 .about-text-contain {
@@ -898,7 +891,7 @@ html.is-animating .transition-fade {
 
     .hero-sectitle {
         position: absolute;
-        bottom: -7.5rem;
+        top: calc(55vh - 5vw);
     }
 
     .proj-sectitle {
@@ -1030,12 +1023,14 @@ html.is-animating .transition-fade {
     ////// about
     .about-hero {
         margin-left: -1rem;
+        margin-top: .75rem;
         margin-right: -1rem;
-        height: 50vh;
-        .hero-sectitle {
-            position: absolute;
-            top: 50vh;
-        }
+        position: relative;
+    }
+
+    .about-hero .hero-sectitle {
+        position: absolute;
+        top: calc(31.5vh - 5vw);
     }
 
     .about-contain {
@@ -1043,12 +1038,13 @@ html.is-animating .transition-fade {
     }
 
     .about-text-contain {
-        position: relative;
-        width: 89vw;
+        box-sizing: border-box;
+        // position: relative;
+        width: 100%;
         top: 40vh;
         left: 1rem;
         font-size: 9vw;
-        margin-left: 1rem;
+        padding-left: 1rem;
         position: static;
         margin-bottom: 1rem;
         width: 89vw;

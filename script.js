@@ -5,10 +5,64 @@
 //   ease: "power4.inOut"
 // })
 
+//project slides on home page
+let textReveal = (projNum) => {
+  gsap.from(`.proj-name${projNum}`, {
+      duration: .5,
+      opacity: 0,
+      text:" ",
+      ease: "power4.inOut",
+      scrollTrigger: {
+          trigger:`.project${projNum}`,
+          // markers: true,
+          start: "top 50%",
+          end: "bottom 60%",
+          toggleActions: "play reverse play reverse",
+          
+          }
+      }
+  )
+}
+
+//for homepage
+// textReveal(1)
+// textReveal(2)
+// textReveal(3)
+// textReveal(4)
+// textReveal(5)
+// textReveal(6)
+// textReveal(7)
+// textReveal(8)
+
 //test transition
 
+let projReveal = (projNum) => {
+  gsap.from(`.project${projNum}`, {
+      duration: .5,
+      y: '100',
+      opacity: 0,
+      ease: "power4.inOut",
+      scrollTrigger: {
+          trigger:`.project${projNum}`,
+          // markers: true,
+          start: "top 90%",
+          end: "bottom 60%",
+          toggleActions: "play none none none",
+          // scrub: true
+          },
+      clearProps: 'all',
+      // onComplete: textReveal(projNum)
+      }
+  )
+}
 
+for (i=1; i < 9; i++) {
+  projReveal(i)
+}
 
+for (i=1; i < 9; i++) {
+  textReveal(i)
+}
 
 
 
@@ -93,34 +147,6 @@ if (aboutMain !== null ) {
 //   onComplete: textAnim
 // })
 
-//project slides on home page
-let textReveal = (projNum) => {
-    gsap.from(`.proj-name${projNum}`, {
-        duration: .5,
-        opacity: 0,
-        text:" ",
-        ease: "power4.inOut",
-        scrollTrigger: {
-            trigger:`.project${projNum}`,
-            // markers: true,
-            start: "top 50%",
-            end: "bottom 60%",
-            toggleActions: "play reverse play reverse",
-            
-            }
-        }
-    )
-}
-
-//for homepage
-textReveal(1)
-textReveal(2)
-textReveal(3)
-textReveal(4)
-textReveal(5)
-textReveal(6)
-textReveal(7)
-textReveal(8)
 
 
 //medium lightbox

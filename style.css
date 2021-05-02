@@ -164,7 +164,7 @@ html.is-animating .transition-fade {
   height: 50vh;
   background-color: black;
   margin-top: -2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,10 +207,6 @@ html.is-animating .transition-fade {
 
 .hero-sectitle {
   padding: 1rem;
-}
-
-#work {
-  height: 2rem;
 }
 
 .proj-img {
@@ -338,6 +334,7 @@ html.is-animating .transition-fade {
 .about-hero {
   height: 30vh;
   background-color: black;
+  width: auto;
   margin-top: -2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -354,8 +351,6 @@ html.is-animating .transition-fade {
 .about-main {
   border-bottom: 1px solid black;
   background-color: white;
-  -webkit-clip-path: polygon(-100% -10%, 100% -10%, 100% 100%, -100% 100%);
-          clip-path: polygon(-100% -10%, 100% -10%, 100% 100%, -100% 100%);
 }
 
 .about-text-contain {
@@ -930,7 +925,7 @@ html.is-animating .transition-fade {
   }
   .hero-sectitle {
     position: absolute;
-    bottom: -7.5rem;
+    top: calc(55vh - 5vw);
   }
   .proj-sectitle {
     font-size: 9vw;
@@ -1036,23 +1031,25 @@ html.is-animating .transition-fade {
   }
   .about-hero {
     margin-left: -1rem;
+    margin-top: .75rem;
     margin-right: -1rem;
-    height: 50vh;
+    position: relative;
   }
   .about-hero .hero-sectitle {
     position: absolute;
-    top: 50vh;
+    top: calc(31.5vh - 5vw);
   }
   .about-contain {
     margin-top: 10vh;
   }
   .about-text-contain {
-    position: relative;
-    width: 89vw;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
     top: 40vh;
     left: 1rem;
     font-size: 9vw;
-    margin-left: 1rem;
+    padding-left: 1rem;
     position: static;
     margin-bottom: 1rem;
     width: 89vw;
