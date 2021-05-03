@@ -48,7 +48,7 @@ let textReveal = (projNum) => {
   tl.from (`.proj-name${projNum}`, {"clipPath": "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", duration: .1})
   tl.from(`.proj-name${projNum}`, {y:'20', opacity: 0, duration: 0.2}, 0)
   tl.to(`.proj-name${projNum}`, {y:'-20', opacity: 0, duration: 0.2}, 0.85)
-  tl.to (`.proj-name${projNum}`, {"clipPath": "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",  ease: "none",duration: .1})
+  tl.to (`.proj-name${projNum}`, {"clipPath": "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",duration: .1})
 }
 
 //test transition
