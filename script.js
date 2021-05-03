@@ -2,6 +2,8 @@
 
 ///////////////////////////////////////
 let easeChoice = "power4.in"
+const mqForTaglineAnimDesk = window.matchMedia('(min-width: 851px)')
+const mqForTaglineAnimSml = window.matchMedia('(max-width: 850px)')
 links = document.querySelectorAll('a');
 btn = document.querySelector('button');
 
@@ -9,16 +11,33 @@ btn = document.querySelector('button');
 const textContain = document.querySelector('.text-contain')
 if(textContain !== null) {
   //tagline animation
-  let homeTextContTL = gsap.timeline({ease: easeChoice, scrollTrigger: {
+  let homeTextContTL;
+  if (mqForTaglineAnimDesk.matches) {
+    homeTextContTL = gsap.timeline({ease: easeChoice, scrollTrigger: {
+      trigger:".hero",
+      // markers: true,
+      start: "top 10%",
+      end: "bottom 40%",
+      // scroller: ".smooth-scroll",
+      toggleActions: "play reverse play reverse",
+      scrub: true
+      } 
+    }
+    )
+    
+} else if (mqForTaglineAnimSml.matches) {
+  homeTextContTL = gsap.timeline({ease: easeChoice, scrollTrigger: {
     trigger:".hero",
     // markers: true,
-    start: "top 10%",
-    end: "bottom 40%",
+    start: "top 20%",
+    end: "bottom 35%",
     // scroller: ".smooth-scroll",
     toggleActions: "play reverse play reverse",
-    scrub: true,
-    }
-  })
+    scrub: true
+    } 
+  }
+  )
+}
   homeTextContTL.from (".text-contain",{
     y: '20',
     opacity: 0,
@@ -220,10 +239,10 @@ var cursor, links;
 //   });
 // }
 
-const mediaQuery = window.matchMedia('(min-width: 851px)')
+const mediaQueryForCursor = window.matchMedia('(min-width: 851px)')
 const mediumBoxes = document.querySelectorAll(".imagecard");
 
-if (mediaQuery.matches) {
+if (mediaQueryForCursor.matches) {
   cursor = document.querySelector('.custom-cursor');
   //using link and btn from above
   window.initCursor = false;
