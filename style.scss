@@ -50,9 +50,10 @@ a {
   }
 
 .custom-cursor--link::before {
+    font-family: $main-font-display;
     content: "✦";
     font-size: 1.5rem;
-    line-height: 1.65rem;
+    line-height: 1.45rem;
     display: flex;
     justify-content: center;
     align-items: center;
