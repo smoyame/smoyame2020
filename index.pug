@@ -15,9 +15,9 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
     body
         +mobile-sidebar('/', '/#work', '/about')
-        .container
+        .container(data-barba="wrapper")
             +sidebar('/#work', '/about')
-            main.main
+            main.main(data-barba="container" data-barba-namespace="content")
                 section.hero
                     .text-contain
                         p.tagline I'm a graphic designer who's here to help.

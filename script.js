@@ -1,12 +1,38 @@
 
 
 ///////////////////////////////////////
-
+let easeChoice = "power4.in"
 links = document.querySelectorAll('a');
 btn = document.querySelector('button');
 
 //tagline on homepage
-let easeChoice = "power4.in"
+const textContain = document.querySelector('.text-contain')
+if(textContain !== null) {
+  //tagline animation
+  let homeTextContTL = gsap.timeline({ease: easeChoice, scrollTrigger: {
+    trigger:".hero",
+    markers: true,
+    start: "top 10%",
+    end: "bottom 40%",
+    // scroller: ".smooth-scroll",
+    toggleActions: "play reverse play reverse",
+    scrub: true,
+    }
+  })
+  homeTextContTL.from (".text-contain",{
+    y: '20',
+    opacity: 0,
+    "clipPath": "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+    duration: .2
+  }) 
+  homeTextContTL.to (".text-contain", {
+    y: '-20',
+    opacity: 0,
+    "clipPath": "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+    duration: .2,
+  })
+}
+
 //project slides on home page
 let textReveal = (projNum) => {
   const tl = gsap.timeline({
@@ -19,15 +45,16 @@ let textReveal = (projNum) => {
       toggleActions: 'play reverse play reverse',
     }
   })
-  tl.from(`.proj-name${projNum}`, {y:'20', opacity: 0, duration: 0.1}, 0)
-  tl.to(`.proj-name${projNum}`, {y:'-20',opacity: 0, duration: 0.1}, 0.85)
+  tl.from (`.proj-name${projNum}`, {"clipPath": "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", duration: .1})
+  tl.from(`.proj-name${projNum}`, {y:'20', opacity: 0, duration: 0.2}, 0)
+  tl.to(`.proj-name${projNum}`, {y:'-20', opacity: 0, duration: 0.2}, 0.85)
+  tl.to (`.proj-name${projNum}`, {"clipPath": "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",  ease: "none",duration: .1})
 }
 
 //test transition
 let projReveal = (projNum) => {
   gsap.from(`.project${projNum}`, {
-      duration: 1,
-      // y: '100',
+      duration: .5,
       opacity: 0.4,
       ease: "expo.inOut",
       scrollTrigger: {
@@ -46,105 +73,9 @@ let projReveal = (projNum) => {
 }
 
 //for reference after .hero animates
-const textContain = document.querySelector('.text-contain')
-if(textContain !== null) {
-  //tagline animation
-  let homeTextContTL = gsap.timeline({ease: easeChoice, scrollTrigger: {
-    trigger:".hero",
-    // markers: true,
-    start: "top 20%",
-    end: "100% 20%",
-    // scroller: ".smooth-scroll",
-    toggleActions: "play reverse play reverse",
-    scrub: true,
-    }
-  })
 
-  // homeTextContTL.fromTo(".text-contain", {
-  //     y: '20'
-  //   }, {
-  //     y: '-20'
-  //   }), 
-  homeTextContTL.from (".text-contain",{
-      y: '20',
-      opacity: 0,
-      duration: .05
-  }) 
-  homeTextContTL.to (".text-contain", {
-    y: '-20',
-    opacity: 0,
-    duration: .05,
-  })
-}
 
 //barba test
-
-// const animationEnter = (container) => {
-//   return gsap.fromTo(container, {
-//     "clipPath": "polygon(-55% 0%, -55% 0%, -55% 100%, -55% 100%)",
-//     // opacity: 0,
-//     // delay: .125,
-//   }, {
-//     "clipPath": "polygon(-55% 0%, 110% 0%, 110% 100%, -55% 100%)",
-//     ease: "circ.inOut",
-//     // opacity: 1,
-//     duration: 1,
-//   });
-// }
-// const animationLeave = (container) => {
-//   return gsap.fromTo(container, {
-//     "clipPath": "polygon(-55% 0%, 100% 0%, 100% 100%, -55% 100%)",
-//     // opacity: 0,
-//     // delay: .125,
-//   }, {
-//     "clipPath": "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
-//     ease: "circ.inOut",
-//     // opacity: 1,
-//     duration: 1,
-//   }
-//   );
-// }
-// let homeAnim = (i) => {
-//     for (i=1; i < 9; i++) {
-//       const homeProjContain = document.querySelector(`.project${i}`)
-//       //check if div exists to avoid warnings in console
-//       if (homeProjContain !== null) {
-//         projReveal(i)
-//       }
-//     }
-    
-//     for (i=1; i < 9; i++) {
-//       const projNameContain = document.querySelector(`.proj-name${i}`)
-//       //check if div exists to avoid warnings in console
-//       if (projNameContain !== null) {
-//       textReveal(i)
-//       }
-//     }
-// }
-
-
-
-
-// barba.init({
-//   transitions: [
-//     {
-//       once({next}){
-//         animationEnter(next.container);
-//       },
-//       leave: ({current}) => animationLeave(current.container),
-//       enter({next}){
-//         animationEnter(next.container);
-//       }
-//     }
-//   ]
-// });
-
-// barba.hooks.beforeEnter( (data) => {
-//   homeAnim(data)
-// }
-// )
-
-
 
 for (i=1; i < 9; i++) {
   const homeProjContain = document.querySelector(`.project${i}`)
@@ -207,7 +138,7 @@ for (i = 0; i < acc.length; i++) {
 
 
 
-// automatically setting height of process images
+// automatically setting height of MediumLightbox images for me
 
 const section = document.getElementsByClassName("process-panel")
 
@@ -336,7 +267,7 @@ if (mediaQuery.matches) {
       cursor.classList.remove("custom-cursor--link");
     });
   };
-  if (mediumBoxes !== null) {
+  if (mediumBoxes.length !== 0) {
     for (var i = 0; i < links.length; i++) {
       var selfImg = mediumBoxes[i];
   

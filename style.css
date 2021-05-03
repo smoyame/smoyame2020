@@ -7,7 +7,6 @@
   font-size: 24px;
   font-family: "Degular", sans-serif;
   text-decoration: none;
-  scroll-behavior: smooth;
   list-style-type: none;
   cursor: none;
   -webkit-transition: .3s;
@@ -186,6 +185,8 @@ a {
   opacity: 1;
   -webkit-transition: none;
   transition: none;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 105%, 0% 105%);
+          clip-path: polygon(0 0, 100% 0, 100% 105%, 0% 105%);
   visibility: visible;
 }
 
@@ -193,6 +194,7 @@ a {
   font-size: 3vw;
   line-height: 3vw;
   width: 30vw;
+  opacity: 1;
   font-weight: 700;
 }
 
@@ -313,6 +315,8 @@ main {
   font-family: "Degular-Display", sans-serif;
   top: 6rem;
   left: 2rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 105%, 0% 105%);
+          clip-path: polygon(0 0, 100% 0, 100% 105%, 0% 105%);
 }
 
 .proj-sectitle {
@@ -426,7 +430,7 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 40vh;
           flex: 1 0 40vh;
-  height: 80vh;
+  height: auto;
   padding-bottom: 2rem;
 }
 
