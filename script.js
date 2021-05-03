@@ -11,7 +11,7 @@ if(textContain !== null) {
   //tagline animation
   let homeTextContTL = gsap.timeline({ease: easeChoice, scrollTrigger: {
     trigger:".hero",
-    markers: true,
+    // markers: true,
     start: "top 10%",
     end: "bottom 40%",
     // scroller: ".smooth-scroll",
