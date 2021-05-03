@@ -9,51 +9,37 @@ btn = document.querySelector('button');
 let easeChoice = "power4.in"
 //project slides on home page
 let textReveal = (projNum) => {
-  let homeProjNameTL = gsap.timeline({ease: easeChoice, scrollTrigger: {
-    trigger:`.project${projNum}`,
-    // markers: true,
-    start: "top 58%",
-    end: "bottom 45%",
-    // scroller: ".smooth-scroll",
-    toggleActions: "play pause play pause",
-    scrub: true,
+  const tl = gsap.timeline({
+    defaults: {duration: 1},
+    scrollTrigger: {
+      trigger: `.project${projNum}`,
+      scrub: true,
+      start: "center 80%",
+      end: "center 20%",
+      toggleActions: 'play reverse play reverse',
     }
   })
-
-  homeProjNameTL.from(`.proj-name${projNum}`, {
-    duration: .5,
-      opacity: 0,
-      y: '20',
-      // text:" ",
-      }), 
-  homeProjNameTL.to (`.proj-name${projNum}`,{
-      y: '0',
-      opacity: 1,
-  }) 
-  homeProjNameTL.to (`.proj-name${projNum}`, {
-    opacity: 0,
-    y: '-10',
-    duration: .5,
-  })
+  tl.from(`.proj-name${projNum}`, {y:'20', opacity: 0, duration: 0.1}, 0)
+  tl.to(`.proj-name${projNum}`, {y:'-20',opacity: 0, duration: 0.1}, 0.85)
 }
 
 //test transition
 let projReveal = (projNum) => {
   gsap.from(`.project${projNum}`, {
       duration: 1,
-      y: '100',
-      opacity: 0,
-      ease: "circ.out",
+      // y: '100',
+      opacity: 0.4,
+      ease: "expo.inOut",
       scrollTrigger: {
           trigger:`.project${projNum}`,
           // markers: true,
-          start: "top 99%",
+          start: "top 50%",
           end: "bottom 60%",
           // scroller: ".smooth-scroll",
-          toggleActions: "play none none none",
+          toggleActions: "play reverse play reverse",
           // scrub: true
           },
-      clearProps: 'all',
+      // clearProps: 'all',
       // onComplete: textReveal(projNum)
       }
   )
@@ -69,25 +55,25 @@ if(textContain !== null) {
     start: "top 20%",
     end: "100% 20%",
     // scroller: ".smooth-scroll",
-    toggleActions: "play pause play pause",
+    toggleActions: "play reverse play reverse",
     scrub: true,
     }
   })
 
-  homeTextContTL.from(".text-contain", {
-    duration: .5,
-      opacity: 0,
+  // homeTextContTL.fromTo(".text-contain", {
+  //     y: '20'
+  //   }, {
+  //     y: '-20'
+  //   }), 
+  homeTextContTL.from (".text-contain",{
       y: '20',
-      // text:" ",
-      }), 
-  homeTextContTL.to (".text-contain",{
-      y: '0',
-      opacity: 1,
+      opacity: 0,
+      duration: .05
   }) 
   homeTextContTL.to (".text-contain", {
+    y: '-20',
     opacity: 0,
-    y: '-10',
-    duration: .5,
+    duration: .05,
   })
 }
 
