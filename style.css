@@ -45,12 +45,19 @@ a {
           transform: translate(-50%, -50%) scale(3);
 }
 
-html.is-leaving .transition-fade {
-  opacity: 0;
-}
-
-html.is-animating .transition-fade {
-  opacity: 0;
+.custom-cursor--link::before {
+  content: "✦";
+  font-size: 1.5rem;
+  line-height: 1.65rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .scrollbar-measure {
@@ -76,8 +83,7 @@ html.is-animating .transition-fade {
 }
 
 .zoom-effect .img {
-  cursor: pointer;
-  cursor: -webkit-zoom-in;
+  cursor: none;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -99,8 +105,7 @@ html.is-animating .transition-fade {
 }
 
 .zoom-effect .zoomImg {
-  cursor: pointer;
-  cursor: -webkit-zoom-out;
+  cursor: none;
 }
 
 .zoom-effect .zoomOverlay.show {
@@ -114,8 +119,7 @@ html.is-animating .transition-fade {
   -webkit-transition: opacity 300ms;
   transition: opacity 300ms;
   opacity: 0;
-  cursor: pointer;
-  cursor: -webkit-zoom-out;
+  cursor: none;
 }
 
 .container {
@@ -159,7 +163,6 @@ html.is-animating .transition-fade {
 .hero {
   height: 50vh;
   background-color: black;
-  margin-top: -2rem;
   margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -182,6 +185,8 @@ html.is-animating .transition-fade {
   top: 6rem;
   left: 2rem;
   opacity: 1;
+  -webkit-transition: none;
+  transition: none;
   visibility: visible;
 }
 
@@ -290,6 +295,7 @@ main {
   background-color: #e0e0e0;
   position: relative;
   margin-bottom: 2rem;
+  opacity: 1;
   -webkit-transition: none;
   transition: none;
 }
@@ -299,6 +305,7 @@ main {
 }
 
 .proj-name {
+  display: block;
   font-size: 3vw;
   line-height: 3vw;
   width: 30%;
@@ -589,7 +596,7 @@ main {
   background-color: white;
   color: black;
   opacity: .3;
-  cursor: pointer;
+  cursor: none;
   width: 100%;
 }
 
@@ -940,7 +947,7 @@ main {
   }
   .hero-sectitle {
     position: absolute;
-    top: calc(55vh - 5vw);
+    top: calc(52vh - 5vw);
   }
   .proj-sectitle {
     font-size: 9vw;
@@ -964,7 +971,8 @@ main {
     display: block;
     -webkit-backdrop-filter: blur(100px);
             backdrop-filter: blur(100px);
-    background-color: rgba(255, 255, 255, 0.164);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid black;
     position: fixed;
     width: 100vw;
     z-index: 90;
@@ -990,7 +998,8 @@ main {
     display: block;
     -webkit-backdrop-filter: blur(100px);
             backdrop-filter: blur(100px);
-    background-color: rgba(255, 255, 255, 0.164);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-top: 1px solid black;
     width: 100%;
     position: fixed;
     z-index: 90;

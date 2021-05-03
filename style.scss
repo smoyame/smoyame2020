@@ -27,6 +27,7 @@ html, body {
 
 a {
     color: $main-dark;
+    // clip-path: polygon(0% 0%, 100% 0%, 100% 105%, 0% 105%);
 }
 
 // cursor
@@ -48,23 +49,14 @@ a {
     transform: translate(-50%, -50%) scale(3);
   }
 
-///swup
-
-// .transition-fade {
-//     transition: 1s cubic-bezier(.58,.11,.93,.49);
-//     opacity: 1;
-// }
-
-html.is-leaving .transition-fade {
-    // transform: translateX(300vw);
-    opacity: 0;
+.custom-cursor--link::before {
+    content: "✦";
+    font-size: 1.5rem;
+    line-height: 1.65rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-html.is-animating .transition-fade {
-    opacity: 0;
-    // transform: translateX(-300vw);
-}
-
 
 /////
 //////////////////
@@ -94,8 +86,8 @@ html.is-animating .transition-fade {
 }
 
 .zoom-effect .img{
-	cursor: pointer;
-	cursor: -webkit-zoom-in;
+	cursor: none;
+	// cursor: -webkit-zoom-in;
 	backface-visibility: hidden;
 }
 
@@ -116,8 +108,8 @@ html.is-animating .transition-fade {
 
 
 .zoom-effect .zoomImg {
-	cursor: pointer;
-	cursor: -webkit-zoom-out;
+	cursor: none;
+	// cursor: -webkit-zoom-out;
 }
 
 
@@ -131,8 +123,8 @@ html.is-animating .transition-fade {
 	position: absolute;
 	transition: opacity 300ms;
 	opacity: 0;
-	cursor: pointer;
-	cursor: -webkit-zoom-out;
+	cursor: none;
+	// cursor: -webkit-zoom-out;
 }
 
 
@@ -151,6 +143,7 @@ html.is-animating .transition-fade {
     grid-template-columns: 1fr 2fr;
     clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
     transition: none;
+    // height: 100vh;
 }
 
 // body::before {
@@ -192,7 +185,7 @@ html.is-animating .transition-fade {
     // background-size: cover;
     // background-position: center;
     // overflow: hidden;
-    margin-top: -2rem;
+    // margin-top: -2rem;
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
@@ -209,7 +202,7 @@ html.is-animating .transition-fade {
     top: 6rem;
     left: 2rem;
     opacity: 1;
-
+    transition: none;
     visibility: visible;
 }
 
@@ -325,6 +318,7 @@ main {
     background-color: rgb(224, 224, 224);
     position: relative;
     margin-bottom: 2rem;
+    opacity: 1;
     transition: none;
 }
 
@@ -334,6 +328,7 @@ main {
 
 
 .proj-name  {
+    display: block;
     $projnamesize: 3vw;
     font-size: $projnamesize;
     line-height: $projnamesize;
@@ -342,7 +337,7 @@ main {
     font-family: $main-font-display;
     top: 6rem;
     left: 2rem;
-    
+    // overflow-y: hidden;
     // backdrop-filter: blur(100px);
 }
 
@@ -629,7 +624,7 @@ main {
     background-color: $main-bright;
     color: $main-dark;
     opacity: .3;
-    cursor: pointer;
+    cursor: none;
     width: 100%;
     
     // padding-top: .4rem;
@@ -918,7 +913,7 @@ main {
     .hero-sectitle {
         position: absolute;
         // padding-left: 0;
-        top: calc(55vh - 5vw);
+        top: calc(52vh - 5vw);
     }
 
     .proj-sectitle {
@@ -948,7 +943,8 @@ main {
     .header-mobile {
         display: block;
         backdrop-filter: blur(100px);
-        background-color: rgba(255, 255, 255, 0.164);
+        background-color: rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid $main-dark;
         position: fixed;
         width: 100vw;
         z-index: 90;
@@ -975,7 +971,8 @@ main {
     .navfoot-contain-mobile {
         display: block;
         backdrop-filter: blur(100px);
-        background-color: rgba(255, 255, 255, 0.164);
+        background-color: rgba(255, 255, 255, 0.5);
+        border-top: 1px solid $main-dark;;
         width: 100%;
         position: fixed;
         z-index: 90;

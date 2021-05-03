@@ -1,37 +1,55 @@
+
+
+///////////////////////////////////////
+
 links = document.querySelectorAll('a');
 btn = document.querySelector('button');
 
+//tagline on homepage
+let easeChoice = "power4.in"
 //project slides on home page
 let textReveal = (projNum) => {
-  gsap.from(`.proj-name${projNum}`, {
-      duration: .5,
+  let homeProjNameTL = gsap.timeline({ease: easeChoice, scrollTrigger: {
+    trigger:`.project${projNum}`,
+    // markers: true,
+    start: "top 58%",
+    end: "bottom 45%",
+    // scroller: ".smooth-scroll",
+    toggleActions: "play pause play pause",
+    scrub: true,
+    }
+  })
+
+  homeProjNameTL.from(`.proj-name${projNum}`, {
+    duration: .5,
       opacity: 0,
-      text:" ",
-      ease: "power4.inOut",
-      scrollTrigger: {
-          trigger:`.project${projNum}`,
-          // markers: true,
-          start: "top 50%",
-          end: "bottom 60%",
-          toggleActions: "play reverse play reverse",
-          
-          }
-      }
-  )
+      y: '20',
+      // text:" ",
+      }), 
+  homeProjNameTL.to (`.proj-name${projNum}`,{
+      y: '0',
+      opacity: 1,
+  }) 
+  homeProjNameTL.to (`.proj-name${projNum}`, {
+    opacity: 0,
+    y: '-10',
+    duration: .5,
+  })
 }
 
 //test transition
 let projReveal = (projNum) => {
   gsap.from(`.project${projNum}`, {
-      duration: .5,
+      duration: 1,
       y: '100',
       opacity: 0,
-      ease: "power4.inOut",
+      ease: "circ.out",
       scrollTrigger: {
           trigger:`.project${projNum}`,
           // markers: true,
           start: "top 99%",
           end: "bottom 60%",
+          // scroller: ".smooth-scroll",
           toggleActions: "play none none none",
           // scrub: true
           },
@@ -41,52 +59,85 @@ let projReveal = (projNum) => {
   )
 }
 
+//for reference after .hero animates
+const textContain = document.querySelector('.text-contain')
+if(textContain !== null) {
+  //tagline animation
+  let homeTextContTL = gsap.timeline({ease: easeChoice, scrollTrigger: {
+    trigger:".hero",
+    // markers: true,
+    start: "top 20%",
+    end: "100% 20%",
+    // scroller: ".smooth-scroll",
+    toggleActions: "play pause play pause",
+    scrub: true,
+    }
+  })
 
+  homeTextContTL.from(".text-contain", {
+    duration: .5,
+      opacity: 0,
+      y: '20',
+      // text:" ",
+      }), 
+  homeTextContTL.to (".text-contain",{
+      y: '0',
+      opacity: 1,
+  }) 
+  homeTextContTL.to (".text-contain", {
+    opacity: 0,
+    y: '-10',
+    duration: .5,
+  })
+}
 
 //barba test
 
-const animationEnter = (container) => {
-  return gsap.fromTo(container, {
-    "clipPath": "polygon(-55% 0%, -55% 0%, -55% 100%, -55% 100%)",
-    // opacity: 0,
-    // delay: .125,
-  }, {
-    "clipPath": "polygon(-55% 0%, 100% 0%, 100% 100%, -55% 100%)",
-    ease: "circ.inOut",
-    // opacity: 1,
-    duration: 1,
-  });
-}
-const animationLeave = (container) => {
-  return gsap.fromTo(container, {
-    "clipPath": "polygon(-55% 0%, 100% 0%, 100% 100%, -55% 100%)",
-    // opacity: 0,
-    // delay: .125,
-  }, {
-    "clipPath": "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
-    ease: "circ.inOut",
-    // opacity: 1,
-    duration: 1,
-  }
-  );
-}
-let homeAnim = (i) => {
-    for (i=1; i < 9; i++) {
-      const homeProjContain = document.querySelector(`.project${i}`)
-      //check if div exists to avoid warnings in console
-      if (homeProjContain !== null) {
-        projReveal(i)
-      }
-    }
+// const animationEnter = (container) => {
+//   return gsap.fromTo(container, {
+//     "clipPath": "polygon(-55% 0%, -55% 0%, -55% 100%, -55% 100%)",
+//     // opacity: 0,
+//     // delay: .125,
+//   }, {
+//     "clipPath": "polygon(-55% 0%, 110% 0%, 110% 100%, -55% 100%)",
+//     ease: "circ.inOut",
+//     // opacity: 1,
+//     duration: 1,
+//   });
+// }
+// const animationLeave = (container) => {
+//   return gsap.fromTo(container, {
+//     "clipPath": "polygon(-55% 0%, 100% 0%, 100% 100%, -55% 100%)",
+//     // opacity: 0,
+//     // delay: .125,
+//   }, {
+//     "clipPath": "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
+//     ease: "circ.inOut",
+//     // opacity: 1,
+//     duration: 1,
+//   }
+//   );
+// }
+// let homeAnim = (i) => {
+//     for (i=1; i < 9; i++) {
+//       const homeProjContain = document.querySelector(`.project${i}`)
+//       //check if div exists to avoid warnings in console
+//       if (homeProjContain !== null) {
+//         projReveal(i)
+//       }
+//     }
     
-    for (i=1; i < 9; i++) {
-      const projNameContain = document.querySelector(`.proj-name${i}`)
-      //check if div exists to avoid warnings in console
-      if (projNameContain !== null) {
-      textReveal(i)
-      }
-    }
-}
+//     for (i=1; i < 9; i++) {
+//       const projNameContain = document.querySelector(`.proj-name${i}`)
+//       //check if div exists to avoid warnings in console
+//       if (projNameContain !== null) {
+//       textReveal(i)
+//       }
+//     }
+// }
+
+
+
 
 // barba.init({
 //   transitions: [
@@ -121,34 +172,13 @@ for (i=1; i < 9; i++) {
   const projNameContain = document.querySelector(`.proj-name${i}`)
   //check if div exists to avoid warnings in console
   if (projNameContain !== null) {
-  textReveal(i)
+    textReveal(i)
   }
 }
 
 
 
-//for reference after .hero animates
-const textContain = document.querySelector('.text-contain')
-if(textContain !== null) {
-  //tagline animation
-  gsap.from('.text-contain', {
-    duration: .35,
-    opacity: 0,
-    // text:" ",
-    // padSpace: true,
-    ease: "power4.inOut",
-    scrollTrigger: {
-        trigger:'.hero',
-        // markers: true,
-        start: "top 40%",
-        end: "bottom 45%",
-        toggleActions: "play reverse play reverse",
-        
-        },
-        clearProps: 'all'
-    }
-  )
-}
+
 
 //medium lightbox
 MediumLightbox('figure.zoom-effect');
@@ -158,6 +188,7 @@ MediumLightbox('figure.zoom-effect');
 var acc = document.getElementsByClassName("accordion");
 var i;
 let collapseBtn = document.getElementsByClassName("process-collapse");
+
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
@@ -183,8 +214,9 @@ for (i = 0; i < acc.length; i++) {
     var idP = document.getElementById("process");
     idP.scrollIntoView();
   });
-
 }
+
+
 //adapted from w3schools example
 
 
@@ -272,6 +304,7 @@ var cursor, links;
 // }
 
 const mediaQuery = window.matchMedia('(min-width: 851px)')
+const mediumBoxes = document.querySelectorAll(".imagecard");
 
 if (mediaQuery.matches) {
   cursor = document.querySelector('.custom-cursor');
@@ -317,7 +350,21 @@ if (mediaQuery.matches) {
       cursor.classList.remove("custom-cursor--link");
     });
   };
+  if (mediumBoxes !== null) {
+    for (var i = 0; i < links.length; i++) {
+      var selfImg = mediumBoxes[i];
+  
+      selfImg.addEventListener("mouseover", function() {
+        cursor.classList.add("custom-cursor--link");
+      });
+      selfImg.addEventListener("mouseout", function() {
+        cursor.classList.remove("custom-cursor--link");
+      });
+    };
+  };
 };
+
+
 
 
 /* Page transitions reserved for later
