@@ -142,7 +142,7 @@ a {
     background: $main-bright;
     gap: 2rem;
     grid-template-columns: 1fr 2fr;
-    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+    // clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
     transition: none;
     // height: 100vh;
 }
@@ -395,6 +395,7 @@ main {
     // clip-path: polygon(-100% -10%, 100% -10%, 100% 100%, -100% 100%);
     transition: none;
     opacity: 1;
+    // height: 100%;
     visibility: visible;
 }
 
@@ -436,23 +437,25 @@ main {
     flex-wrap: wrap;
     margin-top: 2.01rem;
     gap: 2rem;
-    overflow: hidden;
+    // overflow: hidden;
     width: 100%;
+    // height: 100%;
     justify-content: flex-end;
 }
 
 .abt-illus {
-    flex: 0 0 30%;
+    flex: 0 0 30vw;
     display: block;
     
     // margin-bottom: -2rem;
-    height: 60vh;
-    width: auto;
+    width: 25vw;
+    height: auto;
     align-self: flex-end;
 }
 
 .about {
-    flex: 1 0 50%;
+    flex: 1 0 40vh;
+    height: 80vh;
     padding-bottom: 2rem;
     p{
         margin-top: 1rem;
@@ -1055,6 +1058,7 @@ main {
 
     .about-contain {
         margin-top: 10vh;
+        gap: 0;
     }
 
     .about-text-contain {
@@ -1086,9 +1090,14 @@ main {
 
     .about{
         margin-top: 10vh;
+        width: 100%;
+        height: auto;
     }
 
-
+    .abt-illus {
+        width: 75%;
+        height: auto;
+    }
    
     //project pages 
     

@@ -130,8 +130,6 @@ a {
   gap: 2rem;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
-  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
   -webkit-transition: none;
   transition: none;
 }
@@ -407,7 +405,6 @@ main {
       flex-wrap: wrap;
   margin-top: 2.01rem;
   gap: 2rem;
-  overflow: hidden;
   width: 100%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -416,19 +413,20 @@ main {
 
 .abt-illus {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 30%;
-          flex: 0 0 30%;
+      -ms-flex: 0 0 30vw;
+          flex: 0 0 30vw;
   display: block;
-  height: 60vh;
-  width: auto;
+  width: 25vw;
+  height: auto;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
 .about {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 50%;
-          flex: 1 0 50%;
+      -ms-flex: 1 0 40vh;
+          flex: 1 0 40vh;
+  height: 80vh;
   padding-bottom: 2rem;
 }
 
@@ -1067,6 +1065,7 @@ main {
   }
   .about-contain {
     margin-top: 10vh;
+    gap: 0;
   }
   .about-text-contain {
     -webkit-box-sizing: border-box;
@@ -1094,6 +1093,12 @@ main {
   }
   .about {
     margin-top: 10vh;
+    width: 100%;
+    height: auto;
+  }
+  .abt-illus {
+    width: 75%;
+    height: auto;
   }
   .sub-proj-info {
     position: static;
