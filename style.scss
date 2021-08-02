@@ -1009,6 +1009,11 @@ main {
         font-size: .75rem;
     }
 
+    .nav-item a::after {
+        // background-color: $main-passion;
+        content: ' ';
+    }
+
     #work {
         height: 4rem;
     }

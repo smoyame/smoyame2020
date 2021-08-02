@@ -1033,6 +1033,9 @@ main {
     border: none;
     font-size: .75rem;
   }
+  .nav-item a::after {
+    content: ' ';
+  }
   #work {
     height: 4rem;
   }
